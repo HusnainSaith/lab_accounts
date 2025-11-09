@@ -67,17 +67,11 @@ export class Invoice {
   @Column({ name: 'exchange_rate_to_aed', type: 'decimal', precision: 18, scale: 6, nullable: true })
   exchangeRateToAed: number;
 
-  @Column({ name: 'notes_en', type: 'text', nullable: true })
-  notesEn: string;
+  @Column({ type: 'text', nullable: true })
+  notes: string;
 
-  @Column({ name: 'notes_ar', type: 'text', nullable: true })
-  notesAr: string;
-
-  @Column({ name: 'payment_method_en', length: 255, nullable: true })
-  paymentMethodEn: string;
-
-  @Column({ name: 'payment_method_ar', length: 255, nullable: true })
-  paymentMethodAr: string;
+  @Column({ name: 'payment_method', length: 255, nullable: true })
+  paymentMethod: string;
 
   @Column({ name: 'pdf_path', length: 500, nullable: true })
   pdfPath: string;

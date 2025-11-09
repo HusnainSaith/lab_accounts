@@ -6,17 +6,11 @@ export class Permission {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ name: 'permission_name_en', length: 255 })
-  permissionNameEn: string;
+  @Column({ name: 'permission_name', length: 255 })
+  permissionName: string;
 
-  @Column({ name: 'permission_name_ar', length: 255, nullable: true })
-  permissionNameAr: string;
-
-  @Column({ name: 'description_en', type: 'text', nullable: true })
-  descriptionEn: string;
-
-  @Column({ name: 'description_ar', type: 'text', nullable: true })
-  descriptionAr: string;
+  @Column({ type: 'text', nullable: true })
+  description: string;
 
   @ManyToMany('Role', 'permissions')
   roles: Role[];

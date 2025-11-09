@@ -24,12 +24,12 @@ export class PermissionsService implements OnModuleInit {
     const where: any = {};
     
     if (search) {
-      where.permissionNameEn = Like(`%${search}%`);
+      where.permissionName = Like(`%${search}%`);
     }
 
     return this.permissionsRepository.find({
       where,
-      order: { permissionNameEn: 'ASC' }
+      order: { permissionName: 'ASC' }
     });
   }
 
@@ -63,17 +63,17 @@ export class PermissionsService implements OnModuleInit {
 
   private async seedDefaultPermissions(): Promise<void> {
     const defaultPermissions = [
-      { permissionNameEn: 'Create Invoice', permissionNameAr: 'إنشاء فاتورة', descriptionEn: 'Create new invoices', descriptionAr: 'إنشاء فواتير جديدة' },
-      { permissionNameEn: 'View Invoice', permissionNameAr: 'عرض الفاتورة', descriptionEn: 'View invoices', descriptionAr: 'عرض الفواتير' },
-      { permissionNameEn: 'Edit Invoice', permissionNameAr: 'تعديل الفاتورة', descriptionEn: 'Edit invoices', descriptionAr: 'تعديل الفواتير' },
-      { permissionNameEn: 'Delete Invoice', permissionNameAr: 'حذف الفاتورة', descriptionEn: 'Delete invoices', descriptionAr: 'حذف الفواتير' },
-      { permissionNameEn: 'Manage Users', permissionNameAr: 'إدارة المستخدمين', descriptionEn: 'Manage company users', descriptionAr: 'إدارة مستخدمي الشركة' },
-      { permissionNameEn: 'View Reports', permissionNameAr: 'عرض التقارير', descriptionEn: 'View financial reports', descriptionAr: 'عرض التقارير المالية' }
+      { permissionName: 'Create Invoice', description: 'Create new invoices' },
+      { permissionName: 'View Invoice', description: 'View invoices' },
+      { permissionName: 'Edit Invoice', description: 'Edit invoices' },
+      { permissionName: 'Delete Invoice', description: 'Delete invoices' },
+      { permissionName: 'Manage Users', description: 'Manage company users' },
+      { permissionName: 'View Reports', description: 'View financial reports' }
     ];
 
     for (const permission of defaultPermissions) {
       const exists = await this.permissionsRepository.findOne({
-        where: { permissionNameEn: permission.permissionNameEn }
+        where: { permissionName: permission.permissionName }
       });
       
       if (!exists) {

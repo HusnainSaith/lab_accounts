@@ -18,11 +18,8 @@ export class Customer {
   @Column({ name: 'customer_type', type: 'enum', enum: CustomerType })
   customerType: CustomerType;
 
-  @Column({ name: 'name_en', length: 255 })
-  nameEn: string;
-
-  @Column({ name: 'name_ar', length: 255, nullable: true })
-  nameAr: string;
+  @Column({ length: 255 })
+  name: string;
 
   @Column({ length: 255, nullable: true })
   email: string;
@@ -33,17 +30,11 @@ export class Customer {
   @Column({ length: 64, nullable: true })
   trn: string;
 
-  @Column({ name: 'address_en', type: 'text', nullable: true })
-  addressEn: string;
+  @Column({ type: 'text', nullable: true })
+  address: string;
 
-  @Column({ name: 'address_ar', type: 'text', nullable: true })
-  addressAr: string;
-
-  @Column({ name: 'city_en', length: 255, nullable: true })
-  cityEn: string;
-
-  @Column({ name: 'city_ar', length: 255, nullable: true })
-  cityAr: string;
+  @Column({ length: 255, nullable: true })
+  city: string;
 
   @Column({ name: 'country_code', length: 3, nullable: true })
   countryCode: string;

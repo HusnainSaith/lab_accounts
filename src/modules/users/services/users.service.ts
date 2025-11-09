@@ -32,7 +32,7 @@ export class UsersService {
     }
     
     if (search) {
-      where.firstNameEn = Like(`%${search}%`);
+      where.firstName = Like(`%${search}%`);
     }
 
     return this.usersRepository.find({

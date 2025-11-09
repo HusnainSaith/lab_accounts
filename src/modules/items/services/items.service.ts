@@ -20,12 +20,12 @@ export class ItemsService {
     const where: any = { companyId, isActive: true };
     
     if (search) {
-      where.nameEn = Like(`%${search}%`);
+      where.name = Like(`%${search}%`);
     }
 
     return this.itemsRepository.find({ 
       where,
-      order: { nameEn: 'ASC' }
+      order: { name: 'ASC' }
     });
   }
 
@@ -72,7 +72,7 @@ export class ItemsService {
         companyId, 
         aiSuggested: true,
         isActive: true,
-        nameEn: Like(`%${query}%`)
+        name: Like(`%${query}%`)
       },
       take: 10
     });

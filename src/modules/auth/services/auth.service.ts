@@ -44,8 +44,8 @@ export class AuthService {
       access_token: this.jwtService.sign(payload),
       user: {
         id: user.id,
-        firstNameEn: user.firstNameEn,
-        lastNameEn: user.lastNameEn,
+        firstName: user.firstName,
+        lastName: user.lastName,
         email: user.email,
         role: user.role,
         companyId: user.companyId,
@@ -68,8 +68,7 @@ export class AuthService {
     
     // Create company first
     const company = await this.companiesService.create({
-      nameEn: registerDto.companyName,
-      nameAr: registerDto.companyNameAr,
+      name: registerDto.companyName,
       countryCode: registerDto.countryCode,
       currencyCode: countryConfig.currencyCode,
       vatRate: countryConfig.defaultVatRate,
@@ -79,19 +78,11 @@ export class AuthService {
       isTestAccount: false
     });
 
-    // Use provided names
-    const firstNameEn = registerDto.firstNameEn;
-    const lastNameEn = registerDto.lastNameEn;
-    const firstNameAr = registerDto.firstNameAr;
-    const lastNameAr = registerDto.lastNameAr;
-
     // Create user
     const user = await this.usersService.create({
       companyId: company.id,
-      firstNameEn,
-      firstNameAr,
-      lastNameEn,
-      lastNameAr,
+      firstName: registerDto.firstName,
+      lastName: registerDto.lastName,
       email: registerDto.email,
       password: registerDto.password,
       role: UserRole.OWNER,
@@ -102,14 +93,14 @@ export class AuthService {
       message: 'Registration successful',
       user: {
         id: user.id,
-        firstNameEn: user.firstNameEn,
-        lastNameEn: user.lastNameEn,
+        firstName: user.firstName,
+        lastName: user.lastName,
         email: user.email,
         role: user.role
       },
       company: {
         id: company.id,
-        name: company.nameEn,
+        name: company.name,
         countryCode: company.countryCode,
         currencyCode: company.currencyCode
       }

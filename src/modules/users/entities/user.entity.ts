@@ -27,17 +27,11 @@ export class User {
   @Column({ name: 'company_id' })
   companyId: string;
 
-  @Column({ name: 'first_name_en', length: 255 })
-  firstNameEn: string;
+  @Column({ name: 'first_name', length: 255 })
+  firstName: string;
 
-  @Column({ name: 'first_name_ar', length: 255, nullable: true })
-  firstNameAr: string;
-
-  @Column({ name: 'last_name_en', length: 255 })
-  lastNameEn: string;
-
-  @Column({ name: 'last_name_ar', length: 255, nullable: true })
-  lastNameAr: string;
+  @Column({ name: 'last_name', length: 255 })
+  lastName: string;
 
   @Column({ length: 255, unique: true })
   email: string;

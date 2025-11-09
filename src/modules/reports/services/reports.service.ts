@@ -44,7 +44,7 @@ export class ReportsService {
         id: inv.id,
         invoiceNumber: inv.invoiceNumber,
         date: inv.issueDate,
-        customer: inv.customer?.nameEn || 'Unknown',
+        customer: inv.customer?.name || 'Unknown',
         subtotal: Number(inv.subtotal),
         vatAmount: Number(inv.vatAmount),
         total: Number(inv.totalAmount)
@@ -183,7 +183,7 @@ export class ReportsService {
 
         return {
           customerId: customer.id,
-          customerName: customer.nameEn,
+          customerName: customer.name,
           customerType: customer.customerType,
           totalInvoices: invoices.length,
           paidInvoices: paidInvoices.length,

@@ -3,18 +3,10 @@ import { UserRole, UserLanguage } from '../entities/user.entity';
 
 export class CreateUserDto {
   @IsString()
-  firstNameEn: string;
-
-  @IsOptional()
-  @IsString()
-  firstNameAr?: string;
+  firstName: string;
 
   @IsString()
-  lastNameEn: string;
-
-  @IsOptional()
-  @IsString()
-  lastNameAr?: string;
+  lastName: string;
 
   @IsEmail()
   email: string;

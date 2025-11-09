@@ -9,19 +9,11 @@ import {
 export class RegisterDto {
   @IsString()
   @MinLength(2)
-  firstNameEn: string;
-
-  @IsOptional()
-  @IsString()
-  firstNameAr?: string;
+  firstName: string;
 
   @IsString()
   @MinLength(2)
-  lastNameEn: string;
-
-  @IsOptional()
-  @IsString()
-  lastNameAr?: string;
+  lastName: string;
 
   @IsEmail()
   email: string;
@@ -33,10 +25,6 @@ export class RegisterDto {
   @IsString()
   @MinLength(2)
   companyName: string;
-
-  @IsOptional()
-  @IsString()
-  companyNameAr?: string;
 
   @IsOptional()
   @IsString()

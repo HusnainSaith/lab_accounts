@@ -8,11 +8,7 @@ export class UpdateCustomerDto {
   @IsOptional()
   @IsString()
   @MinLength(2)
-  nameEn?: string;
-
-  @IsOptional()
-  @IsString()
-  nameAr?: string;
+  name?: string;
 
   @IsOptional()
   @IsEmail()
@@ -24,19 +20,11 @@ export class UpdateCustomerDto {
 
   @IsOptional()
   @IsString()
-  addressEn?: string;
+  address?: string;
 
   @IsOptional()
   @IsString()
-  addressAr?: string;
-
-  @IsOptional()
-  @IsString()
-  cityEn?: string;
-
-  @IsOptional()
-  @IsString()
-  cityAr?: string;
+  city?: string;
 
   @IsOptional()
   @IsString()

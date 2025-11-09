@@ -12,7 +12,7 @@ export class PdfService {
     // Simplified PDF generation - in production, use puppeteer or similar
     const qrCodeData = await this.generateZATCAQRCode(invoice);
 
-    const pdfContent = `Invoice ${invoice.invoiceNumber} - ${invoice.company.nameEn} - Total: ${invoice.totalAmount} ${invoice.currencyCode}`;
+    const pdfContent = `Invoice ${invoice.invoiceNumber} - ${invoice.company.name} - Total: ${invoice.totalAmount} ${invoice.currencyCode}`;
 
     // Return mock PDF buffer - in production, generate actual PDF
     return Buffer.from(pdfContent, 'utf8');
@@ -20,7 +20,7 @@ export class PdfService {
 
   private async generateZATCAQRCode(invoice: Invoice): Promise<string> {
     // ZATCA QR Code format for KSA
-    const sellerName = invoice.company.nameEn;
+    const sellerName = invoice.company.name;
     const vatNumber = invoice.company.trn || '';
     const timestamp = invoice.issueDate.toISOString();
     const invoiceTotal = invoice.totalAmount.toString();

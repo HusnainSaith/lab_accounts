@@ -24,7 +24,7 @@ export class CustomersService {
     }
     
     if (search) {
-      where.nameEn = Like(`%${search}%`);
+      where.name = Like(`%${search}%`);
     }
     
     return this.customersRepository.find({ 

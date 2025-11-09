@@ -13,7 +13,7 @@ export class CompaniesService {
 
   async create(createCompanyDto: CreateCompanyDto): Promise<Company> {
     // Validate company name uniqueness
-    await this.validateCompanyNameUniqueness(createCompanyDto.nameEn);
+    await this.validateCompanyNameUniqueness(createCompanyDto.name);
     
     // Validate TRN uniqueness if provided
     if (createCompanyDto.trn) {
@@ -51,8 +51,8 @@ export class CompaniesService {
 
   async update(id: string, updateCompanyDto: UpdateCompanyDto): Promise<Company | null> {
     // Validate company name uniqueness if provided
-    if (updateCompanyDto.nameEn) {
-      await this.validateCompanyNameUniqueness(updateCompanyDto.nameEn, id);
+    if (updateCompanyDto.name) {
+      await this.validateCompanyNameUniqueness(updateCompanyDto.name, id);
     }
     
     // Validate TRN uniqueness if provided and different from current
@@ -141,9 +141,9 @@ export class CompaniesService {
     }
   }
 
-  private async validateCompanyNameUniqueness(nameEn: string, excludeCompanyId?: string): Promise<void> {
+  private async validateCompanyNameUniqueness(name: string, excludeCompanyId?: string): Promise<void> {
     const query = this.companiesRepository.createQueryBuilder('company')
-      .where('LOWER(company.nameEn) = LOWER(:nameEn)', { nameEn });
+      .where('LOWER(company.name) = LOWER(:name)', { name });
     
     if (excludeCompanyId) {
       query.andWhere('company.id != :excludeCompanyId', { excludeCompanyId });

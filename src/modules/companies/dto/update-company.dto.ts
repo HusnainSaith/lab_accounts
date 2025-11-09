@@ -4,11 +4,7 @@ export class UpdateCompanyDto {
   @IsOptional()
   @IsString()
   @MinLength(2)
-  nameEn?: string;
-
-  @IsOptional()
-  @IsString()
-  nameAr?: string;
+  name?: string;
 
   @IsOptional()
   @IsEmail()
@@ -20,19 +16,7 @@ export class UpdateCompanyDto {
 
   @IsOptional()
   @IsString()
-  addressEn?: string;
-
-  @IsOptional()
-  @IsString()
-  addressAr?: string;
-
-  @IsOptional()
-  @IsString()
-  cityEn?: string;
-
-  @IsOptional()
-  @IsString()
-  cityAr?: string;
+  address?: string;
 
   @IsOptional()
   @IsString()

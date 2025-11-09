@@ -12,23 +12,14 @@ export class Item {
   @Column({ name: 'item_code', length: 100, nullable: true })
   itemCode: string;
 
-  @Column({ name: 'name_en', length: 255 })
-  nameEn: string;
+  @Column({ length: 255 })
+  name: string;
 
-  @Column({ name: 'name_ar', length: 255, nullable: true })
-  nameAr: string;
+  @Column({ type: 'text', nullable: true })
+  description: string;
 
-  @Column({ name: 'description_en', type: 'text', nullable: true })
-  descriptionEn: string;
-
-  @Column({ name: 'description_ar', type: 'text', nullable: true })
-  descriptionAr: string;
-
-  @Column({ name: 'category_en', length: 255, nullable: true })
-  categoryEn: string;
-
-  @Column({ name: 'category_ar', length: 255, nullable: true })
-  categoryAr: string;
+  @Column({ length: 255, nullable: true })
+  category: string;
 
   @Column({ name: 'unit_price', type: 'decimal', precision: 18, scale: 4 })
   unitPrice: number;

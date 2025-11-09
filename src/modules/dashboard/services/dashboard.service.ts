@@ -71,7 +71,7 @@ export class DashboardService {
       recentInvoices: recentInvoices.map(invoice => ({
         id: invoice.id,
         invoiceNumber: invoice.invoiceNumber,
-        customerName: invoice.customer?.nameEn,
+        customerName: invoice.customer?.name,
         totalAmount: invoice.totalAmount,
         status: invoice.status,
         issueDate: invoice.issueDate
@@ -143,7 +143,7 @@ export class DashboardService {
     return overdueInvoices.map(invoice => ({
       id: invoice.id,
       invoiceNumber: invoice.invoiceNumber,
-      customerName: invoice.customer?.nameEn,
+      customerName: invoice.customer?.name,
       totalAmount: invoice.totalAmount,
       dueDate: invoice.dueDate,
       daysPastDue: Math.floor((new Date().getTime() - new Date(invoice.dueDate).getTime()) / (1000 * 60 * 60 * 24))
@@ -161,10 +161,10 @@ export class DashboardService {
     return recentInvoices.map(invoice => ({
       type: 'invoice',
       action: 'created',
-      description: `Invoice ${invoice.invoiceNumber} created for ${invoice.customer?.nameEn}`,
+      description: `Invoice ${invoice.invoiceNumber} created for ${invoice.customer?.name}`,
       amount: invoice.totalAmount,
       createdAt: invoice.createdAt,
-      createdBy: invoice.createdBy?.firstNameEn + ' ' + invoice.createdBy?.lastNameEn
+      createdBy: invoice.createdBy?.firstName + ' ' + invoice.createdBy?.lastName
     }));
   }
 

@@ -4,19 +4,11 @@ import { UserRole, UserLanguage } from '../entities/user.entity';
 export class UpdateUserDto {
   @IsOptional()
   @IsString()
-  firstNameEn?: string;
+  firstName?: string;
 
   @IsOptional()
   @IsString()
-  firstNameAr?: string;
-
-  @IsOptional()
-  @IsString()
-  lastNameEn?: string;
-
-  @IsOptional()
-  @IsString()
-  lastNameAr?: string;
+  lastName?: string;
 
   @IsOptional()
   @IsEmail()

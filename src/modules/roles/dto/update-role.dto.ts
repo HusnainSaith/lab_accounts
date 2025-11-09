@@ -4,22 +4,9 @@ export class UpdateRoleDto {
   @IsOptional()
   @IsString()
   @MinLength(2)
-  name?: string;
+  roleName?: string;
 
   @IsOptional()
   @IsString()
-  @MinLength(2)
-  roleNameEn?: string;
-
-  @IsOptional()
-  @IsString()
-  roleNameAr?: string;
-
-  @IsOptional()
-  @IsString()
-  descriptionEn?: string;
-
-  @IsOptional()
-  @IsString()
-  descriptionAr?: string;
+  description?: string;
 }

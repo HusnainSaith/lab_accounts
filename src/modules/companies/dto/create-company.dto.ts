@@ -3,11 +3,7 @@ import { IsString, IsEmail, IsOptional, IsBoolean, IsIn, MinLength, IsNumber } f
 export class CreateCompanyDto {
   @IsString()
   @MinLength(2)
-  nameEn: string;
-
-  @IsOptional()
-  @IsString()
-  nameAr?: string;
+  name: string;
 
   @IsString()
   @IsIn(['UAE', 'KSA', 'EGY'])
@@ -34,11 +30,7 @@ export class CreateCompanyDto {
 
   @IsOptional()
   @IsString()
-  addressEn?: string;
-
-  @IsOptional()
-  @IsString()
-  addressAr?: string;
+  address?: string;
 
   @IsOptional()
   @IsString()

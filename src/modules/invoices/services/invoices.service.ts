@@ -156,7 +156,7 @@ export class InvoicesService {
 
     if (invoiceWithCompany.company.countryCode === 'SA') {
       return this.qrCodeService.generateZATCAQRCode({
-        sellerName: invoiceWithCompany.company.nameEn,
+        sellerName: invoiceWithCompany.company.name,
         vatNumber: invoiceWithCompany.company.trn || '',
         timestamp: invoice.createdAt.toISOString(),
         invoiceTotal: invoice.totalAmount,
