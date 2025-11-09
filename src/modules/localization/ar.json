@@ -1,0 +1,78 @@
+{
+  "common": {
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "create": "إنشاء",
+    "search": "بحث",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "register": "التسجيل",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "fullName": "الاسم الكامل",
+    "companyName": "اسم الشركة",
+    "country": "البلد"
+  },
+  "invoice": {
+    "title": "فاتورة ضريبية",
+    "number": "رقم الفاتورة",
+    "date": "تاريخ الفاتورة",
+    "dueDate": "تاريخ الاستحقاق",
+    "customer": "العميل",
+    "items": "البنود",
+    "subtotal": "المجموع الفرعي",
+    "vat": "ضريبة القيمة المضافة",
+    "total": "المجموع الكلي",
+    "notes": "ملاحظات",
+    "paymentMethod": "طريقة الدفع",
+    "status": {
+      "draft": "مسودة",
+      "sent": "مرسلة",
+      "paid": "مدفوعة",
+      "overdue": "متأخرة",
+      "cancelled": "ملغية"
+    }
+  },
+  "company": {
+    "name": "اسم الشركة",
+    "address": "العنوان",
+    "city": "المدينة",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "trn": "الرقم الضريبي",
+    "logo": "شعار الشركة",
+    "vatRegistered": "مسجل في ضريبة القيمة المضافة"
+  },
+  "customer": {
+    "name": "اسم العميل",
+    "address": "العنوان",
+    "city": "المدينة",
+    "phone": "الهاتف",
+    "email": "البريد الإلكتروني",
+    "trn": "الرقم الضريبي"
+  },
+  "reports": {
+    "vatReport": "تقرير ضريبة القيمة المضافة",
+    "profitLoss": "الأرباح والخسائر",
+    "balanceSheet": "الميزانية العمومية",
+    "cashFlow": "التدفق النقدي",
+    "period": "الفترة",
+    "fromDate": "من تاريخ",
+    "toDate": "إلى تاريخ"
+  },
+  "dashboard": {
+    "totalInvoices": "إجمالي الفواتير",
+    "paidInvoices": "الفواتير المدفوعة",
+    "pendingInvoices": "الفواتير المعلقة",
+    "totalRevenue": "إجمالي الإيرادات",
+    "monthlyRevenue": "الإيرادات الشهرية",
+    "recentInvoices": "الفواتير الحديثة"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "fullName": "Full Name",
+    "companyName": "Company Name",
+    "country": "Country"
+  },
+  "invoice": {
+    "title": "Tax Invoice",
+    "number": "Invoice Number",
+    "date": "Invoice Date",
+    "dueDate": "Due Date",
+    "customer": "Customer",
+    "items": "Items",
+    "subtotal": "Subtotal",
+    "vat": "VAT",
+    "total": "Total",
+    "notes": "Notes",
+    "paymentMethod": "Payment Method",
+    "status": {
+      "draft": "Draft",
+      "sent": "Sent",
+      "paid": "Paid",
+      "overdue": "Overdue",
+      "cancelled": "Cancelled"
+    }
+  },
+  "company": {
+    "name": "Company Name",
+    "address": "Address",
+    "city": "City",
+    "phone": "Phone",
+    "email": "Email",
+    "trn": "Tax Registration Number",
+    "logo": "Company Logo",
+    "vatRegistered": "VAT Registered"
+  },
+  "customer": {
+    "name": "Customer Name",
+    "address": "Address",
+    "city": "City",
+    "phone": "Phone",
+    "email": "Email",
+    "trn": "Tax Registration Number"
+  },
+  "reports": {
+    "vatReport": "VAT Report",
+    "profitLoss": "Profit & Loss",
+    "balanceSheet": "Balance Sheet",
+    "cashFlow": "Cash Flow",
+    "period": "Period",
+    "fromDate": "From Date",
+    "toDate": "To Date"
+  },
+  "dashboard": {
+    "totalInvoices": "Total Invoices",
+    "paidInvoices": "Paid Invoices",
+    "pendingInvoices": "Pending Invoices",
+    "totalRevenue": "Total Revenue",
+    "monthlyRevenue": "Monthly Revenue",
+    "recentInvoices": "Recent Invoices"
+  }
+}
