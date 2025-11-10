@@ -3,33 +3,17 @@ import { IsString, IsOptional, MinLength } from 'class-validator';
 export class CreateItemTemplateDto {
   @IsOptional()
   @IsString()
-  industryEn?: string;
-
-  @IsOptional()
-  @IsString()
-  industryAr?: string;
+  industry?: string;
 
   @IsString()
   @MinLength(2)
-  itemNameEn: string;
+  itemName: string;
 
   @IsOptional()
   @IsString()
-  itemNameAr?: string;
+  description?: string;
 
   @IsOptional()
   @IsString()
-  descriptionEn?: string;
-
-  @IsOptional()
-  @IsString()
-  descriptionAr?: string;
-
-  @IsOptional()
-  @IsString()
-  suggestedCategoryEn?: string;
-
-  @IsOptional()
-  @IsString()
-  suggestedCategoryAr?: string;
+  suggestedCategory?: string;
 }

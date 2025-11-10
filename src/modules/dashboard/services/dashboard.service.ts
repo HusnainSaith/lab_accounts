@@ -74,7 +74,7 @@ export class DashboardService {
         customerName: invoice.customer?.name,
         totalAmount: invoice.totalAmount,
         status: invoice.status,
-        issueDate: invoice.issueDate
+        createdAt: invoice.createdAt
       }))
     };
   }

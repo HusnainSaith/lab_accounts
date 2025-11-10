@@ -18,6 +18,7 @@ export class CreateUsers1762602614102 implements MigrationInterface {
         email               varchar(255) UNIQUE NOT NULL,
         password_hash       varchar(255) NOT NULL,
         role                user_role_enum NOT NULL,
+        role_id             uuid REFERENCES roles(id),
         phone               varchar(50),
         preferred_language  user_language_enum NOT NULL DEFAULT 'en',
         is_active           boolean NOT NULL DEFAULT true,

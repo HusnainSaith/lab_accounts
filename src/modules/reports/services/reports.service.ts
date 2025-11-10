@@ -20,10 +20,10 @@ export class ReportsService {
     const invoices = await this.invoicesRepository.find({
       where: {
         companyId: vatReportDto.companyId,
-        issueDate: Between(vatReportDto.startDate, vatReportDto.endDate)
+        createdAt: Between(vatReportDto.startDate, vatReportDto.endDate)
       },
       relations: ['customer'],
-      order: { issueDate: 'ASC' }
+      order: { createdAt: 'ASC' }
     });
 
     const paidInvoices = invoices.filter(inv => inv.status === InvoiceStatus.PAID);
@@ -43,7 +43,7 @@ export class ReportsService {
       invoices: paidInvoices.map(inv => ({
         id: inv.id,
         invoiceNumber: inv.invoiceNumber,
-        date: inv.issueDate,
+        date: inv.createdAt,
         customer: inv.customer?.name || 'Unknown',
         subtotal: Number(inv.subtotal),
         vatAmount: Number(inv.vatAmount),
@@ -59,14 +59,14 @@ export class ReportsService {
       this.invoicesRepository.find({
         where: {
           companyId: profitLossDto.companyId,
-          issueDate: Between(profitLossDto.startDate, profitLossDto.endDate),
+          createdAt: Between(profitLossDto.startDate, profitLossDto.endDate),
           status: InvoiceStatus.PAID
         }
       }),
       this.invoicesRepository.find({
         where: {
           companyId: profitLossDto.companyId,
-          issueDate: Between(profitLossDto.startDate, profitLossDto.endDate)
+          createdAt: Between(profitLossDto.startDate, profitLossDto.endDate)
         }
       })
     ]);
@@ -173,7 +173,7 @@ export class ReportsService {
         const invoices = await this.invoicesRepository.find({
           where: {
             customerId: customer.id,
-            issueDate: Between(startDate, endDate)
+            createdAt: Between(startDate, endDate)
           }
         });
 

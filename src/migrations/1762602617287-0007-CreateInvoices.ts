@@ -19,7 +19,7 @@ export class CreateInvoices1762602617287 implements MigrationInterface {
         invoice_number          varchar(100) NOT NULL,
         invoice_type            invoice_type_enum NOT NULL,
         status                  invoice_status_enum NOT NULL DEFAULT 'draft',
-        issue_date              date NOT NULL,
+
         due_date                date,
         supply_date             date,
         subtotal                numeric(18,2) NOT NULL,
@@ -36,7 +36,7 @@ export class CreateInvoices1762602617287 implements MigrationInterface {
         created_by              uuid REFERENCES users(id),
         created_at              timestamp NOT NULL DEFAULT now(),
         updated_at              timestamp NOT NULL DEFAULT now(),
-        sent_at                 timestamp,
+
         paid_at                 timestamp,
         UNIQUE (company_id, invoice_number)
       );

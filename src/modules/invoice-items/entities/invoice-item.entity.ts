@@ -13,11 +13,8 @@ export class InvoiceItem {
   @Column({ name: 'item_id', nullable: true })
   itemId: string;
 
-  @Column({ name: 'description_en', type: 'text' })
-  descriptionEn: string;
-
-  @Column({ name: 'description_ar', type: 'text', nullable: true })
-  descriptionAr: string;
+  @Column({ type: 'text' })
+  description: string;
 
   @Column({ type: 'decimal', precision: 18, scale: 4 })
   quantity: number;

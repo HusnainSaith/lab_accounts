@@ -1,18 +1,25 @@
 import { Injectable, NotFoundException, OnModuleInit } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository, Like } from 'typeorm';
+import { Repository, Like, DataSource } from 'typeorm';
 import { Permission } from '../entities/permission.entity';
 import { CreatePermissionDto, UpdatePermissionDto } from '../dto';
+import { PermissionsSeed } from '../../../database/seeds/permissions.seed';
+import { AssignRolesSeed } from '../../../database/seeds/assign-roles.seed';
 
 @Injectable()
 export class PermissionsService implements OnModuleInit {
   constructor(
     @InjectRepository(Permission)
     private permissionsRepository: Repository<Permission>,
+    private dataSource: DataSource,
   ) {}
 
   async onModuleInit() {
-    await this.seedDefaultPermissions();
+    const permissionsSeed = new PermissionsSeed();
+    await permissionsSeed.run(this.dataSource);
+    
+    const assignRolesSeed = new AssignRolesSeed();
+    await assignRolesSeed.run(this.dataSource);
   }
 
   async create(createPermissionDto: CreatePermissionDto): Promise<Permission> {
@@ -61,24 +68,5 @@ export class PermissionsService implements OnModuleInit {
     }
   }
 
-  private async seedDefaultPermissions(): Promise<void> {
-    const defaultPermissions = [
-      { permissionName: 'Create Invoice', description: 'Create new invoices' },
-      { permissionName: 'View Invoice', description: 'View invoices' },
-      { permissionName: 'Edit Invoice', description: 'Edit invoices' },
-      { permissionName: 'Delete Invoice', description: 'Delete invoices' },
-      { permissionName: 'Manage Users', description: 'Manage company users' },
-      { permissionName: 'View Reports', description: 'View financial reports' }
-    ];
 
-    for (const permission of defaultPermissions) {
-      const exists = await this.permissionsRepository.findOne({
-        where: { permissionName: permission.permissionName }
-      });
-      
-      if (!exists) {
-        await this.permissionsRepository.save(permission);
-      }
-    }
-  }
 }

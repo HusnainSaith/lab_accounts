@@ -52,8 +52,13 @@ export class InvoicesService {
       const lineVatAmount = lineTotal * (item.vatRate / 100);
 
       await this.invoiceItemsRepository.save({
-        ...item,
         invoiceId: savedInvoice.id,
+        itemId: item.itemId,
+        description: item.description,
+        quantity: item.quantity,
+        unitPrice: item.unitPrice,
+        discountPercentage: item.discountPercentage || 0,
+        vatRate: item.vatRate,
         lineTotal,
         lineVatAmount,
         sortOrder: i + 1,
@@ -97,8 +102,7 @@ export class InvoicesService {
 
   async markAsSent(id: string, companyId: string): Promise<Invoice> {
     await this.invoicesRepository.update({ id, companyId }, {
-      status: InvoiceStatus.SENT,
-      sentAt: new Date()
+      status: InvoiceStatus.SENT
     });
     return this.findOne(id, companyId);
   }

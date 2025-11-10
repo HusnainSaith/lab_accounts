@@ -37,8 +37,7 @@ export class Invoice {
   @Column({ type: 'enum', enum: InvoiceStatus, default: InvoiceStatus.DRAFT })
   status: InvoiceStatus;
 
-  @Column({ name: 'issue_date', type: 'date' })
-  issueDate: Date;
+
 
   @Column({ name: 'due_date', type: 'date', nullable: true })
   dueDate: Date;
@@ -88,8 +87,7 @@ export class Invoice {
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
 
-  @Column({ name: 'sent_at', type: 'timestamp', nullable: true })
-  sentAt: Date;
+
 
   @Column({ name: 'paid_at', type: 'timestamp', nullable: true })
   paidAt: Date;

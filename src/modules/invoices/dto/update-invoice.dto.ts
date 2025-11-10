@@ -16,19 +16,11 @@ export class UpdateInvoiceDto {
 
   @IsOptional()
   @IsString()
-  notesEn?: string;
+  notes?: string;
 
   @IsOptional()
   @IsString()
-  notesAr?: string;
-
-  @IsOptional()
-  @IsString()
-  paymentMethodEn?: string;
-
-  @IsOptional()
-  @IsString()
-  paymentMethodAr?: string;
+  paymentMethod?: string;
 
   @IsOptional()
   @IsNumber()

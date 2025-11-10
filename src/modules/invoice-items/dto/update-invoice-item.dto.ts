@@ -7,11 +7,7 @@ export class UpdateInvoiceItemDto {
 
   @IsOptional()
   @IsString()
-  descriptionEn?: string;
-
-  @IsOptional()
-  @IsString()
-  descriptionAr?: string;
+  description?: string;
 
   @IsOptional()
   @IsNumber()

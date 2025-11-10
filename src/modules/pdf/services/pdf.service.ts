@@ -22,7 +22,7 @@ export class PdfService {
     // ZATCA QR Code format for KSA
     const sellerName = invoice.company.name;
     const vatNumber = invoice.company.trn || '';
-    const timestamp = invoice.issueDate.toISOString();
+    const timestamp = invoice.createdAt.toISOString();
     const invoiceTotal = invoice.totalAmount.toString();
     const vatAmount = invoice.vatAmount.toString();
 

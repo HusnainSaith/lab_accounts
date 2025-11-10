@@ -7,11 +7,7 @@ export class CreateInvoiceItemDto {
 
   @IsNotEmpty()
   @IsString()
-  descriptionEn: string;
-
-  @IsOptional()
-  @IsString()
-  descriptionAr?: string;
+  description: string;
 
   @IsNumber()
   @Min(0)

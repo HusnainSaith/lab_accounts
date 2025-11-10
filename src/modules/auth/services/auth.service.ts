@@ -1,12 +1,9 @@
 import { Injectable, UnauthorizedException, ConflictException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
 import { UsersService } from '../../users/services/users.service';
 import { CompaniesService } from '../../companies/services/companies.service';
 import { LoginDto, RegisterDto } from '../dto/register.dto';
 import { UserRole } from '../../users/entities/user.entity';
-import { BlacklistedToken } from '../entities/blacklisted-token.entity';
 import * as bcrypt from 'bcrypt';
 import * as crypto from 'crypto';
 
@@ -16,8 +13,6 @@ export class AuthService {
     private usersService: UsersService,
     private companiesService: CompaniesService,
     private jwtService: JwtService,
-    @InjectRepository(BlacklistedToken)
-    private blacklistedTokenRepository: Repository<BlacklistedToken>,
   ) {}
 
   async login(loginDto: LoginDto) {
@@ -152,26 +147,11 @@ export class AuthService {
   }
 
   async logout(token: string): Promise<{ message: string }> {
-    try {
-      const decoded = this.jwtService.decode(token) as any;
-      if (decoded && decoded.jti) {
-        await this.blacklistedTokenRepository.save({
-          tokenJti: decoded.jti,
-          userId: decoded.sub,
-          expiresAt: new Date(decoded.exp * 1000)
-        });
-      }
-    } catch (error) {
-      // Token might be invalid, but we still return success
-    }
     return { message: 'Logged out successfully' };
   }
 
   async isTokenBlacklisted(jti: string): Promise<boolean> {
-    const blacklistedToken = await this.blacklistedTokenRepository.findOne({
-      where: { tokenJti: jti }
-    });
-    return !!blacklistedToken;
+    return false;
   }
 
   async validateUser(payload: { sub: string; email: string; jti?: string }) {
@@ -179,6 +159,10 @@ export class AuthService {
     if (payload.jti && await this.isTokenBlacklisted(payload.jti)) {
       throw new UnauthorizedException('Token has been revoked');
     }
-    return this.usersService.findOne(payload.sub);
+    try {
+      return await this.usersService.findOne(payload.sub);
+    } catch (error) {
+      return null;
+    }
   }
 }

@@ -16,9 +16,7 @@ export class CreateInvoiceDto {
   @IsEnum(InvoiceType)
   invoiceType: InvoiceType;
 
-  @IsNotEmpty()
-  @IsDateString()
-  issueDate: Date;
+
 
   @IsOptional()
   @IsDateString()
@@ -42,19 +40,11 @@ export class CreateInvoiceDto {
 
   @IsOptional()
   @IsString()
-  notesEn?: string;
+  notes?: string;
 
   @IsOptional()
   @IsString()
-  notesAr?: string;
-
-  @IsOptional()
-  @IsString()
-  paymentMethodEn?: string;
-
-  @IsOptional()
-  @IsString()
-  paymentMethodAr?: string;
+  paymentMethod?: string;
 
   @IsOptional()
   @IsNumber()

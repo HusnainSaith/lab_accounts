@@ -32,8 +32,7 @@ export class ItemTemplatesService {
   async findByIndustry(industry: string): Promise<ItemTemplate[]> {
     return this.itemTemplatesRepository.find({
       where: [
-        { industryEn: Like(`%${industry}%`) },
-        { industryAr: Like(`%${industry}%`) }
+        { industry: Like(`%${industry}%`) }
       ],
       order: { usageCount: 'DESC' }
     });

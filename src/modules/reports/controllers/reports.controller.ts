@@ -1,20 +1,18 @@
-import { Controller, Get, Query, UseGuards, UseInterceptors } from '@nestjs/common';
+import { Controller, Get, Query, UseGuards } from '@nestjs/common';
 import { ReportsService } from '../services/reports.service';
 import { VatReportDto, ProfitLossReportDto, BalanceSheetReportDto, CashFlowReportDto } from '../dto/report.dto';
-import { Roles } from '../../../common/decorators/roles.decorator';
-import { RolesGuard } from '../../../common/guards/roles.guard';
-import { CompanyGuard } from '../../../common/guards/company.guard';
-import { RLSInterceptor } from '../../../common/interceptors/rls.interceptor';
+import { RequirePermissions } from '../../../common/decorators/permissions.decorator';
+import { PermissionsGuard } from '../../../common/guards/permissions.guard';
+import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
 import { CompanyContext } from '../../../common/decorators/company-context.decorator';
 
 @Controller('reports')
-@UseGuards(RolesGuard, CompanyGuard)
-@UseInterceptors(RLSInterceptor)
+@UseGuards(JwtAuthGuard, PermissionsGuard)
 export class ReportsController {
   constructor(private readonly reportsService: ReportsService) {}
 
   @Get('vat')
-  @Roles('owner', 'accountant')
+  @RequirePermissions('reports.view')
   generateVatReport(
     @Query('startDate') startDate: string,
     @Query('endDate') endDate: string,
@@ -28,7 +26,7 @@ export class ReportsController {
   }
 
   @Get('profit-loss')
-  @Roles('owner', 'accountant')
+  @RequirePermissions('reports.view')
   generateProfitLossReport(
     @Query('startDate') startDate: string,
     @Query('endDate') endDate: string,
@@ -42,7 +40,7 @@ export class ReportsController {
   }
 
   @Get('balance-sheet')
-  @Roles('owner', 'accountant')
+  @RequirePermissions('reports.view')
   generateBalanceSheet(
     @Query('asOfDate') asOfDate: string,
     @CompanyContext() companyId: string
@@ -54,7 +52,7 @@ export class ReportsController {
   }
 
   @Get('cash-flow')
-  @Roles('owner', 'accountant')
+  @RequirePermissions('reports.view')
   generateCashFlowReport(
     @Query('startDate') startDate: string,
     @Query('endDate') endDate: string,
@@ -68,7 +66,7 @@ export class ReportsController {
   }
 
   @Get('customers')
-  @Roles('owner', 'accountant')
+  @RequirePermissions('reports.view')
   generateCustomerReport(
     @Query('startDate') startDate: string,
     @Query('endDate') endDate: string,
