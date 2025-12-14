@@ -2,7 +2,7 @@ import { Injectable, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, Between } from 'typeorm';
 import { Invoice, InvoiceStatus } from '../../invoices/entities/invoice.entity';
-import { Customer } from '../../customers/entities/customer.entity';
+import { Constant, ConstantType } from '../../constant/entities/constant.entity';
 import { VatReportDto, ProfitLossReportDto, BalanceSheetReportDto, CashFlowReportDto } from '../dto/report.dto';
 
 @Injectable()
@@ -10,8 +10,8 @@ export class ReportsService {
   constructor(
     @InjectRepository(Invoice)
     private invoicesRepository: Repository<Invoice>,
-    @InjectRepository(Customer)
-    private customersRepository: Repository<Customer>,
+    @InjectRepository(Constant)
+    private constantsRepository: Repository<Constant>,
   ) {}
 
   async generateVatReport(vatReportDto: VatReportDto) {
@@ -22,7 +22,7 @@ export class ReportsService {
         companyId: vatReportDto.companyId,
         createdAt: Between(vatReportDto.startDate, vatReportDto.endDate)
       },
-      relations: ['customer'],
+      relations: ['party'],
       order: { createdAt: 'ASC' }
     });
 
@@ -44,7 +44,7 @@ export class ReportsService {
         id: inv.id,
         invoiceNumber: inv.invoiceNumber,
         date: inv.createdAt,
-        customer: inv.customer?.name || 'Unknown',
+        customer: (inv.party as any)?.name || 'Unknown',
         subtotal: Number(inv.subtotal),
         vatAmount: Number(inv.vatAmount),
         total: Number(inv.totalAmount)
@@ -74,6 +74,9 @@ export class ReportsService {
     const revenue = paidInvoices.reduce((sum, inv) => sum + Number(inv.subtotal), 0);
     const vatCollected = paidInvoices.reduce((sum, inv) => sum + Number(inv.vatAmount), 0);
     const totalInvoiced = allInvoices.reduce((sum, inv) => sum + Number(inv.subtotal), 0);
+    const totalExpenses = 0; // Expenses module not available
+    const vatPaid = 0; // Expenses module not available
+    const netProfit = revenue - totalExpenses;
 
     return {
       period: { start: profitLossDto.startDate, end: profitLossDto.endDate },
@@ -83,15 +86,19 @@ export class ReportsService {
         collectionRate: totalInvoiced > 0 ? (revenue / totalInvoiced) * 100 : 0
       },
       expenses: {
-        total: 0 // Would need expense tracking implementation
+        total: totalExpenses,
+        vatPaid,
+        count: 0
       },
       profitLoss: {
         grossProfit: revenue,
-        netProfit: revenue,
-        profitMargin: revenue > 0 ? 100 : 0
+        netProfit,
+        profitMargin: revenue > 0 ? (netProfit / revenue) * 100 : 0
       },
       taxes: {
-        vatCollected
+        vatCollected,
+        vatPaid,
+        netVat: vatCollected - vatPaid
       }
     };
   }
@@ -163,8 +170,8 @@ export class ReportsService {
   async generateCustomerReport(companyId: string, startDate: Date, endDate: Date) {
     this.validateDateRange(startDate, endDate);
 
-    const customers = await this.customersRepository.find({
-      where: { companyId },
+    const customers = await this.constantsRepository.find({
+      where: { companyId, type: ConstantType.CUSTOMER },
       relations: ['invoices']
     });
 
@@ -172,7 +179,7 @@ export class ReportsService {
       customers.map(async (customer) => {
         const invoices = await this.invoicesRepository.find({
           where: {
-            customerId: customer.id,
+            partyId: customer.id,
             createdAt: Between(startDate, endDate)
           }
         });
@@ -184,7 +191,7 @@ export class ReportsService {
         return {
           customerId: customer.id,
           customerName: customer.name,
-          customerType: customer.customerType,
+          customerType: customer.type,
           totalInvoices: invoices.length,
           paidInvoices: paidInvoices.length,
           totalInvoiced,
@@ -205,6 +212,54 @@ export class ReportsService {
         totalOutstanding: customerData.reduce((sum, c) => sum + c.outstandingAmount, 0)
       }
     };
+  }
+
+  async getDashboardChartData(companyId: string, months: number = 6): Promise<any[]> {
+    const endDate = new Date();
+    const startDate = new Date();
+    startDate.setMonth(startDate.getMonth() - months);
+
+    const invoices = await this.invoicesRepository
+      .createQueryBuilder('invoice')
+      .select('DATE_TRUNC(\'month\', invoice.createdAt)', 'month')
+      .addSelect('SUM(invoice.subtotal)', 'revenue')
+      .addSelect('SUM(invoice.vatAmount)', 'vat')
+      .addSelect('COUNT(invoice.id)', 'count')
+      .where('invoice.companyId = :companyId', { companyId })
+      .andWhere('invoice.status = :status', { status: InvoiceStatus.PAID })
+      .andWhere('invoice.createdAt >= :startDate', { startDate })
+      .groupBy('DATE_TRUNC(\'month\', invoice.createdAt)')
+      .orderBy('month', 'ASC')
+      .getRawMany();
+    
+    const expenses: any[] = []; // Expenses module not available
+
+    const chartData: any[] = [];
+    for (let i = 0; i < months; i++) {
+      const date = new Date();
+      date.setMonth(date.getMonth() - (months - i - 1));
+      const monthKey = date.toISOString().substring(0, 7);
+
+      const invoiceData = invoices.find((inv) => inv.month?.substring(0, 7) === monthKey);
+      const expenseData = null; // Expenses module not available
+
+      chartData.push({
+        month: monthKey,
+        revenue: Number(invoiceData?.revenue || 0),
+        expenses: 0,
+        netProfit: Number(invoiceData?.revenue || 0),
+        vat: Number(invoiceData?.vat || 0),
+        invoiceCount: Number(invoiceData?.count || 0),
+        expenseCount: 0,
+      });
+    }
+
+    return chartData;
+  }
+
+  async getExpensesByCategory(companyId: string, startDate: Date, endDate: Date) {
+    // Expenses module not available
+    return [];
   }
 
   private validateDateRange(startDate: Date, endDate: Date) {

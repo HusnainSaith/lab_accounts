@@ -4,8 +4,8 @@ import {
   Column,
   CreateDateColumn,
   UpdateDateColumn,
-  ManyToOne,
-  JoinColumn,
+  DeleteDateColumn,
+  OneToMany,
 } from 'typeorm';
 
 export enum UserRole {
@@ -24,40 +24,20 @@ export class User {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @Column({ name: 'company_id' })
-  companyId: string;
-
-  @Column({ name: 'first_name', length: 255 })
-  firstName: string;
-
-  @Column({ name: 'last_name', length: 255 })
-  lastName: string;
+  @Column({ name: 'full_name', length: 255 })
+  fullName: string;
 
   @Column({ length: 255, unique: true })
   email: string;
 
-  @Column({ name: 'password_hash', length: 255 })
+  @Column({ name: 'password_hash', type: 'text' })
   passwordHash: string;
-
-  @Column({ type: 'enum', enum: UserRole })
-  role: UserRole;
-
-  @Column({ length: 50, nullable: true })
-  phone: string;
-
-  @Column({ 
-    name: 'preferred_language', 
-    type: 'enum', 
-    enum: UserLanguage, 
-    default: UserLanguage.EN 
-  })
-  preferredLanguage: UserLanguage;
 
   @Column({ name: 'is_active', default: true })
   isActive: boolean;
 
-  @Column({ name: 'last_login', nullable: true })
-  lastLogin: Date;
+  @Column({ name: 'last_login_at', nullable: true })
+  lastLoginAt: Date;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
@@ -65,14 +45,17 @@ export class User {
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
 
-  @Column({ name: 'role_id', nullable: true })
-  roleId: string;
+  @DeleteDateColumn({ name: 'deleted_at' })
+  deletedAt: Date;
 
-  @ManyToOne('Company', 'users')
-  @JoinColumn({ name: 'company_id' })
-  company: unknown;
 
-  @ManyToOne('Role', { nullable: true })
-  @JoinColumn({ name: 'role_id' })
-  roleEntity: unknown;
+
+  @OneToMany('CompanyUser', 'user')
+  companyUsers: unknown[];
+
+  @OneToMany('UserRole', 'user')
+  userRoles: unknown[];
+
+  @OneToMany('AuditLog', 'actorUser')
+  auditLogs: unknown[];
 }

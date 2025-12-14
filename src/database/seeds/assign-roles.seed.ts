@@ -1,54 +1,108 @@
-import { DataSource, IsNull } from 'typeorm';
-import { User } from '../../modules/users/entities/user.entity';
-import { Role } from '../../modules/roles/entities/role.entity';
+import { DataSource } from 'typeorm';
 
 export class AssignRolesSeed {
-  public async run(dataSource: DataSource): Promise<void> {
-    const userRepository = dataSource.getRepository(User);
-    const roleRepository = dataSource.getRepository(Role);
+  async run(dataSource: DataSource): Promise<void> {
+    const queryRunner = dataSource.createQueryRunner();
+    
+    try {
+      // Create default system roles if they don't exist
+      const roles = [
+        { code: 'super_admin', name: 'Super Administrator', is_system: true },
+        { code: 'owner', name: 'Owner', is_system: true },
+        { code: 'admin', name: 'Administrator', is_system: true },
+        { code: 'accountant', name: 'Accountant', is_system: true },
+        { code: 'user', name: 'User', is_system: true }
+      ];
 
-    // Get all users without role_id
-    const usersWithoutRoles = await userRepository.find({
-      where: { roleId: IsNull() }
-    });
-
-    if (usersWithoutRoles.length === 0) {
-      console.log('✅ All users already have roles assigned');
-      return;
-    }
-
-    // Get roles
-    const ownerRole = await roleRepository.findOne({ where: { roleName: 'Owner' } });
-    const staffRole = await roleRepository.findOne({ where: { roleName: 'Staff' } });
-    const accountantRole = await roleRepository.findOne({ where: { roleName: 'Accountant' } });
-
-    // Create roles if they don't exist
-    if (!ownerRole || !staffRole || !accountantRole) {
-      console.log('❌ Required roles not found. Please run permissions seed first.');
-      return;
-    }
-
-    // Assign roles based on existing role enum
-    for (const user of usersWithoutRoles) {
-      let roleId: string;
-      
-      switch (user.role) {
-        case 'owner':
-          roleId = ownerRole.id;
-          break;
-        case 'staff':
-          roleId = staffRole.id;
-          break;
-        case 'accountant':
-          roleId = accountantRole.id;
-          break;
-        default:
-          roleId = staffRole.id; // Default to staff
+      for (const role of roles) {
+        const existing = await queryRunner.query(
+          `SELECT id FROM roles WHERE company_id IS NULL AND code = $1`,
+          [role.code]
+        );
+        
+        if (existing.length === 0) {
+          await queryRunner.query(
+            `INSERT INTO roles (company_id, code, name, is_system) VALUES (NULL, $1, $2, $3)`,
+            [role.code, role.name, role.is_system]
+          );
+        }
       }
 
-      await userRepository.update(user.id, { roleId });
-    }
+      // Assign permissions to roles
+      const rolePermissions = [
+        // Super Admin - all permissions
+        { roleCode: 'super_admin', permissions: [
+          'users.create', 'users.read', 'users.update', 'users.delete',
+          'roles.create', 'roles.read', 'roles.update', 'roles.delete',
+          'permissions.create', 'permissions.read', 'permissions.update', 'permissions.delete',
+          'companies.create', 'companies.read', 'companies.update', 'companies.delete',
+          'accounts.create', 'accounts.read', 'accounts.update', 'accounts.delete',
+          'invoices.create', 'invoices.read', 'invoices.update', 'invoices.delete',
+          'reports.view', 'reports.export', 'audit.read', 'system.settings', 'fiscal.close',
+          'vouchers.approve', 'vouchers.post', 'vouchers.reverse'
+        ]},
+        
+        // Owner - full company access
+        { roleCode: 'owner', permissions: [
+          'users.create', 'users.read', 'users.update', 'users.delete',
+          'roles.create', 'roles.read', 'roles.update', 'roles.delete',
+          'permissions.read',
+          'companies.read', 'companies.update',
+          'accounts.create', 'accounts.read', 'accounts.update', 'accounts.delete',
+          'invoices.create', 'invoices.read', 'invoices.update', 'invoices.delete',
+          'reports.view', 'reports.export', 'audit.read', 'system.settings', 'fiscal.close',
+          'vouchers.approve', 'vouchers.post', 'vouchers.reverse'
+        ]},
+        
+        // Admin - most permissions except system-level
+        { roleCode: 'admin', permissions: [
+          'users.create', 'users.read', 'users.update',
+          'roles.read', 'permissions.read',
+          'companies.read', 'companies.update',
+          'accounts.create', 'accounts.read', 'accounts.update', 'accounts.delete',
+          'invoices.create', 'invoices.read', 'invoices.update', 'invoices.delete',
+          'reports.view', 'reports.export'
+        ]},
+        
+        // Accountant - accounting focused permissions
+        { roleCode: 'accountant', permissions: [
+          'accounts.create', 'accounts.read', 'accounts.update',
+          'invoices.create', 'invoices.read', 'invoices.update',
+          'reports.view', 'reports.export'
+        ]},
+        
+        // User - basic read permissions
+        { roleCode: 'user', permissions: [
+          'accounts.read', 'invoices.read', 'reports.view'
+        ]}
+      ];
 
-    console.log(`✅ Assigned roles to ${usersWithoutRoles.length} users`);
+      for (const rolePermission of rolePermissions) {
+        for (const permissionName of rolePermission.permissions) {
+          const existing = await queryRunner.query(
+            `SELECT 1 FROM role_permissions rp
+             JOIN roles r ON r.id = rp.role_id
+             JOIN permissions p ON p.id = rp.permission_id
+             WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2`,
+            [rolePermission.roleCode, permissionName]
+          );
+          
+          if (existing.length === 0) {
+            await queryRunner.query(
+              `INSERT INTO role_permissions (role_id, permission_id)
+               SELECT r.id, p.id 
+               FROM roles r, permissions p 
+               WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2`,
+              [rolePermission.roleCode, permissionName]
+            );
+          }
+        }
+      }
+      
+      console.log('✅ Role permissions assigned successfully');
+    } catch (error) {
+      console.error('❌ Error assigning role permissions:', error);
+      throw error;
+    }
   }
 }
