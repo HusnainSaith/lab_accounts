@@ -2,6 +2,7 @@ import { Injectable, NotFoundException, BadRequestException } from '@nestjs/comm
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, Like } from 'typeorm';
 import { User, UserRole } from '../entities/user.entity';
+import { CompanyUser } from '../../companies/entities/company-user.entity';
 import { CreateUserDto, UpdateUserDto } from '../dto';
 import * as bcrypt from 'bcrypt';
 
@@ -10,6 +11,8 @@ export class UsersService {
   constructor(
     @InjectRepository(User)
     private usersRepository: Repository<User>,
+    @InjectRepository(CompanyUser)
+    private companyUsersRepository: Repository<CompanyUser>,
   ) {}
 
   async create(
@@ -33,9 +36,24 @@ export class UsersService {
       preferredLanguage: createUserDto.preferredLanguage,
     };
 
-    const user = this.usersRepository.create(userData);
-    const savedUser = await this.usersRepository.save(user);
-    return Array.isArray(savedUser) ? savedUser[0] : savedUser;
+    return await this.usersRepository.manager.transaction(async manager => {
+      // Create user
+      const user = manager.create(User, userData);
+      const savedUser = await manager.save(user);
+      const finalUser = Array.isArray(savedUser) ? savedUser[0] : savedUser;
+
+      // Associate user with company if companyId provided
+      if (createUserDto.companyId) {
+        const companyUser = manager.create(CompanyUser, {
+          companyId: createUserDto.companyId,
+          userId: finalUser.id,
+          isActive: true,
+        });
+        await manager.save(companyUser);
+      }
+
+      return finalUser;
+    });
   }
 
   async findAll(
@@ -43,21 +61,25 @@ export class UsersService {
     role?: string,
     search?: string,
   ): Promise<User[]> {
-    const where: any = { isActive: true };
+    // RLS will automatically filter users by company context
+    // We just need to join with company_users to ensure proper filtering
+    const queryBuilder = this.usersRepository
+      .createQueryBuilder('user')
+      .innerJoin('user.companyUsers', 'companyUser')
+      .where('user.isActive = :isActive', { isActive: true })
+      .andWhere('companyUser.isActive = :companyUserActive', { companyUserActive: true });
 
     if (role) {
-      where.role = role;
+      queryBuilder.andWhere('user.role = :role', { role });
     }
 
     if (search) {
-      where.fullName = Like(`%${search}%`);
+      queryBuilder.andWhere('user.fullName ILIKE :search', { search: `%${search}%` });
     }
 
-    return this.usersRepository.find({
-      where,
-      relations: ['companyUsers'],
-      order: { createdAt: 'DESC' },
-    });
+    return queryBuilder
+      .orderBy('user.createdAt', 'DESC')
+      .getMany();
   }
 
   async findOne(id: string, companyId?: string): Promise<User> {

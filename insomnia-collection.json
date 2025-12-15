@@ -9,8 +9,8 @@
       "parentId": null,
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
-      "name": "Hisab Accounting API (Insomnia)",
-      "description": "Generated from NestJS routes list + your Postman collection",
+      "name": "Hisab Accounting API (Updated DTOs)",
+      "description": "Updated with correct DTOs from the codebase",
       "scope": "collection",
       "_type": "workspace"
     },
@@ -28,10 +28,7 @@
         "constant_id": "",
         "invoice_id": "",
         "role_id": "",
-        "permission_id": "",
-        "audit_log_id": "",
-        "entityType": "invoice",
-        "entityId": ""
+        "permission_id": ""
       },
       "dataPropertyOrder": {
         "&": [
@@ -42,10 +39,7 @@
           "constant_id",
           "invoice_id",
           "role_id",
-          "permission_id",
-          "audit_log_id",
-          "entityType",
-          "entityId"
+          "permission_id"
         ]
       },
       "color": null,
@@ -54,7 +48,7 @@
       "_type": "environment"
     },
     {
-      "_id": "fld_njb7w5x18d5j2ujg7vxge3b7",
+      "_id": "fld_auth",
       "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
@@ -65,107 +59,8 @@
       "_type": "request_group"
     },
     {
-      "_id": "fld_jh0g2xyv4x8yyunrs1l0hpsz",
-      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "name": "Users",
-      "description": "",
-      "environment": {},
-      "metaSortKey": -1,
-      "_type": "request_group"
-    },
-    {
-      "_id": "fld_08rduotz2dvt3tjmh0cfu08h",
-      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "name": "Companies",
-      "description": "",
-      "environment": {},
-      "metaSortKey": -1,
-      "_type": "request_group"
-    },
-    {
-      "_id": "fld_h97jou3wlfoqnjythwkhgtdv",
-      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "name": "Constants",
-      "description": "",
-      "environment": {},
-      "metaSortKey": -1,
-      "_type": "request_group"
-    },
-    {
-      "_id": "fld_ewos5u11eacynwth25iw4fbu",
-      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "name": "Invoices",
-      "description": "",
-      "environment": {},
-      "metaSortKey": -1,
-      "_type": "request_group"
-    },
-    {
-      "_id": "fld_xyz99ps4997rf04pg6ff5avg",
-      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "name": "Reports",
-      "description": "",
-      "environment": {},
-      "metaSortKey": -1,
-      "_type": "request_group"
-    },
-    {
-      "_id": "fld_633dszgmm9y9hz879vdcjtg4",
-      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "name": "Roles",
-      "description": "",
-      "environment": {},
-      "metaSortKey": -1,
-      "_type": "request_group"
-    },
-    {
-      "_id": "fld_ewi1kr9u3564ih1ka0lvq9sx",
-      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "name": "Permissions",
-      "description": "",
-      "environment": {},
-      "metaSortKey": -1,
-      "_type": "request_group"
-    },
-    {
-      "_id": "fld_9he0yh4a1zgchf7p5nq62hgy",
-      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "name": "Audit Logs",
-      "description": "",
-      "environment": {},
-      "metaSortKey": -1,
-      "_type": "request_group"
-    },
-    {
-      "_id": "fld_5ytykjmymfo0e10clh7vp8er",
-      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "name": "Role Permissions",
-      "description": "",
-      "environment": {},
-      "metaSortKey": -1,
-      "_type": "request_group"
-    },
-    {
-      "_id": "req_luyy2cqx3zmd90z9ttr02t39",
-      "parentId": "fld_njb7w5x18d5j2ujg7vxge3b7",
+      "_id": "req_auth_register",
+      "parentId": "fld_auth",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/auth/register",
@@ -174,7 +69,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"full_name\": \"Ahmed Ali\",\n  \"email\": \"ahmed@test.com\",\n  \"password\": \"Test@123456\"\n}"
+        "text": "{\n  \"firstName\": \"Ahmed\",\n  \"lastName\": \"Ali\",\n  \"email\": \"ahmed@test.com\",\n  \"password\": \"Test@123456\",\n  \"companyName\": \"Test Company LLC\",\n  \"countryCode\": \"AE\",\n  \"trn\": \"123456789012345\",\n  \"phone\": \"+971501234567\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -186,21 +81,15 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_n7d3tmbydpwtwd52ulvdxqom",
-      "parentId": "fld_njb7w5x18d5j2ujg7vxge3b7",
+      "_id": "req_auth_login",
+      "parentId": "fld_auth",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/auth/login",
-      "name": "Login (sets access_token)",
+      "name": "Login",
       "description": "",
       "method": "POST",
       "body": {
@@ -218,20 +107,13 @@
       "metaSortKey": -1,
       "isPrivate": false,
       "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global",
       "scripts": {
-        "preRequest": "",
-        "afterResponse": "const code = insomnia.response.code;\nif (code >= 200 && code < 300) {\n  const body = insomnia.response.json();\n\n  // Try common shapes:\n  // 1) { accessToken: \"...\" }\n  // 2) { access_token: \"...\" }\n  // 3) { data: { accessToken: \"...\" } }\n  // 4) { data: { access_token: \"...\" } }\n  const token =\n    body?.accessToken ??\n    body?.access_token ??\n    body?.data?.accessToken ??\n    body?.data?.access_token;\n\n  if (token) {\n    insomnia.environment.set(\"access_token\", token);\n    console.log(\"\u2705 access_token saved to environment\");\n  } else {\n    console.log(\"\u26a0\ufe0f Token not found in response:\", body);\n  }\n\n  // Optional helpers (only set if present)\n  const companyId = body?.companyId ?? body?.company_id ?? body?.data?.companyId ?? body?.data?.company_id;\n  const userId = body?.userId ?? body?.user_id ?? body?.data?.userId ?? body?.data?.user_id;\n\n  if (companyId) insomnia.environment.set(\"company_id\", companyId);\n  if (userId) insomnia.environment.set(\"user_id\", userId);\n} else {\n  console.log(\"\u274c Login failed:\", code, insomnia.response.text());\n}"
+        "afterResponse": "const code = insomnia.response.code;\nif (code >= 200 && code < 300) {\n  try {\n    const body = insomnia.response.json();\n    const token = body?.access_token || body?.accessToken || body?.token;\n    if (token) {\n      insomnia.environment.set('access_token', token);\n      console.log('✅ Access token saved:', token.substring(0, 20) + '...');\n    }\n    \n    // Extract company_id from user object\n    const companyId = body?.user?.companyId || body?.companyId;\n    if (companyId) {\n      insomnia.environment.set('company_id', companyId);\n      console.log('✅ Company ID saved:', companyId);\n    }\n    \n    // Extract user_id from user object\n    const userId = body?.user?.id || body?.userId;\n    if (userId) {\n      insomnia.environment.set('user_id', userId);\n      console.log('✅ User ID saved:', userId);\n    }\n    \n    if (!token) {\n      console.log('❌ No token found in response:', JSON.stringify(body));\n    }\n  } catch (e) {\n    console.log('❌ Error parsing response:', e.message);\n  }\n} else {\n  console.log('❌ Login failed with status:', code);\n}"
       }
     },
     {
-      "_id": "req_sh1tvwv9pev7k2ociyzbt7m8",
-      "parentId": "fld_njb7w5x18d5j2ujg7vxge3b7",
+      "_id": "req_auth_profile",
+      "parentId": "fld_auth",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/auth/profile",
@@ -249,17 +131,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_0qf69acfbv6pg1l3wg6j6g40",
-      "parentId": "fld_njb7w5x18d5j2ujg7vxge3b7",
+      "_id": "req_auth_forgot_password",
+      "parentId": "fld_auth",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/auth/forgot-password",
@@ -280,17 +156,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_avs167zqnxjv8n0u1wgp5te2",
-      "parentId": "fld_njb7w5x18d5j2ujg7vxge3b7",
+      "_id": "req_auth_reset_password",
+      "parentId": "fld_auth",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/auth/reset-password",
@@ -311,17 +181,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_wkp7t8f2i2cxz04968ew6anc",
-      "parentId": "fld_njb7w5x18d5j2ujg7vxge3b7",
+      "_id": "req_auth_change_password",
+      "parentId": "fld_auth",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/auth/change-password",
@@ -346,17 +210,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_twg3ufeuufr388z5ozs2cmlo",
-      "parentId": "fld_njb7w5x18d5j2ujg7vxge3b7",
+      "_id": "req_auth_logout",
+      "parentId": "fld_auth",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/auth/logout",
@@ -374,17 +232,22 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_iw709zp22f5ylu532wiugk3y",
-      "parentId": "fld_jh0g2xyv4x8yyunrs1l0hpsz",
+      "_id": "fld_users",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-14T18:55:51Z",
+      "created": "2025-12-14T18:55:51Z",
+      "name": "Users",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_users_create",
+      "parentId": "fld_users",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/users",
@@ -393,7 +256,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"full_name\": \"John Doe\",\n  \"email\": \"john@test.com\",\n  \"password\": \"Test@123456\"\n}"
+        "text": "{\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"email\": \"john@test.com\",\n  \"password\": \"Test@123456\",\n  \"role\": \"staff\",\n  \"phone\": \"+971501234568\",\n  \"preferredLanguage\": \"en\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -409,25 +272,28 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_gskna7fv926jpi3ku2q0gzja",
-      "parentId": "fld_jh0g2xyv4x8yyunrs1l0hpsz",
+      "_id": "req_users_list",
+      "parentId": "fld_users",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/users",
-      "name": "Get Users",
+      "name": "List Users",
       "description": "",
       "method": "GET",
       "body": {},
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "role",
+          "value": ""
+        },
+        {
+          "name": "search",
+          "value": ""
+        }
+      ],
       "headers": [
         {
           "name": "Authorization",
@@ -437,49 +303,15 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_jn5mranhclt4dozbmqc65b6o",
-      "parentId": "fld_jh0g2xyv4x8yyunrs1l0hpsz",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/users/statistics",
-      "name": "Get User Statistics",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_bispbx7gpgl4socj84zufmr8",
-      "parentId": "fld_jh0g2xyv4x8yyunrs1l0hpsz",
+      "_id": "req_users_get",
+      "parentId": "fld_users",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/users/{{ user_id }}",
-      "name": "Get User by ID",
+      "name": "Get User",
       "description": "",
       "method": "GET",
       "body": {},
@@ -493,17 +325,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_5zgg71vr0pbhvpl7x56vuesd",
-      "parentId": "fld_jh0g2xyv4x8yyunrs1l0hpsz",
+      "_id": "req_users_update",
+      "parentId": "fld_users",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/users/{{ user_id }}",
@@ -512,7 +338,7 @@
       "method": "PATCH",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"full_name\": \"Updated Name\"\n}"
+        "text": "{\n  \"fullName\": \"Updated Name\",\n  \"phone\": \"+971507654321\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -528,17 +354,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_j7e8id5ginl3phyofzc32era",
-      "parentId": "fld_jh0g2xyv4x8yyunrs1l0hpsz",
+      "_id": "req_users_delete",
+      "parentId": "fld_users",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/users/{{ user_id }}",
@@ -556,23 +376,17 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_dtvm0t7950c3d75rfkhre7rg",
-      "parentId": "fld_jh0g2xyv4x8yyunrs1l0hpsz",
+      "_id": "req_users_statistics",
+      "parentId": "fld_users",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/users/{{ user_id }}/restore",
-      "name": "Restore User",
+      "url": "{{ base_url }}/users/statistics",
+      "name": "User Statistics",
       "description": "",
-      "method": "PATCH",
+      "method": "GET",
       "body": {},
       "parameters": [],
       "headers": [
@@ -584,17 +398,22 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_482f3rjdh03g82gcjrl0vma2",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
+      "_id": "fld_companies",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-14T18:55:51Z",
+      "created": "2025-12-14T18:55:51Z",
+      "name": "Companies",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_companies_create",
+      "parentId": "fld_companies",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/companies",
@@ -603,7 +422,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"name\": \"Test Company LLC\",\n  \"country_code\": \"AE\",\n  \"currency_code\": \"AED\"\n}"
+        "text": "{\n  \"name\": \"Test Company LLC\",\n  \"countryCode\": \"UAE\",\n  \"currencyCode\": \"AED\",\n  \"vatRate\": 5,\n  \"trn\": \"123456789012345\",\n  \"address\": \"Dubai, UAE\",\n  \"phone\": \"+971501234567\",\n  \"email\": \"info@testcompany.com\"\n}"
       },
       "parameters": [],
       "headers": [
@@ -619,25 +438,24 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_0dexowvbkn50lilsq91m3ojc",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
+      "_id": "req_companies_list",
+      "parentId": "fld_companies",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/companies",
-      "name": "Get Companies",
+      "name": "List Companies",
       "description": "",
       "method": "GET",
       "body": {},
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "activeOnly",
+          "value": "true"
+        }
+      ],
       "headers": [
         {
           "name": "Authorization",
@@ -647,105 +465,15 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_o3nq15x8gy4niuwmngsub49f",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/companies/statistics",
-      "name": "Get Company Statistics",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_3sc34ycg7qikcoc6coj9ceoy",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/companies/country/AE",
-      "name": "Get Companies by Country",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_a533sw44ytjhbxdj2bgq04bj",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/companies/{{ company_id }}/stats",
-      "name": "Get Company Stats",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_7c6gqbhrdymv0onkz8zftcsp",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
+      "_id": "req_companies_get",
+      "parentId": "fld_companies",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/companies/{{ company_id }}",
-      "name": "Get Company by ID",
+      "name": "Get Company",
       "description": "",
       "method": "GET",
       "body": {},
@@ -759,17 +487,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_njkz7ftcuor2a7qpq2v7s7su",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
+      "_id": "req_companies_update",
+      "parentId": "fld_companies",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/companies/{{ company_id }}",
@@ -778,7 +500,7 @@
       "method": "PATCH",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"name\": \"Updated Company Name\"\n}"
+        "text": "{\n  \"name\": \"Updated Company Name\",\n  \"phone\": \"+971507654321\",\n  \"vatRate\": 5\n}"
       },
       "parameters": [],
       "headers": [
@@ -794,73 +516,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_edwfttpmxnnpzmcq34f7t7qx",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/companies/{{ company_id }}/deactivate",
-      "name": "Deactivate Company",
-      "description": "",
-      "method": "PATCH",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_2sg9an312abmpewkkehdw8df",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/companies/{{ company_id }}/activate",
-      "name": "Activate Company",
-      "description": "",
-      "method": "PATCH",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_bvpyzlvbus4woyw92b5khfy1",
-      "parentId": "fld_08rduotz2dvt3tjmh0cfu08h",
+      "_id": "req_companies_delete",
+      "parentId": "fld_companies",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/companies/{{ company_id }}",
@@ -878,17 +538,22 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_crv54i2pqe7czfu7f0dl444k",
-      "parentId": "fld_h97jou3wlfoqnjythwkhgtdv",
+      "_id": "fld_constants",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-14T18:55:51Z",
+      "created": "2025-12-14T18:55:51Z",
+      "name": "Constants",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_constants_create",
+      "parentId": "fld_constants",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/constants",
@@ -897,7 +562,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"code\": \"C-0001\",\n  \"name\": \"Demo Customer\",\n  \"type\": \"customer\",\n  \"email\": \"customer@test.com\"\n}"
+        "text": "{\n  \"code\": \"C-0001\",\n  \"name\": \"Demo Customer\",\n  \"type\": \"customer\",\n  \"email\": \"customer@test.com\",\n  \"phone\": \"+971501234569\",\n  \"address\": \"Dubai, UAE\",\n  \"taxRegistrationNo\": \"123456789012345\",\n  \"creditLimit\": 10000,\n  \"paymentTerms\": 30\n}"
       },
       "parameters": [],
       "headers": [
@@ -913,25 +578,24 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_v1i4jq90h0tkloox4jv865yx",
-      "parentId": "fld_h97jou3wlfoqnjythwkhgtdv",
+      "_id": "req_constants_list",
+      "parentId": "fld_constants",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/constants",
-      "name": "Get Constants",
+      "name": "List Constants",
       "description": "",
       "method": "GET",
       "body": {},
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "type",
+          "value": "customer"
+        }
+      ],
       "headers": [
         {
           "name": "Authorization",
@@ -941,21 +605,15 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_h09ys36fwugfqu461pcr80f8",
-      "parentId": "fld_h97jou3wlfoqnjythwkhgtdv",
+      "_id": "req_constants_get",
+      "parentId": "fld_constants",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/constants/{{ constant_id }}",
-      "name": "Get Constant by ID",
+      "name": "Get Constant",
       "description": "",
       "method": "GET",
       "body": {},
@@ -969,17 +627,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_d6m218updsb7onvngcnzukmo",
-      "parentId": "fld_h97jou3wlfoqnjythwkhgtdv",
+      "_id": "req_constants_update",
+      "parentId": "fld_constants",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/constants/{{ constant_id }}",
@@ -988,7 +640,7 @@
       "method": "PATCH",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"name\": \"Updated Constant Name\"\n}"
+        "text": "{\n  \"name\": \"Updated Constant Name\",\n  \"creditLimit\": 15000\n}"
       },
       "parameters": [],
       "headers": [
@@ -1004,17 +656,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_woof04n39w9r0uyj3noq7vhm",
-      "parentId": "fld_h97jou3wlfoqnjythwkhgtdv",
+      "_id": "req_constants_delete",
+      "parentId": "fld_constants",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/constants/{{ constant_id }}",
@@ -1032,17 +678,22 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_x3ihgwaekk9z5xbsi797z4af",
-      "parentId": "fld_ewos5u11eacynwth25iw4fbu",
+      "_id": "fld_invoices",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-14T18:55:51Z",
+      "created": "2025-12-14T18:55:51Z",
+      "name": "Invoices",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_invoices_create",
+      "parentId": "fld_invoices",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/invoices",
@@ -1051,7 +702,7 @@
       "method": "POST",
       "body": {
         "mimeType": "application/json",
-        "text": "{\n  \"invoice_type\": \"sales\",\n  \"invoice_date\": \"2025-12-14\",\n  \"due_date\": \"2026-01-13\",\n  \"party_id\": \"{{ constant_id }}\",\n  \"currency_code\": \"AED\",\n  \"subtotal\": 100,\n  \"tax_amount\": 5,\n  \"total_amount\": 105,\n  \"lines\": [\n    {\n      \"description\": \"Service\",\n      \"quantity\": 1,\n      \"unit_price\": 100,\n      \"line_total\": 100\n    }\n  ]\n}"
+        "text": "{\n  \"customerId\": \"{{ constant_id }}\",\n  \"invoiceType\": \"full\",\n  \"vatRate\": 5,\n  \"currencyCode\": \"AED\",\n  \"dueDate\": \"2025-01-15\",\n  \"supplyDate\": \"2025-12-14\",\n  \"notes\": \"Test invoice\",\n  \"paymentMethod\": \"cash\",\n  \"invoiceItems\": [\n    {\n      \"description\": \"Service 1\",\n      \"quantity\": 1,\n      \"unitPrice\": 1000,\n      \"vatRate\": 5\n    }\n  ]\n}"
       },
       "parameters": [],
       "headers": [
@@ -1067,21 +718,42 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_0dzoemqcvzxb3de71cgr366w",
-      "parentId": "fld_ewos5u11eacynwth25iw4fbu",
+      "_id": "req_invoices_list",
+      "parentId": "fld_invoices",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/invoices",
-      "name": "Get Invoices",
+      "name": "List Invoices",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "status",
+          "value": ""
+        }
+      ],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_invoices_get",
+      "parentId": "fld_invoices",
+      "modified": "2025-12-14T18:55:51Z",
+      "created": "2025-12-14T18:55:51Z",
+      "url": "{{ base_url }}/invoices/{{ invoice_id }}",
+      "name": "Get Invoice",
       "description": "",
       "method": "GET",
       "body": {},
@@ -1095,21 +767,44 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_wzx9d6fodwoc0ch466vqwsyn",
-      "parentId": "fld_ewos5u11eacynwth25iw4fbu",
+      "_id": "req_invoices_update",
+      "parentId": "fld_invoices",
+      "modified": "2025-12-14T18:55:51Z",
+      "created": "2025-12-14T18:55:51Z",
+      "url": "{{ base_url }}/invoices/{{ invoice_id }}",
+      "name": "Update Invoice",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"notes\": \"Updated invoice notes\",\n  \"paymentMethod\": \"bank_transfer\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_invoices_statistics",
+      "parentId": "fld_invoices",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/invoices/statistics",
-      "name": "Get Invoice Statistics",
+      "name": "Invoice Statistics",
       "description": "",
       "method": "GET",
       "body": {},
@@ -1123,17 +818,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_94mw8as2t9sewot2821ykoic",
-      "parentId": "fld_ewos5u11eacynwth25iw4fbu",
+      "_id": "req_invoices_generate_number",
+      "parentId": "fld_invoices",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/invoices/generate-number",
@@ -1151,84 +840,15 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_z4ej5f76kagmfq0l1qrh58sa",
-      "parentId": "fld_ewos5u11eacynwth25iw4fbu",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/invoices/{{ invoice_id }}",
-      "name": "Get Invoice by ID",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_d90l8qm60q5z47u5y9vajea5",
-      "parentId": "fld_ewos5u11eacynwth25iw4fbu",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/invoices/{{ invoice_id }}",
-      "name": "Update Invoice",
-      "description": "",
-      "method": "PATCH",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n  \"status\": \"issued\"\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_y70dsxij1wq2zelsq3azmxd1",
-      "parentId": "fld_ewos5u11eacynwth25iw4fbu",
+      "_id": "req_invoices_mark_sent",
+      "parentId": "fld_invoices",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/invoices/{{ invoice_id }}/send",
-      "name": "Send Invoice",
+      "name": "Mark Invoice as Sent",
       "description": "",
       "method": "PATCH",
       "body": {},
@@ -1242,17 +862,11 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_bbbrc57zu3qcwf924a2riyjr",
-      "parentId": "fld_ewos5u11eacynwth25iw4fbu",
+      "_id": "req_invoices_mark_paid",
+      "parentId": "fld_invoices",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
       "url": "{{ base_url }}/invoices/{{ invoice_id }}/paid",
@@ -1270,342 +884,41 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_nm2e0dckm8lciregskz13y8o",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
+      "_id": "fld_reports",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/vat?startDate=2025-12-01&endDate=2025-12-31",
+      "name": "Reports",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_reports_vat",
+      "parentId": "fld_reports",
+      "modified": "2025-12-14T18:55:51Z",
+      "created": "2025-12-14T18:55:51Z",
+      "url": "{{ base_url }}/reports/vat",
       "name": "VAT Report",
       "description": "",
       "method": "GET",
       "body": {},
-      "parameters": [],
-      "headers": [
+      "parameters": [
         {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_0uegr6bve1h8i44pi3urpq0a",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/profit-loss?startDate=2025-12-01&endDate=2025-12-31",
-      "name": "Profit & Loss",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_ud7e1fevui8cz8ludpcejc4z",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/balance-sheet?date=2025-12-31",
-      "name": "Balance Sheet",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_4fgln8fqut4odcc2m5opstdy",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/cash-flow?startDate=2025-12-01&endDate=2025-12-31",
-      "name": "Cash Flow",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_zzewr93s4etzo49qz2epi7lb",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/customers",
-      "name": "Customers Report",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_bhgocv2u50bopwbvc8swtw4z",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/dashboard/charts",
-      "name": "Dashboard Charts",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_nvamutf4wy3i2hr30vxgy5la",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/expenses/by-category",
-      "name": "Expenses by Category",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_decm4v166ydrsq2obe5botei",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/vat/export/excel?startDate=2025-12-01&endDate=2025-12-31",
-      "name": "Export VAT to Excel",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_m85il9hpcl2tnszk4ehycqiz",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/profit-loss/export/excel?startDate=2025-12-01&endDate=2025-12-31",
-      "name": "Export P&L to Excel",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_45fhj5k0ify2l3vlmnsnadd9",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/balance-sheet/export/excel?date=2025-12-31",
-      "name": "Export Balance Sheet to Excel",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_fueiwkoexetcjlv89ndl3ch9",
-      "parentId": "fld_xyz99ps4997rf04pg6ff5avg",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/reports/expenses/by-category/export/excel",
-      "name": "Export Expenses by Category to Excel",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_p43twflfn6ph4smr4emws3tj",
-      "parentId": "fld_633dszgmm9y9hz879vdcjtg4",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/roles",
-      "name": "Create Role",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n  \"code\": \"manager\",\n  \"name\": \"Manager\"\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
+          "name": "startDate",
+          "value": "2025-01-01"
         },
         {
+          "name": "endDate",
+          "value": "2025-12-31"
+        }
+      ],
+      "headers": [
+        {
           "name": "Authorization",
           "value": "Bearer {{ access_token }}"
         }
@@ -1613,116 +926,28 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_91tbvck2ybrozwn7fao1vxb2",
-      "parentId": "fld_633dszgmm9y9hz879vdcjtg4",
+      "_id": "req_reports_profit_loss",
+      "parentId": "fld_reports",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/roles",
-      "name": "Get Roles",
+      "url": "{{ base_url }}/reports/profit-loss",
+      "name": "Profit & Loss Report",
       "description": "",
       "method": "GET",
       "body": {},
-      "parameters": [],
-      "headers": [
+      "parameters": [
         {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_0bqrpuikrd9666ui3l7tnbse",
-      "parentId": "fld_633dszgmm9y9hz879vdcjtg4",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/roles/{{ role_id }}",
-      "name": "Get Role by ID",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_vl8zo3r2ckwk5qo7klffwco6",
-      "parentId": "fld_633dszgmm9y9hz879vdcjtg4",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/roles/{{ role_id }}",
-      "name": "Update Role",
-      "description": "",
-      "method": "PATCH",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n  \"name\": \"Updated Role\"\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
+          "name": "startDate",
+          "value": "2025-01-01"
         },
         {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
+          "name": "endDate",
+          "value": "2025-12-31"
         }
       ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_47ccoait4vprstfivzndfonr",
-      "parentId": "fld_633dszgmm9y9hz879vdcjtg4",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/roles/{{ role_id }}",
-      "name": "Delete Role",
-      "description": "",
-      "method": "DELETE",
-      "body": {},
-      "parameters": [],
       "headers": [
         {
           "name": "Authorization",
@@ -1732,60 +957,24 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     },
     {
-      "_id": "req_sbrpviqnycz2jp4hkfevyrxu",
-      "parentId": "fld_ewi1kr9u3564ih1ka0lvq9sx",
+      "_id": "req_reports_balance_sheet",
+      "parentId": "fld_reports",
       "modified": "2025-12-14T18:55:51Z",
       "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/permissions",
-      "name": "Create Permission",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n  \"code\": \"invoices:read\",\n  \"description\": \"Read invoices\"\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_d7jkvzq26r9ic9y9uf6lovnt",
-      "parentId": "fld_ewi1kr9u3564ih1ka0lvq9sx",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/permissions",
-      "name": "Get Permissions",
+      "url": "{{ base_url }}/reports/balance-sheet",
+      "name": "Balance Sheet Report",
       "description": "",
       "method": "GET",
       "body": {},
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "asOfDate",
+          "value": "2025-12-31"
+        }
+      ],
       "headers": [
         {
           "name": "Authorization",
@@ -1795,454 +984,7 @@
       "authentication": {},
       "metaSortKey": -1,
       "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_n6s118z3r5ylcki2awx3m9bh",
-      "parentId": "fld_ewi1kr9u3564ih1ka0lvq9sx",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/permissions/{{ permission_id }}",
-      "name": "Get Permission by ID",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_4nv571iy069xect83hh8xsd9",
-      "parentId": "fld_ewi1kr9u3564ih1ka0lvq9sx",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/permissions/{{ permission_id }}",
-      "name": "Update Permission",
-      "description": "",
-      "method": "PATCH",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n  \"description\": \"Updated permission\"\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_3esncjhil8s512waav5uxztq",
-      "parentId": "fld_ewi1kr9u3564ih1ka0lvq9sx",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/permissions/{{ permission_id }}",
-      "name": "Delete Permission",
-      "description": "",
-      "method": "DELETE",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_gpu6stblfng3ljocg59u66ur",
-      "parentId": "fld_5ytykjmymfo0e10clh7vp8er",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/role-permissions/assign",
-      "name": "Assign Permission",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n  \"roleId\": \"{{ role_id }}\",\n  \"permissionId\": \"{{ permission_id }}\"\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_6eksctanma8ifvcqgiarn8ye",
-      "parentId": "fld_5ytykjmymfo0e10clh7vp8er",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/role-permissions/assign-multiple/{{ role_id }}",
-      "name": "Assign Multiple",
-      "description": "",
-      "method": "POST",
-      "body": {
-        "mimeType": "application/json",
-        "text": "{\n  \"permissionIds\": [\n    \"{{ permission_id }}\"\n  ]\n}"
-      },
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Content-Type",
-          "value": "application/json"
-        },
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_6p4irf5f3r2kyeodfozl80sz",
-      "parentId": "fld_5ytykjmymfo0e10clh7vp8er",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/role-permissions/{{ role_id }}/{{ permission_id }}",
-      "name": "Remove Permission",
-      "description": "",
-      "method": "DELETE",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_rxex7z7sl7lw3nc0zt2lch01",
-      "parentId": "fld_5ytykjmymfo0e10clh7vp8er",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/role-permissions/role/{{ role_id }}/all",
-      "name": "Remove All Permissions",
-      "description": "",
-      "method": "DELETE",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_dssi541zg9vfibhcy2v8j8ka",
-      "parentId": "fld_5ytykjmymfo0e10clh7vp8er",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/role-permissions/role/{{ role_id }}",
-      "name": "Get Role Permissions",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_ruefma1spspnk9xhbzd4tv4c",
-      "parentId": "fld_5ytykjmymfo0e10clh7vp8er",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/role-permissions/permission/{{ permission_id }}",
-      "name": "Get Permission Roles",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_vtt5cu0h1u3ie4lg4oywl95n",
-      "parentId": "fld_9he0yh4a1zgchf7p5nq62hgy",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/audit-logs",
-      "name": "Get Audit Logs",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_qjvhzrdmo77d4zgugbdt5ykr",
-      "parentId": "fld_9he0yh4a1zgchf7p5nq62hgy",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/audit-logs/statistics",
-      "name": "Get Audit Log Statistics",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_pzn7ngpdt13qe416j5fpl1a5",
-      "parentId": "fld_9he0yh4a1zgchf7p5nq62hgy",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/audit-logs/by-date-range?startDate=2025-12-01&endDate=2025-12-31",
-      "name": "Get Audit Logs by Date Range",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_kdg2ver3i90o7n0ez3tb9f5g",
-      "parentId": "fld_9he0yh4a1zgchf7p5nq62hgy",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/audit-logs/by-user/{{ user_id }}",
-      "name": "Get Audit Logs by User",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_aus6z0hy0nu3tdn4ip5bms7m",
-      "parentId": "fld_9he0yh4a1zgchf7p5nq62hgy",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/audit-logs/entity/{{ entityType }}/{{ entityId }}",
-      "name": "Get Audit Logs by Entity",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
-    },
-    {
-      "_id": "req_6w08o0pcjt2f46oakcsemke3",
-      "parentId": "fld_9he0yh4a1zgchf7p5nq62hgy",
-      "modified": "2025-12-14T18:55:51Z",
-      "created": "2025-12-14T18:55:51Z",
-      "url": "{{ base_url }}/audit-logs/{{ audit_log_id }}",
-      "name": "Get Audit Log by ID",
-      "description": "",
-      "method": "GET",
-      "body": {},
-      "parameters": [],
-      "headers": [
-        {
-          "name": "Authorization",
-          "value": "Bearer {{ access_token }}"
-        }
-      ],
-      "authentication": {},
-      "metaSortKey": -1,
-      "isPrivate": false,
-      "_type": "request",
-      "settingStoreCookies": true,
-      "settingSendCookies": true,
-      "settingDisableRenderRequestBody": false,
-      "settingEncodeUrl": true,
-      "settingRebuildPath": true,
-      "settingFollowRedirects": "global"
+      "_type": "request"
     }
   ]
 }
