@@ -1,25 +1,28 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Query, UseGuards } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query, UseGuards, Request } from '@nestjs/common';
 import { ConstantService } from '../services/constant.service';
 import { CreateConstantDto, UpdateConstantDto } from '../dto';
-import { CompanyContext } from '../../../common/decorators/company-context.decorator';
+import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
 
 @Controller('constants')
+@UseGuards(JwtAuthGuard)
 export class ConstantController {
   constructor(private readonly constantService: ConstantService) {}
 
   @Post()
   create(
-    @CompanyContext() companyId: string,
+    @Request() req: any,
     @Body() createConstantDto: CreateConstantDto,
   ) {
+    const companyId = req.user?.companyId;
     return this.constantService.create(companyId, createConstantDto);
   }
 
   @Get()
   findAll(
-    @CompanyContext() companyId: string,
+    @Request() req: any,
     @Query('type') type?: string,
   ) {
+    const companyId = req.user?.companyId;
     if (type) {
       return this.constantService.findByType(companyId, type);
     }
@@ -28,26 +31,29 @@ export class ConstantController {
 
   @Get(':id')
   findOne(
-    @CompanyContext() companyId: string,
+    @Request() req: any,
     @Param('id') id: string,
   ) {
+    const companyId = req.user?.companyId;
     return this.constantService.findOne(companyId, id);
   }
 
   @Patch(':id')
   update(
-    @CompanyContext() companyId: string,
+    @Request() req: any,
     @Param('id') id: string,
     @Body() updateConstantDto: UpdateConstantDto,
   ) {
+    const companyId = req.user?.companyId;
     return this.constantService.update(companyId, id, updateConstantDto);
   }
 
   @Delete(':id')
   remove(
-    @CompanyContext() companyId: string,
+    @Request() req: any,
     @Param('id') id: string,
   ) {
+    const companyId = req.user?.companyId;
     return this.constantService.remove(companyId, id);
   }
 }

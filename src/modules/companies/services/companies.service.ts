@@ -128,7 +128,7 @@ export class CompaniesService {
 
   private async validateTrnUniqueness(trn: string, excludeCompanyId?: string): Promise<void> {
     const query = this.companiesRepository.createQueryBuilder('company')
-      .where('company.trn = :trn', { trn });
+      .where('company.taxRegistrationNo = :trn', { trn });
     
     if (excludeCompanyId) {
       query.andWhere('company.id != :excludeCompanyId', { excludeCompanyId });

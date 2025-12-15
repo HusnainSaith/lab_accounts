@@ -28,7 +28,12 @@
         "constant_id": "",
         "invoice_id": "",
         "role_id": "",
-        "permission_id": ""
+        "permission_id": "",
+        "account_id": "",
+        "fiscal_year_id": "",
+        "voucher_type_id": "",
+        "journal_entry_id": "",
+        "invoice_line_id": ""
       },
       "dataPropertyOrder": {
         "&": [
@@ -39,7 +44,12 @@
           "constant_id",
           "invoice_id",
           "role_id",
-          "permission_id"
+          "permission_id",
+          "account_id",
+          "fiscal_year_id",
+          "voucher_type_id",
+          "journal_entry_id",
+          "invoice_line_id"
         ]
       },
       "color": null,
@@ -975,6 +985,798 @@
           "value": "2025-12-31"
         }
       ],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_accounts",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Accounts",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_accounts_create",
+      "parentId": "fld_accounts",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/accounts",
+      "name": "Create Account",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"code\": \"1001\",\n  \"name\": \"Cash in Hand\",\n  \"description\": \"Cash account for daily operations\",\n  \"type\": \"asset\",\n  \"level\": \"4\",\n  \"isPosting\": true,\n  \"openingBalance\": 10000,\n  \"openingBalanceType\": \"debit\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_accounts_list",
+      "parentId": "fld_accounts",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/accounts",
+      "name": "List Accounts",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "type",
+          "value": "asset"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_accounts_chart",
+      "parentId": "fld_accounts",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/accounts/chart",
+      "name": "Chart of Accounts",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_accounts_get",
+      "parentId": "fld_accounts",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/accounts/{{ account_id }}",
+      "name": "Get Account",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_accounts_update",
+      "parentId": "fld_accounts",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/accounts/{{ account_id }}",
+      "name": "Update Account",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Updated Account Name\",\n  \"description\": \"Updated description\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_accounts_delete",
+      "parentId": "fld_accounts",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/accounts/{{ account_id }}",
+      "name": "Delete Account",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_fiscal_years",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Fiscal Years",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_fiscal_years_create",
+      "parentId": "fld_fiscal_years",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/fiscal-years",
+      "name": "Create Fiscal Year",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"yearName\": \"2025\",\n  \"startDate\": \"2025-01-01\",\n  \"endDate\": \"2025-12-31\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_fiscal_years_list",
+      "parentId": "fld_fiscal_years",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/fiscal-years",
+      "name": "List Fiscal Years",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_fiscal_years_current",
+      "parentId": "fld_fiscal_years",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/fiscal-years/current",
+      "name": "Get Current Fiscal Year",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_fiscal_years_close",
+      "parentId": "fld_fiscal_years",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/fiscal-years/{{ fiscal_year_id }}/close",
+      "name": "Close Fiscal Year",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_voucher_types",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Voucher Types",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_voucher_types_create",
+      "parentId": "fld_voucher_types",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/voucher-types",
+      "name": "Create Voucher Type",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"code\": \"JV\",\n  \"name\": \"Journal Voucher\",\n  \"nature\": \"journal\",\n  \"autoNumbering\": true,\n  \"prefix\": \"JV-\",\n  \"requiresApproval\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_voucher_types_list",
+      "parentId": "fld_voucher_types",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/voucher-types",
+      "name": "List Voucher Types",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_journal_entries",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Journal Entries",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_journal_entries_create",
+      "parentId": "fld_journal_entries",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/journal-entries",
+      "name": "Create Journal Entry",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"voucherTypeId\": \"{{ voucher_type_id }}\",\n  \"voucherNo\": \"JV-001\",\n  \"entryDate\": \"2025-12-15\",\n  \"postingDate\": \"2025-12-15\",\n  \"reference\": \"Test Entry\",\n  \"description\": \"Test journal entry\",\n  \"lines\": [\n    {\n      \"accountId\": \"{{ account_id }}\",\n      \"debit\": \"1000\",\n      \"credit\": \"0\",\n      \"description\": \"Debit entry\"\n    },\n    {\n      \"accountId\": \"{{ account_id }}\",\n      \"debit\": \"0\",\n      \"credit\": \"1000\",\n      \"description\": \"Credit entry\"\n    }\n  ]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_journal_entries_list",
+      "parentId": "fld_journal_entries",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/journal-entries",
+      "name": "List Journal Entries",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "status",
+          "value": "draft"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_journal_entries_post",
+      "parentId": "fld_journal_entries",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/journal-entries/{{ journal_entry_id }}/post",
+      "name": "Post Journal Entry",
+      "description": "",
+      "method": "PATCH",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_account_balances",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Account Balances",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_account_balances_list",
+      "parentId": "fld_account_balances",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/account-balances",
+      "name": "List Account Balances",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "period",
+          "value": "2025-12-31"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_account_balances_trial_balance",
+      "parentId": "fld_account_balances",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/account-balances/trial-balance",
+      "name": "Trial Balance",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "period",
+          "value": "2025-12-31"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_invoice_lines",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Invoice Lines",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_invoice_lines_create",
+      "parentId": "fld_invoice_lines",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/invoice-lines",
+      "name": "Create Invoice Line",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"invoiceId\": \"{{ invoice_id }}\",\n  \"lineNo\": 1,\n  \"description\": \"Service Item\",\n  \"quantity\": 2,\n  \"unitPrice\": 500,\n  \"discountPercent\": 0,\n  \"taxPercent\": 5,\n  \"taxAmount\": 50,\n  \"lineTotal\": 1050\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_invoice_lines_by_invoice",
+      "parentId": "fld_invoice_lines",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/invoice-lines/invoice/{{ invoice_id }}",
+      "name": "Get Invoice Lines by Invoice",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_roles",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Roles",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_roles_create",
+      "parentId": "fld_roles",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/roles",
+      "name": "Create Role",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"code\": \"ACCOUNTANT\",\n  \"name\": \"Accountant\",\n  \"isSystem\": false\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_roles_list",
+      "parentId": "fld_roles",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/roles",
+      "name": "List Roles",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_permissions",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Permissions",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_permissions_create",
+      "parentId": "fld_permissions",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/permissions",
+      "name": "Create Permission",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"code\": \"accounts.create\",\n  \"description\": \"Create accounts\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_permissions_list",
+      "parentId": "fld_permissions",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/permissions",
+      "name": "List Permissions",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_role_permissions",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Role Permissions",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_role_permissions_assign",
+      "parentId": "fld_role_permissions",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/role-permissions/assign",
+      "name": "Assign Permission to Role",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"roleId\": \"{{ role_id }}\",\n  \"permissionId\": \"{{ permission_id }}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_role_permissions_list",
+      "parentId": "fld_role_permissions",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/role-permissions/role/{{ role_id }}",
+      "name": "Get Role Permissions",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_audit_logs",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "name": "Audit Logs",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_audit_logs_list",
+      "parentId": "fld_audit_logs",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/audit-logs",
+      "name": "List Audit Logs",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "limit",
+          "value": "50"
+        }
+      ],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_audit_logs_statistics",
+      "parentId": "fld_audit_logs",
+      "modified": "2025-12-15T19:00:00Z",
+      "created": "2025-12-15T19:00:00Z",
+      "url": "{{ base_url }}/audit-logs/statistics",
+      "name": "Audit Logs Statistics",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
       "headers": [
         {
           "name": "Authorization",
