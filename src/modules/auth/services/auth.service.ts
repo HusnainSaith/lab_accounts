@@ -40,11 +40,18 @@ export class AuthService {
     // Update last login
     await this.usersService.updateLastLogin(user.id);
 
+    // Get user's company ID from database query
+    const companyUserResult = await this.dataSource.query(
+      'SELECT company_id FROM company_users WHERE user_id = $1 AND is_active = true LIMIT 1',
+      [user.id]
+    );
+    const companyId = companyUserResult[0]?.company_id;
+
     const jti = crypto.randomUUID();
     const payload = { 
       sub: user.id, 
       email: user.email,
-
+      companyId,
       jti
     };
 
@@ -53,7 +60,8 @@ export class AuthService {
       user: {
         id: user.id,
         fullName: user.fullName,
-        email: user.email
+        email: user.email,
+        companyId
       }
     };
   }

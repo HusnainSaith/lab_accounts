@@ -8,6 +8,7 @@ import {
   Delete,
   UseGuards,
   Query,
+  Request,
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../services/users.service';
@@ -15,7 +16,6 @@ import { CreateUserDto, UpdateUserDto } from '../dto';
 import { RequirePermissions } from '../../../common/decorators/permissions.decorator';
 import { PermissionsGuard } from '../../../common/guards/permissions.guard';
 import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
-import { CompanyContext } from '../../../common/decorators/company-context.decorator';
 import * as crypto from 'crypto';
 
 @Controller('users')
@@ -30,8 +30,9 @@ export class UsersController {
   @RequirePermissions('users.create')
   create(
     @Body() createUserDto: CreateUserDto,
-    @CompanyContext() companyId: string,
+    @Request() req: any,
   ) {
+    const companyId = req.user?.companyId;
     return this.usersService.create({ ...createUserDto, companyId });
   }
 
@@ -39,24 +40,27 @@ export class UsersController {
   @UseGuards(JwtAuthGuard, PermissionsGuard)
   @RequirePermissions('users.read')
   findAll(
-    @CompanyContext() companyId: string,
+    @Request() req: any,
     @Query('role') role?: string,
     @Query('search') search?: string,
   ) {
+    const companyId = req.user?.companyId;
     return this.usersService.findAll(companyId, role, search);
   }
 
   @Get('statistics')
   @UseGuards(JwtAuthGuard, PermissionsGuard)
   @RequirePermissions('users.read')
-  getStatistics(@CompanyContext() companyId: string) {
+  getStatistics(@Request() req: any) {
+    const companyId = req.user?.companyId;
     return this.usersService.getStatistics(companyId);
   }
 
   @Get(':id')
   @UseGuards(JwtAuthGuard, PermissionsGuard)
   @RequirePermissions('users.read')
-  findOne(@Param('id') id: string, @CompanyContext() companyId: string) {
+  findOne(@Param('id') id: string, @Request() req: any) {
+    const companyId = req.user?.companyId;
     return this.usersService.findOneActive(id, companyId);
   }
 
@@ -66,9 +70,9 @@ export class UsersController {
   update(
     @Param('id') id: string,
     @Body() updateUserDto: UpdateUserDto,
-    @CompanyContext() companyId: string,
+    @Request() req: any,
   ) {
-    // First check if user exists and is active
+    const companyId = req.user?.companyId;
     return this.usersService.findOneActive(id, companyId).then(() => {
       return this.usersService.update(id, updateUserDto, companyId);
     });
@@ -77,11 +81,10 @@ export class UsersController {
   @Delete(':id')
   @UseGuards(JwtAuthGuard, PermissionsGuard)
   @RequirePermissions('users.delete')
-  async remove(@Param('id') id: string, @CompanyContext() companyId: string) {
-    // Check if user is owner or regular user
+  async remove(@Param('id') id: string, @Request() req: any) {
+    const companyId = req.user?.companyId;
     const user = await this.usersService.findOneActive(id, companyId);
     
-    // Regular user: Only delete this user
     await this.usersService.remove(id, companyId);
     return { message: 'User deleted successfully' };
   }

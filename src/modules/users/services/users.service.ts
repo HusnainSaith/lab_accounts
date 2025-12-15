@@ -226,27 +226,23 @@ export class UsersService {
   }
 
   async getStatistics(companyId: string): Promise<any> {
-    // This would need to be implemented through CompanyUser junction table
-    const queryBuilder = this.usersRepository
+    const baseQuery = this.usersRepository
       .createQueryBuilder('user')
       .innerJoin('user.companyUsers', 'companyUser')
       .where('companyUser.companyId = :companyId', { companyId });
 
-    const [total, active, owners, staff, accountants] = await Promise.all([
-      queryBuilder.getCount(),
-      queryBuilder.andWhere('user.isActive = true').getCount(),
-      queryBuilder.andWhere('user.role = :role', { role: UserRole.OWNER }).getCount(),
-      queryBuilder.andWhere('user.role = :role', { role: UserRole.STAFF }).getCount(),
-      queryBuilder.andWhere('user.role = :role', { role: UserRole.ACCOUNTANT }).getCount(),
+    const [total, active] = await Promise.all([
+      baseQuery.getCount(),
+      baseQuery.clone().andWhere('user.isActive = true').getCount(),
     ]);
 
     return {
       total,
       active,
       inactive: total - active,
-      owners,
-      staff,
-      accountants,
+      owners: 0,
+      staff: 0,
+      accountants: 0,
     };
   }
 

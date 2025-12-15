@@ -16,8 +16,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   async validate(payload: {
     sub: string;
     email: string;
-    companyId: string;
-    role: string;
+    companyId?: string;
+    role?: string;
     jti?: string;
   }) {
     console.log('JWT Strategy - Payload:', payload);
@@ -31,8 +31,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
       id: user.id,
       email: user.email,
       companyId: payload.companyId,
-      role: payload.role,
-      roles: [payload.role], // Convert single role to array
+      role: payload.role || (user as any).role,
+      roles: [payload.role || (user as any).role], // Convert single role to array
     };
     console.log('JWT Strategy - Returning user:', result);
     return result;
