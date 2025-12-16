@@ -4,6 +4,10 @@ import { UserRole, UserLanguage } from '../entities/user.entity';
 export class UpdateUserDto {
   @IsOptional()
   @IsString()
+  fullName?: string;
+
+  @IsOptional()
+  @IsString()
   firstName?: string;
 
   @IsOptional()
@@ -17,18 +21,6 @@ export class UpdateUserDto {
   @IsOptional()
   @IsString()
   password?: string;
-
-  @IsOptional()
-  @IsEnum(UserRole)
-  role?: UserRole;
-
-  @IsOptional()
-  @IsString()
-  phone?: string;
-
-  @IsOptional()
-  @IsEnum(UserLanguage)
-  preferredLanguage?: UserLanguage;
 
   @IsOptional()
   @IsBoolean()

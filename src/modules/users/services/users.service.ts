@@ -20,7 +20,7 @@ export class UsersService {
   ): Promise<User> {
     const hashedPassword = await bcrypt.hash(createUserDto.password, 10);
 
-    // Map old fields to new schema
+    // Map fields to User entity schema
     const userData: any = {
       fullName: createUserDto.firstName && createUserDto.lastName 
         ? `${createUserDto.firstName} ${createUserDto.lastName}` 
@@ -28,12 +28,6 @@ export class UsersService {
       email: createUserDto.email,
       passwordHash: hashedPassword,
       isActive: true,
-      // Keep old fields for compatibility
-      firstName: createUserDto.firstName,
-      lastName: createUserDto.lastName,
-      role: createUserDto.role,
-      phone: createUserDto.phone,
-      preferredLanguage: createUserDto.preferredLanguage,
     };
 
     return await this.usersRepository.manager.transaction(async manager => {
@@ -138,12 +132,14 @@ export class UsersService {
     updateUserDto: UpdateUserDto,
     companyId?: string,
   ): Promise<User> {
-    const where: any = { id };
-    if (companyId) {
-      where.companyId = companyId;
-    }
-
     const updateData: any = { ...updateUserDto };
+
+    // Transform firstName/lastName to fullName if provided
+    if (updateUserDto.firstName || updateUserDto.lastName) {
+      updateData.fullName = `${updateUserDto.firstName || ''} ${updateUserDto.lastName || ''}`.trim();
+      delete updateData.firstName;
+      delete updateData.lastName;
+    }
 
     // Hash password if provided
     if (updateUserDto.password) {
@@ -151,7 +147,7 @@ export class UsersService {
       delete updateData.password;
     }
 
-    const result = await this.usersRepository.update(where, updateData);
+    const result = await this.usersRepository.update({ id }, updateData);
 
     if (result.affected === 0) {
       throw new NotFoundException('User not found');
@@ -165,12 +161,7 @@ export class UsersService {
   }
 
   async remove(id: string, companyId?: string): Promise<void> {
-    const where: any = { id };
-    if (companyId) {
-      where.companyId = companyId;
-    }
-
-    const result = await this.usersRepository.update(where, {
+    const result = await this.usersRepository.update({ id }, {
       isActive: false,
     });
 
@@ -247,12 +238,7 @@ export class UsersService {
   }
 
   async restore(id: string, companyId?: string): Promise<User> {
-    const where: any = { id };
-    if (companyId) {
-      where.companyId = companyId;
-    }
-
-    const result = await this.usersRepository.update(where, { isActive: true });
+    const result = await this.usersRepository.update({ id }, { isActive: true });
 
     if (result.affected === 0) {
       throw new NotFoundException('User not found');
