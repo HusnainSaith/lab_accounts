@@ -2,6 +2,9 @@ import { Injectable, ConflictException, NotFoundException } from '@nestjs/common
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Company } from '../entities/company.entity';
+import { CompanyUser } from '../entities/company-user.entity';
+import { UserRole } from '../../users/entities/user-role.entity';
+import { Role } from '../../roles/entities/role.entity';
 import { CreateCompanyDto, UpdateCompanyDto } from '../dto';
 
 @Injectable()
@@ -9,9 +12,15 @@ export class CompaniesService {
   constructor(
     @InjectRepository(Company)
     private companiesRepository: Repository<Company>,
+    @InjectRepository(CompanyUser)
+    private companyUsersRepository: Repository<CompanyUser>,
+    @InjectRepository(UserRole)
+    private userRolesRepository: Repository<UserRole>,
+    @InjectRepository(Role)
+    private rolesRepository: Repository<Role>,
   ) {}
 
-  async create(createCompanyDto: CreateCompanyDto): Promise<Company> {
+  async create(createCompanyDto: CreateCompanyDto & { userId?: string }): Promise<Company> {
     // Validate company name uniqueness
     await this.validateCompanyNameUniqueness(createCompanyDto.name);
     
@@ -20,8 +29,40 @@ export class CompaniesService {
       await this.validateTrnUniqueness(createCompanyDto.trn);
     }
     
-    const company = this.companiesRepository.create(createCompanyDto);
-    return this.companiesRepository.save(company);
+    return await this.companiesRepository.manager.transaction(async manager => {
+      // Create company
+      const company = manager.create(Company, createCompanyDto);
+      const savedCompany = await manager.save(company);
+      
+      // Associate user with company and assign OWNER role if userId provided
+      if (createCompanyDto.userId) {
+        // Create company-user association
+        const companyUser = manager.create(CompanyUser, {
+          companyId: savedCompany.id,
+          userId: createCompanyDto.userId,
+          isActive: true,
+        });
+        await manager.save(companyUser);
+        
+        // Find OWNER role using query builder
+        const ownerRole = await manager.createQueryBuilder(Role, 'role')
+          .where('role.code = :code', { code: 'OWNER' })
+          .andWhere('role.companyId IS NULL')
+          .getOne();
+        
+        if (ownerRole) {
+          // Assign OWNER role to user
+          const userRole = manager.create(UserRole, {
+            companyId: savedCompany.id,
+            userId: createCompanyDto.userId,
+            roleId: ownerRole.id,
+          });
+          await manager.save(userRole);
+        }
+      }
+      
+      return savedCompany;
+    });
   }
 
   async findAll(activeOnly: boolean = true): Promise<Company[]> {

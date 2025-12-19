@@ -13,7 +13,7 @@ export class InvoicesService {
   ) {}
 
   async create(createInvoiceDto: CreateInvoiceDto, userId: string): Promise<Invoice> {
-    const { invoiceItems, ...invoiceData } = createInvoiceDto;
+    const { invoiceItems, customerId, ...invoiceData } = createInvoiceDto;
     
     // Generate invoice number if not provided
     if (!invoiceData.invoiceNumber) {
@@ -33,17 +33,27 @@ export class InvoicesService {
 
     const totalAmount = subtotal + vatAmount - (createInvoiceDto.discountAmount || 0);
 
+    // Get company ID from current context (RLS should provide this)
+    const company = await this.invoicesRepository.manager
+      .createQueryBuilder()
+      .select('id')
+      .from('companies', 'company')
+      .getRawOne();
+
     const invoice = this.invoicesRepository.create({
       ...invoiceData,
+      companyId: company?.id,
+      partyId: customerId, // Map customerId to partyId
       subtotal,
       taxAmount: vatAmount,
+      vatAmount, // Also set vatAmount field
       totalAmount,
       createdBy: userId,
-      invoiceType: InvoiceType.SALES as any, // Default to sales
+      invoiceType: InvoiceType.SALES as any,
       invoiceNo: invoiceData.invoiceNumber,
       invoiceDate: new Date(),
       dueDate: invoiceData.dueDate || new Date(),
-      currencyCode: 'AED', // Default currency
+      currencyCode: invoiceData.currencyCode || 'AED',
     });
 
     const savedInvoice = await this.invoicesRepository.save(invoice);
@@ -63,7 +73,7 @@ export class InvoicesService {
     // RLS will automatically filter by current tenant
     return this.invoicesRepository.find({
       where,
-      relations: ['customer', 'invoiceItems'],
+      relations: ['party'],
       order: { createdAt: 'DESC' }
     });
   }
@@ -72,7 +82,7 @@ export class InvoicesService {
     // RLS will automatically filter by current tenant
     const invoice = await this.invoicesRepository.findOne({
       where: { id },
-      relations: ['customer', 'invoiceItems', 'createdBy', 'company']
+      relations: ['party', 'creator', 'company']
     });
     
     if (!invoice) {
@@ -150,8 +160,8 @@ export class InvoicesService {
     
     const lastInvoice = await this.invoicesRepository
       .createQueryBuilder('invoice')
-      .where('invoice.invoiceNumber LIKE :prefix', { prefix: `${todayPrefix}%` })
-      .orderBy('invoice.invoiceNumber', 'DESC')
+      .where('invoice.invoice_number LIKE :prefix', { prefix: `${todayPrefix}%` })
+      .orderBy('invoice.invoice_number', 'DESC')
       .getOne();
     
     let sequenceNumber = 1;

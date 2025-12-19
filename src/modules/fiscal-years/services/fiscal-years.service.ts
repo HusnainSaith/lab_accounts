@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { FiscalYear } from '../../companies/entities/fiscal-year.entity';
@@ -42,8 +42,13 @@ export class FiscalYearsService {
     });
   }
 
-  update(id: string, updateFiscalYearDto: UpdateFiscalYearDto, companyId: string) {
-    return this.fiscalYearsRepository.update({ id, companyId }, updateFiscalYearDto);
+  async update(id: string, updateFiscalYearDto: UpdateFiscalYearDto, companyId: string): Promise<FiscalYear> {
+    await this.fiscalYearsRepository.update({ id, companyId }, updateFiscalYearDto);
+    const fiscalYear = await this.findOne(id, companyId);
+    if (!fiscalYear) {
+      throw new NotFoundException('Fiscal year not found');
+    }
+    return fiscalYear;
   }
 
   closeFiscalYear(id: string, companyId: string) {

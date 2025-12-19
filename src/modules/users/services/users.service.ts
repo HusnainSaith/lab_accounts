@@ -1,8 +1,10 @@
 import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, Like } from 'typeorm';
-import { User, UserRole } from '../entities/user.entity';
+import { User, UserRole as UserRoleEnum } from '../entities/user.entity';
 import { CompanyUser } from '../../companies/entities/company-user.entity';
+import { UserRole } from '../entities/user-role.entity';
+import { Role } from '../../roles/entities/role.entity';
 import { CreateUserDto, UpdateUserDto } from '../dto';
 import * as bcrypt from 'bcrypt';
 
@@ -13,6 +15,10 @@ export class UsersService {
     private usersRepository: Repository<User>,
     @InjectRepository(CompanyUser)
     private companyUsersRepository: Repository<CompanyUser>,
+    @InjectRepository(UserRole)
+    private userRolesRepository: Repository<UserRole>,
+    @InjectRepository(Role)
+    private rolesRepository: Repository<Role>,
   ) {}
 
   async create(
@@ -44,6 +50,35 @@ export class UsersService {
           isActive: true,
         });
         await manager.save(companyUser);
+
+        // Assign role if provided
+        if (createUserDto.role) {
+          let role = await manager.findOne(Role, {
+            where: {
+              code: createUserDto.role.toUpperCase(),
+              companyId: createUserDto.companyId
+            }
+          });
+          
+          if (!role) {
+            role = await manager.createQueryBuilder(Role, 'role')
+              .where('role.code = :code', { code: createUserDto.role.toUpperCase() })
+              .andWhere('role.companyId IS NULL')
+              .getOne();
+          }
+
+          if (role) {
+            const userRole = manager.create(UserRole, {
+              companyId: createUserDto.companyId,
+              userId: finalUser.id,
+              roleId: role.id,
+            });
+            await manager.save(userRole);
+            
+            // Add role info to returned user
+            (finalUser as any).role = role;
+          }
+        }
       }
 
       return finalUser;
@@ -81,11 +116,23 @@ export class UsersService {
 
     const user = await this.usersRepository.findOne({
       where,
-      relations: ['companyUsers'],
+      relations: ['companyUsers', 'userRoles'],
     });
 
     if (!user) {
       throw new NotFoundException('User not found');
+    }
+
+    // Get role information
+    if (companyId && user.userRoles) {
+      const userRole = await this.userRolesRepository.findOne({
+        where: { userId: id, companyId },
+        relations: ['role']
+      });
+      
+      if (userRole) {
+        (user as any).role = (userRole as any).role;
+      }
     }
 
     return user;
@@ -227,13 +274,57 @@ export class UsersService {
       baseQuery.clone().andWhere('user.isActive = true').getCount(),
     ]);
 
+    // Debug: Check what's in user_roles table
+    const debugUserRoles = await this.usersRepository.manager.query(`
+      SELECT u.full_name, r.code as role_code, ur.company_id
+      FROM users u
+      INNER JOIN company_users cu ON cu.user_id = u.id
+      INNER JOIN user_roles ur ON ur.user_id = u.id
+      INNER JOIN roles r ON r.id = ur.role_id
+      WHERE cu.company_id = $1 AND u.is_active = true
+    `, [companyId]);
+    
+    console.log('Debug - User roles for company:', companyId, debugUserRoles);
+
+    // Count users by roles using direct table joins
+    const roleStats = await this.usersRepository.manager.query(`
+      SELECT r.code as "roleCode", COUNT(*)::int as count
+      FROM users u
+      INNER JOIN company_users cu ON cu.user_id = u.id
+      INNER JOIN user_roles ur ON ur.user_id = u.id AND ur.company_id = $1
+      INNER JOIN roles r ON r.id = ur.role_id
+      WHERE cu.company_id = $1 AND u.is_active = true
+      GROUP BY r.code
+    `, [companyId]);
+    
+    console.log('Debug - Role stats:', roleStats);
+
+    const roleCounts = {
+      owners: 0,
+      staff: 0,
+      accountants: 0,
+    };
+
+    roleStats.forEach(stat => {
+      const count = parseInt(stat.count);
+      switch (stat.roleCode.toUpperCase()) {
+        case 'OWNER':
+          roleCounts.owners = count;
+          break;
+        case 'STAFF':
+          roleCounts.staff = count;
+          break;
+        case 'ACCOUNTANT':
+          roleCounts.accountants = count;
+          break;
+      }
+    });
+
     return {
       total,
       active,
       inactive: total - active,
-      owners: 0,
-      staff: 0,
-      accountants: 0,
+      ...roleCounts,
     };
   }
 

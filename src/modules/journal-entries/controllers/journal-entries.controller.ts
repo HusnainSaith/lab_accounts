@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Query } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Query, Request } from '@nestjs/common';
 import { JournalEntriesService } from '../services/journal-entries.service';
 import { CreateJournalEntryDto, UpdateJournalEntryDto } from '../dto';
 import { RequirePermissions } from '../../../common/decorators/permissions.decorator';
@@ -13,8 +13,8 @@ export class JournalEntriesController {
 
   @Post()
   @RequirePermissions('journal-entries.create')
-  create(@Body() createJournalEntryDto: CreateJournalEntryDto, @CompanyContext() companyId: string) {
-    return this.journalEntriesService.create(createJournalEntryDto, companyId);
+  create(@Body() createJournalEntryDto: CreateJournalEntryDto, @CompanyContext() companyId: string, @Request() req: any) {
+    return this.journalEntriesService.create(createJournalEntryDto, companyId, req.user.id);
   }
 
   @Get()

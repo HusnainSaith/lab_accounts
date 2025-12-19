@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, UseInterceptors, Query } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, UseInterceptors, Query, Request } from '@nestjs/common';
 import { CompaniesService } from '../services/companies.service';
 import { CreateCompanyDto, UpdateCompanyDto } from '../dto';
 import { RequirePermissions } from '../../../common/decorators/permissions.decorator';
@@ -13,8 +13,9 @@ export class CompaniesController {
 
   @Post()
   @RequirePermissions('companies.create')
-  create(@Body() createCompanyDto: CreateCompanyDto) {
-    return this.companiesService.create(createCompanyDto);
+  create(@Body() createCompanyDto: CreateCompanyDto, @Request() req: any) {
+    const userId = req.user?.id;
+    return this.companiesService.create({ ...createCompanyDto, userId });
   }
 
   @Get()
