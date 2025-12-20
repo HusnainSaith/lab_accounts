@@ -12,12 +12,12 @@ export class PermissionsService implements OnModuleInit {
     @InjectRepository(Permission)
     private permissionsRepository: Repository<Permission>,
     private dataSource: DataSource,
-  ) {}
+  ) { }
 
   async onModuleInit() {
     const permissionsSeed = new PermissionsSeed();
     await permissionsSeed.run(this.dataSource);
-    
+
     const assignRolesSeed = new AssignRolesSeed();
     await assignRolesSeed.run(this.dataSource);
   }
@@ -29,40 +29,40 @@ export class PermissionsService implements OnModuleInit {
 
   async findAll(search?: string): Promise<Permission[]> {
     const where: any = {};
-    
+
     if (search) {
-      where.name = Like(`%${search}%`);
+      where.code = Like(`%${search}%`);
     }
 
     return this.permissionsRepository.find({
       where,
-      order: { name: 'ASC' }
+      order: { code: 'ASC' }
     });
   }
 
   async findOne(id: string): Promise<Permission> {
     const permission = await this.permissionsRepository.findOne({ where: { id } });
-    
+
     if (!permission) {
       throw new NotFoundException('Permission not found');
     }
-    
+
     return permission;
   }
 
   async update(id: string, updatePermissionDto: UpdatePermissionDto): Promise<Permission> {
     const result = await this.permissionsRepository.update(id, updatePermissionDto);
-    
+
     if (result.affected === 0) {
       throw new NotFoundException('Permission not found');
     }
-    
+
     return this.findOne(id);
   }
 
   async remove(id: string): Promise<void> {
     const result = await this.permissionsRepository.delete(id);
-    
+
     if (result.affected === 0) {
       throw new NotFoundException('Permission not found');
     }

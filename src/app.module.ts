@@ -1,6 +1,8 @@
 import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
 import { dataSourceOptions } from './config/database.config';
 
 // Feature Modules
@@ -56,7 +58,8 @@ import { RLSMiddleware } from './common/middleware/rls.middleware';
     InvoiceLinesModule,
     AccountBalancesModule,
   ],
-  providers: [RLSService, EncryptionService, RLSMiddleware],
+  controllers: [AppController],
+  providers: [AppService, RLSService, EncryptionService, RLSMiddleware],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {

@@ -1,0 +1,2255 @@
+
+> accounts_backend@0.0.1 test:e2e
+> jest --config ./test/jest-e2e.json
+
+FAIL test/project-flow.e2e-spec.ts (6.946 s)
+  ΓùÅ Console
+
+    console.log
+      query: SELECT version()
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+    console.log
+      query: SELECT * FROM current_schema()
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+    console.log
+      query: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["users.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["users.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["users.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["users.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["roles.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["roles.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["roles.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["roles.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["permissions.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["permissions.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["permissions.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["permissions.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["companies.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["companies.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["companies.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["companies.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["accounts.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["invoices.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["audit.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["system.settings"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["fiscal.close"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["vouchers.approve"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["vouchers.post"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["vouchers.reverse"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      Γ£à Permissions seeded successfully
+
+      at PermissionsSeed.run (../src/database/seeds/permissions.seed.ts:74:15)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["super_admin"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["owner"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["admin"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["accountant"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["user"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","users.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","users.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","users.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","users.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","roles.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","roles.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","roles.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","roles.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","permissions.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","permissions.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","permissions.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","permissions.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","companies.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","companies.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","companies.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","companies.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","accounts.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","invoices.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","audit.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","system.settings"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","fiscal.close"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","vouchers.approve"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","vouchers.post"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","vouchers.reverse"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","users.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","users.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","users.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","users.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","roles.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","roles.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","roles.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","roles.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","permissions.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","companies.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","companies.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","accounts.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","invoices.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","audit.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","system.settings"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","fiscal.close"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","vouchers.approve"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","vouchers.post"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","vouchers.reverse"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","users.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","users.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","users.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","roles.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","permissions.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","companies.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","companies.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","accounts.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","invoices.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["user","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["user","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["user","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      Γ£à Role permissions assigned successfully
+
+      at AssignRolesSeed.run (../src/database/seeds/assign-roles.seed.ts:102:15)
+          at async Promise.all (index 0)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Authentication ΓÇ║ should register a new user
+
+    TypeError: request is not a function
+
+      36 |   describe('Authentication', () => {
+      37 |     it('should register a new user', async () => {
+    > 38 |       const response = await request(app.getHttpServer())
+         |                              ^
+      39 |         .post('/auth/register')
+      40 |         .send({
+      41 |           email: userEmail,
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:38:30)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Authentication ΓÇ║ should login
+
+    TypeError: request is not a function
+
+      53 |
+      54 |     it('should login', async () => {
+    > 55 |       const response = await request(app.getHttpServer())
+         |                              ^
+      56 |         .post('/auth/login')
+      57 |         .send({
+      58 |           email: userEmail,
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:55:30)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Company Management ΓÇ║ should create a new company
+
+    TypeError: request is not a function
+
+      69 |   describe('Company Management', () => {
+      70 |     it('should create a new company', async () => {
+    > 71 |       const response = await request(app.getHttpServer())
+         |                              ^
+      72 |         .post('/companies')
+      73 |         .set('Authorization', `Bearer ${accessToken}`)
+      74 |         .send({
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:71:30)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Company Management ΓÇ║ should get company statistics
+
+    TypeError: request is not a function
+
+      85 |
+      86 |     it('should get company statistics', async () => {
+    > 87 |       await request(app.getHttpServer())
+         |             ^
+      88 |         .get('/companies/statistics')
+      89 |         .set('Authorization', `Bearer ${accessToken}`)
+      90 |         .expect(200);
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:87:13)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Financial Setup ΓÇ║ should create a Bank Account (Asset)
+
+    TypeError: request is not a function
+
+      102 |         // For verify, we'll try to fetch existing chart first or just create one.
+      103 |         // Let's create a "Bank" type account.
+    > 104 |       const response = await request(app.getHttpServer())
+          |                              ^
+      105 |         .post('/accounts')
+      106 |         .set('Authorization', `Bearer ${accessToken}`)
+      107 |         .set('x-company-id', companyId) // If header is used, otherwise usually interceptor uses user's company
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:104:30)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Re-Authentication with Context ΓÇ║ should login again to get company context in token
+
+    TypeError: request is not a function
+
+      135 |       it('should login again to get company context in token', async () => {
+      136 |           // In a real app, 'switch company' endpoint might issue new token, or just login again.
+    > 137 |           const response = await request(app.getHttpServer())
+          |                                  ^
+      138 |             .post('/auth/login')
+      139 |             .send({
+      140 |               email: userEmail,
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:137:34)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Constants (Contacts) ΓÇ║ should create a Customer
+
+    TypeError: request is not a function
+
+      151 |   describe('Constants (Contacts)', () => {
+      152 |       it('should create a Customer', async () => {
+    > 153 |           const response = await request(app.getHttpServer())
+          |                                  ^
+      154 |             .post('/constant')
+      155 |             .set('Authorization', `Bearer ${accessToken}`)
+      156 |             .send({
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:153:34)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Invoicing ΓÇ║ should create a Sales Invoice
+
+    TypeError: request is not a function
+
+      171 |       it('should create a Sales Invoice', async () => {
+      172 |           // We need items
+    > 173 |           const response = await request(app.getHttpServer())
+          |                                  ^
+      174 |             .post('/invoices')
+      175 |             .set('Authorization', `Bearer ${accessToken}`)
+      176 |             .send({
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:173:34)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Invoicing ΓÇ║ should mark invoice as sent
+
+    TypeError: request is not a function
+
+      198 |
+      199 |       it('should mark invoice as sent', async () => {
+    > 200 |            await request(app.getHttpServer())
+          |                  ^
+      201 |             .patch(`/invoices/${invoiceId}/sent`)
+      202 |             .set('Authorization', `Bearer ${accessToken}`)
+      203 |             .expect(200);
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:200:18)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Reports ΓÇ║ should generate a Balance Sheet
+
+    TypeError: request is not a function
+
+      209 |       it('should generate a Balance Sheet', async () => {
+      210 |           const date = new Date().toISOString().split('T')[0];
+    > 211 |           await request(app.getHttpServer())
+          |                 ^
+      212 |             .get('/reports/balance-sheet')
+      213 |             .query({ asOfDate: date })
+      214 |             .set('Authorization', `Bearer ${accessToken}`)
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:211:17)
+
+  ΓùÅ Project Flow (E2E) ΓÇ║ Reports ΓÇ║ should generate Dashboard Charts data
+
+    TypeError: request is not a function
+
+      218 |
+      219 |       it('should generate Dashboard Charts data', async () => {
+    > 220 |           await request(app.getHttpServer())
+          |                 ^
+      221 |             .get('/reports/dashboard/charts')
+      222 |             .query({ months: 6 })
+      223 |             .set('Authorization', `Bearer ${accessToken}`)
+
+      at Object.<anonymous> (project-flow.e2e-spec.ts:220:17)
+
+FAIL test/app.e2e-spec.ts (7.061 s)
+  ΓùÅ Console
+
+    console.log
+      query: SELECT version()
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+    console.log
+      query: SELECT * FROM current_schema()
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+    console.log
+      query: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["users.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["users.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["users.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["users.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["roles.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["roles.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["roles.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["roles.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["permissions.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["permissions.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["permissions.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["permissions.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["companies.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["companies.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["companies.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["companies.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["accounts.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["invoices.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["audit.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["system.settings"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["fiscal.close"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["vouchers.approve"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["vouchers.post"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM permissions WHERE code = $1 -- PARAMETERS: ["vouchers.reverse"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      Γ£à Permissions seeded successfully
+
+      at PermissionsSeed.run (../src/database/seeds/permissions.seed.ts:74:15)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["super_admin"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["owner"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["admin"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["accountant"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT id FROM roles WHERE company_id IS NULL AND code = $1 -- PARAMETERS: ["user"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","users.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","users.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","users.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","users.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","roles.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","roles.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","roles.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","roles.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","permissions.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","permissions.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","permissions.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","permissions.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","companies.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","companies.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","companies.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","companies.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","accounts.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","invoices.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","audit.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","system.settings"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","fiscal.close"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","vouchers.approve"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","vouchers.post"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["super_admin","vouchers.reverse"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","users.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","users.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","users.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","users.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","roles.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","roles.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","roles.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","roles.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","permissions.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","companies.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","companies.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","accounts.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","invoices.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","audit.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","system.settings"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","fiscal.close"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","vouchers.approve"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","vouchers.post"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["owner","vouchers.reverse"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","users.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","users.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","users.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","roles.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","permissions.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","companies.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","companies.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","accounts.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","invoices.delete"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["admin","reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","accounts.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","accounts.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","invoices.create"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","invoices.update"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["accountant","reports.export"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["user","accounts.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["user","invoices.read"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      query: SELECT 1 FROM role_permissions rp
+                   JOIN roles r ON r.id = rp.role_id
+                   JOIN permissions p ON p.id = rp.permission_id
+                   WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2 -- PARAMETERS: ["user","reports.view"]
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+    console.log
+      Γ£à Role permissions assigned successfully
+
+      at AssignRolesSeed.run (../src/database/seeds/assign-roles.seed.ts:102:15)
+          at async Promise.all (index 0)
+
+  ΓùÅ AppController (e2e) ΓÇ║ / (GET)
+
+    expected 200 "OK", got 404 "Not Found"
+
+      20 |     return request(app.getHttpServer())
+      21 |       .get('/')
+    > 22 |       .expect(200)
+         |        ^
+      23 |       .expect('Hello World!');
+      24 |   });
+      25 | });
+
+      at Object.<anonymous> (app.e2e-spec.ts:22:8)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
+Test Suites: 2 failed, 2 total
+Tests:       12 failed, 12 total
+Snapshots:   0 total
+Time:        9.056 s
+Ran all test suites.

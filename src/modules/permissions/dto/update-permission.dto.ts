@@ -4,7 +4,7 @@ export class UpdatePermissionDto {
   @IsOptional()
   @IsString()
   @MinLength(2)
-  name?: string;
+  code?: string;
 
   @IsOptional()
   @IsString()

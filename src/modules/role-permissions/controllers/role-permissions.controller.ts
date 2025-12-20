@@ -1,14 +1,14 @@
 import { Controller, Post, Delete, Get, Body, Param, UseGuards } from '@nestjs/common';
-import { JwtAuthGuard } from 'src/modules/auth/guards/jwt-auth.guard';
-import { RolesGuard } from 'src/common/guards/roles.guard';
-import { Roles } from 'src/common/decorators/roles.decorator';
+import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
+import { RolesGuard } from '../../../common/guards/roles.guard';
+import { Roles } from '../../../common/decorators/roles.decorator';
 import { RolePermissionsService } from '../services/role-permissions.service';
 import { AssignPermissionDto } from '../dto/assign-permission.dto';
 
 @Controller('role-permissions')
 @UseGuards(JwtAuthGuard, RolesGuard)
 export class RolePermissionsController {
-  constructor(private readonly rolePermissionsService: RolePermissionsService) {}
+  constructor(private readonly rolePermissionsService: RolePermissionsService) { }
 
   @Post('assign')
   @Roles('owner')
