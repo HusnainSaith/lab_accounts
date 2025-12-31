@@ -10,11 +10,16 @@ export class RLSMiddleware implements NestMiddleware {
     const user = req.user as any;
     
     if (user?.companyId) {
-      // Set company context for RLS
-      await this.dataSource.query(
-        `SELECT set_config('app.company_id', $1, true)`,
-        [user.companyId]
-      );
+      try {
+        // Set company context for RLS
+        await this.dataSource.query(
+          `SELECT set_config('app.company_id', $1, true)`,
+          [user.companyId]
+        );
+      } catch (error) {
+        console.error('Failed to set RLS context:', error);
+        // Continue without failing the request
+      }
     }
     
     next();

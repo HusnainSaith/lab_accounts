@@ -90,16 +90,22 @@ export class UsersService {
     role?: string,
     search?: string,
   ): Promise<User[]> {
-    // RLS will automatically filter users by company context
-    // We just need to join with company_users to ensure proper filtering
     const queryBuilder = this.usersRepository
       .createQueryBuilder('user')
       .innerJoin('user.companyUsers', 'companyUser')
       .where('user.isActive = :isActive', { isActive: true })
       .andWhere('companyUser.isActive = :companyUserActive', { companyUserActive: true });
 
+    // CRITICAL: Always filter by company context
+    if (companyId) {
+      queryBuilder.andWhere('companyUser.companyId = :companyId', { companyId });
+    }
+
     if (role) {
-      queryBuilder.andWhere('user.role = :role', { role });
+      queryBuilder
+        .leftJoin('user.userRoles', 'userRole')
+        .leftJoin('userRole.role', 'roleEntity')
+        .andWhere('roleEntity.code = :role', { role: role.toUpperCase() });
     }
 
     if (search) {
@@ -112,12 +118,18 @@ export class UsersService {
   }
 
   async findOne(id: string, companyId?: string): Promise<User> {
-    const where: any = { id };
+    const queryBuilder = this.usersRepository
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.companyUsers', 'companyUser')
+      .leftJoinAndSelect('user.userRoles', 'userRole')
+      .where('user.id = :id', { id });
 
-    const user = await this.usersRepository.findOne({
-      where,
-      relations: ['companyUsers', 'userRoles'],
-    });
+    // Filter by company if provided
+    if (companyId) {
+      queryBuilder.andWhere('companyUser.companyId = :companyId', { companyId });
+    }
+
+    const user = await queryBuilder.getOne();
 
     if (!user) {
       throw new NotFoundException('User not found');

@@ -54,3 +54,19 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Playwright Testing
+/test-results/
+/playwright-report/
+/playwright/.auth/
+*.log
+fail_*.log
+last_*.log
+reg_*.log
+e2e_results.txt
+test_output.log
+**/*.trace.zip
+**/trace.zip
+trace*.zip
+*.trace.zip
+trace.zip

@@ -8,10 +8,15 @@ import { Constant } from '../constant/entities/constant.entity';
 import { User } from '../users/entities/user.entity';
 import { Role } from '../roles/entities/role.entity';
 
+import { AccountBalancesModule } from '../account-balances/account-balances.module';
+
 @Module({
-  imports: [TypeOrmModule.forFeature([Invoice, Constant, User, Role])],
+  imports: [
+    TypeOrmModule.forFeature([Invoice, Constant, User, Role]),
+    AccountBalancesModule,
+  ],
   controllers: [ReportsController],
   providers: [ReportsService, ExcelExportService],
   exports: [ReportsService, ExcelExportService],
 })
-export class ReportsModule {}
+export class ReportsModule { }

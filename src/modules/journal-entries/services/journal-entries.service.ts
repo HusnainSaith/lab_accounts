@@ -9,11 +9,11 @@ export class JournalEntriesService {
   constructor(
     @InjectRepository(JournalEntry)
     private journalEntriesRepository: Repository<JournalEntry>,
-  ) {}
+  ) { }
 
   async create(createJournalEntryDto: CreateJournalEntryDto, companyId: string, userId: string) {
     const { lines, ...journalEntryData } = createJournalEntryDto;
-    
+
     // Get current fiscal year
     const currentFiscalYear = await this.journalEntriesRepository.manager
       .createQueryBuilder()
@@ -23,29 +23,33 @@ export class JournalEntriesService {
       .andWhere('fy.start_date <= CURRENT_DATE')
       .andWhere('fy.end_date >= CURRENT_DATE')
       .getRawOne();
-    
+
     if (!currentFiscalYear) {
       throw new BadRequestException('No active fiscal year found');
     }
-    
+
     const journalEntry = this.journalEntriesRepository.create({
       ...journalEntryData,
       companyId,
       fiscalYearId: currentFiscalYear.id,
       createdBy: userId,
+      lines: lines.map((line, index) => ({
+        ...line,
+        lineNo: index + 1,
+      })),
     });
-    
+
     return this.journalEntriesRepository.save(journalEntry);
   }
 
   findAll(companyId: string, status?: string) {
     const query = this.journalEntriesRepository.createQueryBuilder('je')
       .where('je.companyId = :companyId', { companyId });
-    
+
     if (status) {
       query.andWhere('je.status = :status', { status });
     }
-    
+
     return query.orderBy('je.entryDate', 'DESC').getMany();
   }
 
@@ -62,12 +66,19 @@ export class JournalEntriesService {
   }
 
   async update(id: string, updateJournalEntryDto: UpdateJournalEntryDto, companyId: string): Promise<JournalEntry> {
-    await this.journalEntriesRepository.update({ id, companyId }, updateJournalEntryDto);
     const journalEntry = await this.findOne(id, companyId);
     if (!journalEntry) {
       throw new BadRequestException('Journal entry not found');
     }
-    return journalEntry;
+
+    if (journalEntry.posted) {
+      throw new BadRequestException('Cannot update posted journal entry');
+    }
+
+    await this.journalEntriesRepository.update({ id, companyId }, updateJournalEntryDto);
+    const updatedEntry = await this.findOne(id, companyId);
+    if (!updatedEntry) throw new BadRequestException('Journal entry not found after update');
+    return updatedEntry;
   }
 
   postEntry(id: string, companyId: string) {

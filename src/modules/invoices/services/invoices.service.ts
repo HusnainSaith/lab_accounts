@@ -10,25 +10,44 @@ export class InvoicesService {
   constructor(
     @InjectRepository(Invoice)
     private invoicesRepository: Repository<Invoice>,
-  ) {}
+  ) { }
 
   async create(createInvoiceDto: CreateInvoiceDto, userId: string): Promise<Invoice> {
     const { invoiceItems, customerId, ...invoiceData } = createInvoiceDto;
-    
+
     // Generate invoice number if not provided
     if (!invoiceData.invoiceNumber) {
       invoiceData.invoiceNumber = await this.generateInvoiceNumber();
     }
-    
+
     // Calculate totals
     let subtotal = 0;
     let vatAmount = 0;
-    
+
+    const lines: any[] = [];
+    let lineNo = 1;
+
     for (const item of invoiceItems) {
-      const lineTotal = item.quantity * item.unitPrice * (1 - (item.discountPercentage || 0) / 100);
+      const grossAmount = item.quantity * item.unitPrice;
+      const discountAmount = grossAmount * ((item.discountPercentage || 0) / 100);
+      const lineTotal = grossAmount - discountAmount;
       const lineVat = lineTotal * (item.vatRate / 100);
+
       subtotal += lineTotal;
       vatAmount += lineVat;
+
+      lines.push({
+        lineNo: lineNo++,
+        itemId: item.itemId,
+        description: item.description,
+        quantity: item.quantity,
+        unitPrice: item.unitPrice,
+        discountPercent: item.discountPercentage || 0,
+        discountAmount,
+        taxPercent: item.vatRate,
+        taxAmount: lineVat,
+        lineTotal
+      });
     }
 
     const totalAmount = subtotal + vatAmount - (createInvoiceDto.discountAmount || 0);
@@ -54,6 +73,7 @@ export class InvoicesService {
       invoiceDate: new Date(),
       dueDate: invoiceData.dueDate || new Date(),
       currencyCode: invoiceData.currencyCode || 'AED',
+      lines,
     });
 
     const savedInvoice = await this.invoicesRepository.save(invoice);
@@ -65,7 +85,7 @@ export class InvoicesService {
 
   async findAll(status?: string): Promise<Invoice[]> {
     const where: any = {};
-    
+
     if (status) {
       where.status = status;
     }
@@ -82,13 +102,13 @@ export class InvoicesService {
     // RLS will automatically filter by current tenant
     const invoice = await this.invoicesRepository.findOne({
       where: { id },
-      relations: ['party', 'creator', 'company']
+      relations: ['party', 'creator', 'company', 'lines']
     });
-    
+
     if (!invoice) {
       throw new NotFoundException('Invoice not found');
     }
-    
+
     return invoice;
   }
 
@@ -130,11 +150,11 @@ export class InvoicesService {
       .select('SUM(invoice.totalAmount)', 'sum')
       .getRawOne();
 
-    return { 
-      total, 
-      draft, 
-      sent, 
-      paid, 
+    return {
+      total,
+      draft,
+      sent,
+      paid,
       overdue,
       totalAmount: parseFloat(totalAmount.sum) || 0
     };
@@ -147,29 +167,29 @@ export class InvoicesService {
       .select('name')
       .from('companies', 'company')
       .getRawOne();
-    
+
     const companyPrefix = company?.name?.substring(0, 3).toUpperCase() || 'INV';
-    
+
     // Get current date in MM-DD format
     const now = new Date();
     const month = String(now.getMonth() + 1).padStart(2, '0');
     const day = String(now.getDate()).padStart(2, '0');
-    
+
     // Find the highest sequence number for today's invoices with this prefix
     const todayPrefix = `${companyPrefix}-${month}-${day}-`;
-    
+
     const lastInvoice = await this.invoicesRepository
       .createQueryBuilder('invoice')
       .where('invoice.invoice_number LIKE :prefix', { prefix: `${todayPrefix}%` })
       .orderBy('invoice.invoice_number', 'DESC')
       .getOne();
-    
+
     let sequenceNumber = 1;
     if (lastInvoice && lastInvoice.invoiceNumber) {
       const lastSequence = lastInvoice.invoiceNumber.split('-').pop();
       sequenceNumber = parseInt(lastSequence || '0') + 1;
     }
-    
+
     return `${todayPrefix}${String(sequenceNumber).padStart(4, '0')}`;
   }
 

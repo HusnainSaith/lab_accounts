@@ -1,4 +1,4 @@
-import { Controller, Get, Query, UseGuards, Res, Header } from '@nestjs/common';
+import { Controller, Get, Query, UseGuards, Res, Header, Param } from '@nestjs/common';
 import type { Response } from 'express';
 import { ReportsService } from '../services/reports.service';
 import { ExcelExportService } from '../services/excel-export.service';
@@ -7,6 +7,7 @@ import { RequirePermissions } from '../../../common/decorators/permissions.decor
 import { PermissionsGuard } from '../../../common/guards/permissions.guard';
 import { JwtAuthGuard } from '../../auth/guards/jwt-auth.guard';
 import { CompanyContext } from '../../../common/decorators/company-context.decorator';
+import { AccountBalancesService } from '../../account-balances/services/account-balances.service';
 
 @Controller('reports')
 @UseGuards(JwtAuthGuard, PermissionsGuard)
@@ -14,7 +15,8 @@ export class ReportsController {
   constructor(
     private readonly reportsService: ReportsService,
     private readonly excelExportService: ExcelExportService,
-  ) {}
+    private readonly accountBalancesService: AccountBalancesService,
+  ) { }
 
   @Get('vat')
   @RequirePermissions('reports.view')
@@ -186,5 +188,24 @@ export class ReportsController {
     const buffer = await this.excelExportService.exportExpensesByCategory(data, language as 'en' | 'ar');
     res.setHeader('Content-Disposition', `attachment; filename=expenses-by-category-${startDate}-${endDate}.xlsx`);
     res.send(buffer);
+  }
+
+  @Get('trial-balance')
+  @RequirePermissions('reports.view')
+  getTrialBalance(
+    @CompanyContext() companyId: string,
+    @Query('period') period?: string
+  ) {
+    return this.accountBalancesService.getTrialBalance(companyId, period);
+  }
+
+  @Get('general-ledger/:accountId')
+  @RequirePermissions('reports.view')
+  getGeneralLedger(
+    @Param('accountId') accountId: string,
+    @CompanyContext() companyId: string,
+    @Query('period') period?: string
+  ) {
+    return this.accountBalancesService.getAccountBalance(accountId, companyId, period);
   }
 }

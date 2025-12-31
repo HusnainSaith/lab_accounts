@@ -33,7 +33,10 @@
         "fiscal_year_id": "",
         "voucher_type_id": "",
         "journal_entry_id": "",
-        "invoice_line_id": ""
+        "invoice_line_id": "",
+        "payment_id": "",
+        "integration_id": "",
+        "audit_log_id": ""
       },
       "dataPropertyOrder": {
         "&": [
@@ -49,7 +52,10 @@
           "fiscal_year_id",
           "voucher_type_id",
           "journal_entry_id",
-          "invoice_line_id"
+          "invoice_line_id",
+          "payment_id",
+          "integration_id",
+          "audit_log_id"
         ]
       },
       "color": null,
@@ -2850,6 +2856,419 @@
         }
       ],
       "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_payments",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "name": "Payments",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_payments_create",
+      "parentId": "fld_payments",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/payments",
+      "name": "Create Payment",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"invoiceId\": \"{{ invoice_id }}\",\n  \"amount\": 1000,\n  \"paymentMethod\": \"cash\",\n  \"paymentDate\": \"2025-12-15\",\n  \"reference\": \"PAY-001\",\n  \"notes\": \"Payment for invoice\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_payments_list",
+      "parentId": "fld_payments",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/payments",
+      "name": "List Payments",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_payments_get",
+      "parentId": "fld_payments",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/payments/{{ payment_id }}",
+      "name": "Get Payment",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_payments_confirm",
+      "parentId": "fld_payments",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/payments/{{ payment_id }}/confirm",
+      "name": "Confirm Payment",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_payments_cancel",
+      "parentId": "fld_payments",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/payments/{{ payment_id }}/cancel",
+      "name": "Cancel Payment",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_payments_delete",
+      "parentId": "fld_payments",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/payments/{{ payment_id }}",
+      "name": "Delete Payment",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_integrations",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "name": "Integrations",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_integrations_create",
+      "parentId": "fld_integrations",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/integrations",
+      "name": "Create Integration",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Stripe Integration\",\n  \"type\": \"stripe\",\n  \"isActive\": true,\n  \"config\": {\n    \"apiKey\": \"sk_test_...\",\n    \"webhookSecret\": \"whsec_...\"\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_integrations_list",
+      "parentId": "fld_integrations",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/integrations",
+      "name": "List Integrations",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_integrations_activate",
+      "parentId": "fld_integrations",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/integrations/{{ integration_id }}/activate",
+      "name": "Activate Integration",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_integrations_deactivate",
+      "parentId": "fld_integrations",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/integrations/{{ integration_id }}/deactivate",
+      "name": "Deactivate Integration",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_integrations_test",
+      "parentId": "fld_integrations",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/integrations/{{ integration_id }}/test",
+      "name": "Test Integration Connection",
+      "description": "",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_integrations_delete",
+      "parentId": "fld_integrations",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/integrations/{{ integration_id }}",
+      "name": "Delete Integration",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "fld_settings",
+      "parentId": "wrk_z6l6a66bg1kmsnjo9kwxyo7u",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "name": "Settings",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_settings_user_get",
+      "parentId": "fld_settings",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/settings/user",
+      "name": "Get User Settings",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_settings_user_update",
+      "parentId": "fld_settings",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/settings/user",
+      "name": "Update User Settings",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"language\": \"en\",\n  \"theme\": \"light\",\n  \"timezone\": \"UTC\",\n  \"dateFormat\": \"DD/MM/YYYY\",\n  \"notifications\": {\n    \"email\": true,\n    \"push\": false\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_settings_tenant_get",
+      "parentId": "fld_settings",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/settings/tenant",
+      "name": "Get Tenant Settings",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{ access_token }}"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1,
+      "isPrivate": false,
+      "_type": "request"
+    },
+    {
+      "_id": "req_settings_tenant_update",
+      "parentId": "fld_settings",
+      "modified": "2025-12-19T00:00:00Z",
+      "created": "2025-12-19T00:00:00Z",
+      "url": "{{ base_url }}/settings/tenant",
+      "name": "Update Tenant Settings",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"companyName\": \"Updated Company Name\",\n  \"fiscalYearStart\": \"01-01\",\n  \"defaultCurrency\": \"AED\",\n  \"taxSettings\": {\n    \"vatRate\": 5,\n    \"taxNumber\": \"123456789012345\"\n  },\n  \"invoiceSettings\": {\n    \"prefix\": \"INV-\",\n    \"startNumber\": 1000\n  }\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
         {
           "name": "Authorization",
           "value": "Bearer {{ access_token }}"

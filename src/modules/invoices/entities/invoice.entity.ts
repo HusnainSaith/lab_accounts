@@ -153,6 +153,9 @@ export class Invoice {
   @JoinColumn({ name: 'created_by' })
   creator: unknown;
 
+  @OneToMany('InvoiceLine', 'invoice', { cascade: true })
+  lines: unknown[];
+
 
 
 

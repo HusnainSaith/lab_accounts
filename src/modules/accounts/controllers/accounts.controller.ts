@@ -9,7 +9,7 @@ import { CompanyContext } from '../../../common/decorators/company-context.decor
 @Controller('accounts')
 @UseGuards(JwtAuthGuard, PermissionsGuard)
 export class AccountsController {
-  constructor(private readonly accountsService: AccountsService) {}
+  constructor(private readonly accountsService: AccountsService) { }
 
   @Post()
   @RequirePermissions('accounts.create')
@@ -27,6 +27,12 @@ export class AccountsController {
   @RequirePermissions('accounts.read')
   getChartOfAccounts(@CompanyContext() companyId: string) {
     return this.accountsService.getChartOfAccounts(companyId);
+  }
+
+  @Get('posting')
+  @RequirePermissions('accounts.read')
+  getPostingAccounts(@CompanyContext() companyId: string) {
+    return this.accountsService.getPostingAccounts(companyId);
   }
 
   @Get(':id')

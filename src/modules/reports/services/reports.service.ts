@@ -12,7 +12,7 @@ export class ReportsService {
     private invoicesRepository: Repository<Invoice>,
     @InjectRepository(Constant)
     private constantsRepository: Repository<Constant>,
-  ) {}
+  ) { }
 
   async generateVatReport(vatReportDto: VatReportDto) {
     this.validateDateRange(vatReportDto.startDate, vatReportDto.endDate);
@@ -26,7 +26,9 @@ export class ReportsService {
       order: { createdAt: 'ASC' }
     });
 
-    const paidInvoices = invoices.filter(inv => inv.status === InvoiceStatus.PAID);
+    const paidInvoices = invoices.filter(inv =>
+      inv.status === InvoiceStatus.PAID || inv.status === InvoiceStatus.PARTIALLY_PAID
+    );
     const totalSales = paidInvoices.reduce((sum, inv) => sum + Number(inv.subtotal), 0);
     const totalVat = paidInvoices.reduce((sum, inv) => sum + Number(inv.vatAmount), 0);
     const totalGross = paidInvoices.reduce((sum, inv) => sum + Number(inv.totalAmount), 0);
@@ -57,11 +59,18 @@ export class ReportsService {
 
     const [paidInvoices, allInvoices] = await Promise.all([
       this.invoicesRepository.find({
-        where: {
-          companyId: profitLossDto.companyId,
-          createdAt: Between(profitLossDto.startDate, profitLossDto.endDate),
-          status: InvoiceStatus.PAID
-        }
+        where: [
+          {
+            companyId: profitLossDto.companyId,
+            createdAt: Between(profitLossDto.startDate, profitLossDto.endDate),
+            status: InvoiceStatus.PAID
+          },
+          {
+            companyId: profitLossDto.companyId,
+            createdAt: Between(profitLossDto.startDate, profitLossDto.endDate),
+            status: InvoiceStatus.PARTIALLY_PAID
+          }
+        ]
       }),
       this.invoicesRepository.find({
         where: {
@@ -104,22 +113,15 @@ export class ReportsService {
   }
 
   async generateBalanceSheet(balanceSheetDto: BalanceSheetReportDto) {
-    const paidInvoices = await this.invoicesRepository.find({
-      where: {
-        companyId: balanceSheetDto.companyId,
-        status: InvoiceStatus.PAID
-      }
+    const allInvoices = await this.invoicesRepository.find({
+      where: { companyId: balanceSheetDto.companyId }
     });
 
-    const unpaidInvoices = await this.invoicesRepository.find({
-      where: {
-        companyId: balanceSheetDto.companyId,
-        status: InvoiceStatus.SENT
-      }
-    });
-
-    const cash = paidInvoices.reduce((sum, inv) => sum + Number(inv.totalAmount), 0);
-    const accountsReceivable = unpaidInvoices.reduce((sum, inv) => sum + Number(inv.totalAmount), 0);
+    const cash = allInvoices.reduce((sum, inv) => sum + Number(inv.paidAmount || 0), 0);
+    const accountsReceivable = allInvoices.reduce((sum, inv) => {
+      const remaining = Number(inv.totalAmount) - Number(inv.paidAmount || 0);
+      return sum + (remaining > 0 ? remaining : 0);
+    }, 0);
 
     return {
       asOfDate: balanceSheetDto.asOfDate,
@@ -132,11 +134,11 @@ export class ReportsService {
       },
       liabilities: {
         currentLiabilities: {
-          vatPayable: paidInvoices.reduce((sum, inv) => sum + Number(inv.vatAmount), 0)
+          vatPayable: allInvoices.reduce((sum, inv) => sum + Number(inv.vatAmount), 0)
         }
       },
       equity: {
-        retainedEarnings: cash - paidInvoices.reduce((sum, inv) => sum + Number(inv.vatAmount), 0)
+        retainedEarnings: allInvoices.reduce((sum, inv) => sum + Number(inv.subtotal), 0) // Net Sales
       }
     };
   }
@@ -231,7 +233,7 @@ export class ReportsService {
       .groupBy('DATE_TRUNC(\'month\', invoice.createdAt)')
       .orderBy('month', 'ASC')
       .getRawMany();
-    
+
     const expenses: any[] = []; // Expenses module not available
 
     const chartData: any[] = [];
@@ -266,7 +268,7 @@ export class ReportsService {
     if (startDate >= endDate) {
       throw new BadRequestException('Start date must be before end date');
     }
-    
+
     const maxRange = 365 * 24 * 60 * 60 * 1000; // 1 year in milliseconds
     if (endDate.getTime() - startDate.getTime() > maxRange) {
       throw new BadRequestException('Date range cannot exceed 1 year');

@@ -9,7 +9,7 @@ import { CompanyContext } from '../../../common/decorators/company-context.decor
 @Controller('fiscal-years')
 @UseGuards(JwtAuthGuard, PermissionsGuard)
 export class FiscalYearsController {
-  constructor(private readonly fiscalYearsService: FiscalYearsService) {}
+  constructor(private readonly fiscalYearsService: FiscalYearsService) { }
 
   @Post()
   @RequirePermissions('fiscal-years.create')
@@ -46,6 +46,13 @@ export class FiscalYearsController {
   closeFiscalYear(@Param('id') id: string, @CompanyContext() companyId: string) {
     return this.fiscalYearsService.closeFiscalYear(id, companyId);
   }
+
+  @Patch(':id/open')
+  @RequirePermissions('fiscal-years.update')
+  openFiscalYear(@Param('id') id: string, @CompanyContext() companyId: string) {
+    return this.fiscalYearsService.openFiscalYear(id, companyId);
+  }
+
 
   @Delete(':id')
   @RequirePermissions('fiscal-years.delete')

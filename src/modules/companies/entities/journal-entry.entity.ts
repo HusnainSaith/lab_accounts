@@ -125,7 +125,7 @@ export class JournalEntry {
   @JoinColumn({ name: 'reversal_of_id' })
   reversalOf: JournalEntry;
 
-  @OneToMany('JournalEntryLine', 'journalEntry')
+  @OneToMany('JournalEntryLine', 'journalEntry', { cascade: true })
   lines: unknown[];
 
   @OneToMany('Invoice', 'voucher')

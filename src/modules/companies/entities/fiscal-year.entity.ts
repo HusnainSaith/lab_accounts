@@ -31,11 +31,11 @@ export class FiscalYear {
   @Column({ name: 'is_closed', default: false })
   isClosed: boolean;
 
-  @Column({ name: 'closed_at', nullable: true })
-  closedAt: Date;
+  @Column({ name: 'closed_at', type: 'timestamp', nullable: true })
+  closedAt: Date | null;
 
-  @Column({ name: 'closed_by', nullable: true })
-  closedBy: string;
+  @Column({ name: 'closed_by', type: 'varchar', nullable: true })
+  closedBy: string | null;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;

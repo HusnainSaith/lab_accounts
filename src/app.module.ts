@@ -23,6 +23,10 @@ import { VoucherTypesModule } from './modules/voucher-types/voucher-types.module
 import { JournalEntriesModule } from './modules/journal-entries/journal-entries.module';
 import { InvoiceLinesModule } from './modules/invoice-lines/invoice-lines.module';
 import { AccountBalancesModule } from './modules/account-balances/account-balances.module';
+import { PaymentsModule } from './modules/payments/payments.module';
+import { BillingModule } from './modules/billing/billing.module';
+import { IntegrationsModule } from './modules/integrations/integrations.module';
+import { SettingsModule } from './modules/settings/settings.module';
 
 // Common Services
 import { RLSService } from './common/services/rls.service';
@@ -57,6 +61,10 @@ import { RLSMiddleware } from './common/middleware/rls.middleware';
     JournalEntriesModule,
     InvoiceLinesModule,
     AccountBalancesModule,
+    PaymentsModule,
+    BillingModule,
+    IntegrationsModule,
+    SettingsModule,
   ],
   controllers: [AppController],
   providers: [AppService, RLSService, EncryptionService, RLSMiddleware],
