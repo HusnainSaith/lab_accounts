@@ -127,8 +127,8 @@ describe('Project Flow (E2E)', () => {
                 .set('Authorization', `Bearer ${accessToken}`)
                 .send({
                     yearName: `FY TEST ${uniqueId}`,
-                    startDate: '2026-01-01',
-                    endDate: '2026-12-31'
+                    startDate: '2027-01-01',
+                    endDate: '2027-12-31'
                 })
                 .expect(201);
         });

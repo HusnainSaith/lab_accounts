@@ -4,7 +4,7 @@ import { RegisterDto } from '../dto/register.dto';
 
 @Injectable()
 export class RegistrationBootstrapService {
-  constructor(private dataSource: DataSource) {}
+  constructor(private dataSource: DataSource) { }
 
   async bootstrapUserEnvironment(registerDto: RegisterDto, hashedPassword: string) {
     const queryRunner = this.dataSource.createQueryRunner();
@@ -59,6 +59,9 @@ export class RegistrationBootstrapService {
 
       // 8. Create Default Fiscal Year
       await this.createDefaultFiscalYear(queryRunner, companyId, countryConfig.fiscalYearStartMonth);
+
+      // 9. Create Default Voucher Types
+      await this.createDefaultVoucherTypes(queryRunner, companyId);
 
       await queryRunner.commitTransaction();
 
@@ -158,13 +161,13 @@ export class RegistrationBootstrapService {
 
     for (const account of accounts) {
       const parentId = account.parent ? accountMap.get(account.parent) : null;
-      
+
       const result = await queryRunner.query(
         `INSERT INTO accounts (company_id, code, name, type, level, parent_id, is_posting, is_system, is_active) 
          VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id`,
         [companyId, account.code, account.name, account.type, account.level, parentId, account.isPosting, true, true]
       );
-      
+
       accountMap.set(account.code, result[0].id);
     }
   }
@@ -172,7 +175,7 @@ export class RegistrationBootstrapService {
   private async createDefaultFiscalYear(queryRunner: any, companyId: string, fiscalStartMonth: number): Promise<void> {
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
-    
+
     // Determine fiscal year based on start month
     let fiscalYear = currentYear;
     if (currentDate.getMonth() + 1 < fiscalStartMonth) {
@@ -187,6 +190,25 @@ export class RegistrationBootstrapService {
        VALUES ($1, $2, $3, $4, $5)`,
       [companyId, `FY ${fiscalYear}-${fiscalYear + 1}`, startDate, endDate, false]
     );
+  }
+
+  private async createDefaultVoucherTypes(queryRunner: any, companyId: string): Promise<void> {
+    const voucherTypes = [
+      { code: 'JV', name: 'Journal Voucher', nature: 'journal' },
+      { code: 'PV', name: 'Payment Voucher', nature: 'payment' },
+      { code: 'RV', name: 'Receipt Voucher', nature: 'receipt' },
+      { code: 'CN', name: 'Credit Note', nature: 'credit_note' },
+      { code: 'DN', name: 'Debit Note', nature: 'debit_note' },
+      { code: 'CV', name: 'Contra Voucher', nature: 'contra' }
+    ];
+
+    for (const vt of voucherTypes) {
+      await queryRunner.query(
+        `INSERT INTO voucher_types (company_id, code, name, nature, auto_numbering, next_sequence, is_active) 
+         VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+        [companyId, vt.code, vt.name, vt.nature, true, 1, true]
+      );
+    }
   }
 
   private getCountryConfig(countryCode: string) {

@@ -91,11 +91,16 @@ export class InvoicesService {
     }
 
     // RLS will automatically filter by current tenant
-    return this.invoicesRepository.find({
+    const invoices = await this.invoicesRepository.find({
       where,
       relations: ['party'],
       order: { createdAt: 'DESC' }
     });
+
+    return invoices.map(invoice => ({
+      ...invoice,
+      customerName: invoice.party?.name || 'Unknown'
+    }));
   }
 
   async findOne(id: string): Promise<Invoice> {
@@ -109,7 +114,10 @@ export class InvoicesService {
       throw new NotFoundException('Invoice not found');
     }
 
-    return invoice;
+    return {
+      ...invoice,
+      customerName: invoice.party?.name || 'Unknown'
+    };
   }
 
   async update(id: string, updateInvoiceDto: UpdateInvoiceDto): Promise<Invoice> {

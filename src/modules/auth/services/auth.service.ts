@@ -19,11 +19,11 @@ export class AuthService {
     private bootstrapService: RegistrationBootstrapService,
     @InjectRepository(BlacklistedToken)
     private blacklistedTokenRepository: Repository<BlacklistedToken>,
-  ) {}
+  ) { }
 
   async login(loginDto: LoginDto) {
     const user = await this.usersService.findByEmail(loginDto.email);
-    
+
     if (!user) {
       throw new UnauthorizedException('User not found');
     }
@@ -48,8 +48,8 @@ export class AuthService {
     const companyId = companyUserResult[0]?.company_id;
 
     const jti = crypto.randomUUID();
-    const payload = { 
-      sub: user.id, 
+    const payload = {
+      sub: user.id,
       email: user.email,
       companyId,
       jti
@@ -72,13 +72,13 @@ export class AuthService {
       'SELECT id FROM users WHERE email = $1',
       [registerDto.email]
     );
-    
+
     if (existingUser.length > 0) {
       throw new ConflictException('Email already exists');
     }
 
     const hashedPassword = await bcrypt.hash(registerDto.password, 10);
-    
+
     // Bootstrap complete user environment
     const result = await this.bootstrapService.bootstrapUserEnvironment(registerDto, hashedPassword);
 
@@ -149,13 +149,13 @@ export class AuthService {
     return !!blacklistedToken;
   }
 
-  async validateUser(payload: { sub: string; email: string; jti?: string }) {
+  async validateUser(payload: { sub: string; email: string; jti?: string; companyId?: string }) {
     // Check if token is blacklisted
     if (payload.jti && await this.isTokenBlacklisted(payload.jti)) {
       throw new UnauthorizedException('Token has been revoked');
     }
     try {
-      const user = await this.usersService.findOne(payload.sub);
+      const user = await this.usersService.findOne(payload.sub, payload.companyId);
       if (!user) {
         throw new UnauthorizedException('User not found');
       }

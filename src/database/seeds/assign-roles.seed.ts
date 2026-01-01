@@ -3,7 +3,7 @@ import { DataSource } from 'typeorm';
 export class AssignRolesSeed {
   async run(dataSource: DataSource): Promise<void> {
     const queryRunner = dataSource.createQueryRunner();
-    
+
     try {
       // Create default system roles if they don't exist
       const roles = [
@@ -19,7 +19,7 @@ export class AssignRolesSeed {
           `SELECT id FROM roles WHERE company_id IS NULL AND code = $1`,
           [role.code]
         );
-        
+
         if (existing.length === 0) {
           await queryRunner.query(
             `INSERT INTO roles (company_id, code, name, is_system) VALUES (NULL, $1, $2, $3)`,
@@ -31,50 +31,78 @@ export class AssignRolesSeed {
       // Assign permissions to roles
       const rolePermissions = [
         // Super Admin - all permissions
-        { roleCode: 'super_admin', permissions: [
-          'users.create', 'users.read', 'users.update', 'users.delete',
-          'roles.create', 'roles.read', 'roles.update', 'roles.delete',
-          'permissions.create', 'permissions.read', 'permissions.update', 'permissions.delete',
-          'companies.create', 'companies.read', 'companies.update', 'companies.delete',
-          'accounts.create', 'accounts.read', 'accounts.update', 'accounts.delete',
-          'invoices.create', 'invoices.read', 'invoices.update', 'invoices.delete',
-          'reports.view', 'reports.export', 'audit.read', 'system.settings', 'fiscal.close',
-          'vouchers.approve', 'vouchers.post', 'vouchers.reverse'
-        ]},
-        
+        {
+          roleCode: 'super_admin', permissions: [
+            'users.create', 'users.read', 'users.update', 'users.delete',
+            'roles.create', 'roles.read', 'roles.update', 'roles.delete',
+            'permissions.create', 'permissions.read', 'permissions.update', 'permissions.delete',
+            'companies.create', 'companies.read', 'companies.update', 'companies.delete',
+            'accounts.create', 'accounts.read', 'accounts.update', 'accounts.delete',
+            'invoices.create', 'invoices.read', 'invoices.update', 'invoices.delete',
+            'payments.create', 'payments.view', 'payments.edit', 'payments.delete',
+            'billing.view', 'billing.edit',
+            'integrations.create', 'integrations.view', 'integrations.edit', 'integrations.delete',
+            'settings.view', 'settings.edit',
+            'journal-entries.create', 'journal-entries.read', 'journal-entries.update', 'journal-entries.post', 'journal-entries.delete',
+            'fiscal-years.create', 'fiscal-years.read', 'fiscal-years.update', 'fiscal-years.close', 'fiscal-years.delete',
+            'voucher-types.create', 'voucher-types.read', 'voucher-types.update', 'voucher-types.delete',
+            'account-balances.read',
+            'reports.view', 'reports.export', 'audit.read', 'system.settings', 'fiscal.close',
+            'vouchers.approve', 'vouchers.post', 'vouchers.reverse'
+          ]
+        },
+
+
         // Owner - full company access
-        { roleCode: 'owner', permissions: [
-          'users.create', 'users.read', 'users.update', 'users.delete',
-          'roles.create', 'roles.read', 'roles.update', 'roles.delete',
-          'permissions.read',
-          'companies.read', 'companies.update',
-          'accounts.create', 'accounts.read', 'accounts.update', 'accounts.delete',
-          'invoices.create', 'invoices.read', 'invoices.update', 'invoices.delete',
-          'reports.view', 'reports.export', 'audit.read', 'system.settings', 'fiscal.close',
-          'vouchers.approve', 'vouchers.post', 'vouchers.reverse'
-        ]},
-        
+        {
+          roleCode: 'owner', permissions: [
+            'users.create', 'users.read', 'users.update', 'users.delete',
+            'roles.create', 'roles.read', 'roles.update', 'roles.delete',
+            'permissions.read',
+            'companies.read', 'companies.update',
+            'accounts.create', 'accounts.read', 'accounts.update', 'accounts.delete',
+            'invoices.create', 'invoices.read', 'invoices.update', 'invoices.delete',
+            'payments.create', 'payments.view', 'payments.edit', 'payments.delete',
+            'billing.view', 'billing.edit',
+            'integrations.create', 'integrations.view', 'integrations.edit', 'integrations.delete',
+            'settings.view', 'settings.edit',
+            'journal-entries.create', 'journal-entries.read', 'journal-entries.update', 'journal-entries.post', 'journal-entries.delete',
+            'fiscal-years.create', 'fiscal-years.read', 'fiscal-years.update', 'fiscal-years.close', 'fiscal-years.delete',
+            'voucher-types.create', 'voucher-types.read', 'voucher-types.update', 'voucher-types.delete',
+            'account-balances.read',
+            'reports.view', 'reports.export', 'audit.read', 'system.settings', 'fiscal.close',
+            'vouchers.approve', 'vouchers.post', 'vouchers.reverse'
+          ]
+        },
+
+
         // Admin - most permissions except system-level
-        { roleCode: 'admin', permissions: [
-          'users.create', 'users.read', 'users.update',
-          'roles.read', 'permissions.read',
-          'companies.read', 'companies.update',
-          'accounts.create', 'accounts.read', 'accounts.update', 'accounts.delete',
-          'invoices.create', 'invoices.read', 'invoices.update', 'invoices.delete',
-          'reports.view', 'reports.export'
-        ]},
-        
+        {
+          roleCode: 'admin', permissions: [
+            'users.create', 'users.read', 'users.update',
+            'roles.read', 'permissions.read',
+            'companies.read', 'companies.update',
+            'accounts.create', 'accounts.read', 'accounts.update', 'accounts.delete',
+            'invoices.create', 'invoices.read', 'invoices.update', 'invoices.delete',
+            'reports.view', 'reports.export'
+          ]
+        },
+
         // Accountant - accounting focused permissions
-        { roleCode: 'accountant', permissions: [
-          'accounts.create', 'accounts.read', 'accounts.update',
-          'invoices.create', 'invoices.read', 'invoices.update',
-          'reports.view', 'reports.export'
-        ]},
-        
+        {
+          roleCode: 'accountant', permissions: [
+            'accounts.create', 'accounts.read', 'accounts.update',
+            'invoices.create', 'invoices.read', 'invoices.update',
+            'reports.view', 'reports.export'
+          ]
+        },
+
         // User - basic read permissions
-        { roleCode: 'user', permissions: [
-          'accounts.read', 'invoices.read', 'reports.view'
-        ]}
+        {
+          roleCode: 'user', permissions: [
+            'accounts.read', 'invoices.read', 'reports.view'
+          ]
+        }
       ];
 
       for (const rolePermission of rolePermissions) {
@@ -86,7 +114,7 @@ export class AssignRolesSeed {
              WHERE r.code = $1 AND r.company_id IS NULL AND p.code = $2`,
             [rolePermission.roleCode, permissionName]
           );
-          
+
           if (existing.length === 0) {
             await queryRunner.query(
               `INSERT INTO role_permissions (role_id, permission_id)
@@ -98,7 +126,7 @@ export class AssignRolesSeed {
           }
         }
       }
-      
+
       console.log('✅ Role permissions assigned successfully');
     } catch (error) {
       console.error('❌ Error assigning role permissions:', error);

@@ -45,6 +45,8 @@ export class Invoice {
   @Column({ name: 'party_id' })
   partyId: string;
 
+  customerName?: string;
+
   @Column({ name: 'currency_code', length: 3 })
   currencyCode: string;
 

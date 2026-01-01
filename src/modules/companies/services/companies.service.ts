@@ -18,22 +18,22 @@ export class CompaniesService {
     private userRolesRepository: Repository<UserRole>,
     @InjectRepository(Role)
     private rolesRepository: Repository<Role>,
-  ) {}
+  ) { }
 
   async create(createCompanyDto: CreateCompanyDto & { userId?: string }): Promise<Company> {
     // Validate company name uniqueness
     await this.validateCompanyNameUniqueness(createCompanyDto.name);
-    
+
     // Validate TRN uniqueness if provided
     if (createCompanyDto.trn) {
       await this.validateTrnUniqueness(createCompanyDto.trn);
     }
-    
+
     return await this.companiesRepository.manager.transaction(async manager => {
       // Create company
       const company = manager.create(Company, createCompanyDto);
       const savedCompany = await manager.save(company);
-      
+
       // Associate user with company and assign OWNER role if userId provided
       if (createCompanyDto.userId) {
         // Create company-user association
@@ -43,13 +43,14 @@ export class CompaniesService {
           isActive: true,
         });
         await manager.save(companyUser);
-        
-        // Find OWNER role using query builder
+
+        // Find owner role using query builder
         const ownerRole = await manager.createQueryBuilder(Role, 'role')
-          .where('role.code = :code', { code: 'OWNER' })
+          .where('role.code = :code', { code: 'owner' })
           .andWhere('role.companyId IS NULL')
           .getOne();
-        
+
+
         if (ownerRole) {
           // Assign OWNER role to user
           const userRole = manager.create(UserRole, {
@@ -60,27 +61,27 @@ export class CompaniesService {
           await manager.save(userRole);
         }
       }
-      
+
       return savedCompany;
     });
   }
 
   async findAll(activeOnly: boolean = true): Promise<Company[]> {
     const where = activeOnly ? { isActive: true } : {};
-    return this.companiesRepository.find({ 
+    return this.companiesRepository.find({
       where
     });
   }
 
   async findOne(id: string): Promise<Company> {
-    const company = await this.companiesRepository.findOne({ 
+    const company = await this.companiesRepository.findOne({
       where: { id }
     });
-    
+
     if (!company) {
       throw new NotFoundException('Company not found');
     }
-    
+
     return company;
   }
 
@@ -95,12 +96,12 @@ export class CompaniesService {
     if (updateCompanyDto.name) {
       await this.validateCompanyNameUniqueness(updateCompanyDto.name, id);
     }
-    
+
     // Validate TRN uniqueness if provided and different from current
     if (updateCompanyDto.trn) {
       await this.validateTrnUniqueness(updateCompanyDto.trn, id);
     }
-    
+
     await this.companiesRepository.update(id, updateCompanyDto);
     return this.findOne(id);
   }
@@ -138,7 +139,7 @@ export class CompaniesService {
 
   async getStatistics(companyId?: string): Promise<any> {
     const whereCondition = companyId ? { id: companyId } : {};
-    
+
     const [total, active, inactive] = await Promise.all([
       this.companiesRepository.count({ where: whereCondition }),
       this.companiesRepository.count({ where: { ...whereCondition, isActive: true } }),
@@ -170,13 +171,13 @@ export class CompaniesService {
   private async validateTrnUniqueness(trn: string, excludeCompanyId?: string): Promise<void> {
     const query = this.companiesRepository.createQueryBuilder('company')
       .where('company.taxRegistrationNo = :trn', { trn });
-    
+
     if (excludeCompanyId) {
       query.andWhere('company.id != :excludeCompanyId', { excludeCompanyId });
     }
-    
+
     const existingCompany = await query.getOne();
-    
+
     if (existingCompany) {
       throw new ConflictException('TRN number already exists for another company');
     }
@@ -185,13 +186,13 @@ export class CompaniesService {
   private async validateCompanyNameUniqueness(name: string, excludeCompanyId?: string): Promise<void> {
     const query = this.companiesRepository.createQueryBuilder('company')
       .where('LOWER(company.name) = LOWER(:name)', { name });
-    
+
     if (excludeCompanyId) {
       query.andWhere('company.id != :excludeCompanyId', { excludeCompanyId });
     }
-    
+
     const existingCompany = await query.getOne();
-    
+
     if (existingCompany) {
       throw new ConflictException('Company name already exists');
     }

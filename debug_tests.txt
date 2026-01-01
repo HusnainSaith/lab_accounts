@@ -1,0 +1,1580 @@
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [95mversion[0m[37m([0m[37m)[0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m*[0m [94mFROM[0m [95mcurrent_schema[0m[37m([0m[37m)[0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mCREATE[0m [37mEXTENSION[0m [94mIF[0m [94mNOT[0m [94mEXISTS[0m [37m"uuid-ossp"[0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["users.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["users.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["users.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["users.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["roles.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["roles.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["roles.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["roles.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["permissions.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["permissions.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["permissions.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["permissions.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["companies.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["companies.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["companies.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["companies.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["accounts.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["accounts.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["accounts.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["accounts.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["invoices.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["invoices.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["invoices.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["invoices.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["reports.view"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["reports.export"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["audit.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["system.settings"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["fiscal.close"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["vouchers.approve"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["vouchers.post"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mpermissions[0m [94mWHERE[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["vouchers.reverse"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    Γ£à Permissions seeded successfully
+
+      at PermissionsSeed.run (../src/database/seeds/permissions.seed.ts:74:15)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mroles[0m [94mWHERE[0m [37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["super_admin"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mroles[0m [94mWHERE[0m [37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["owner"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mroles[0m [94mWHERE[0m [37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["admin"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mroles[0m [94mWHERE[0m [37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["accountant"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mroles[0m [94mWHERE[0m [37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mcode[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["user"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","users.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","users.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","users.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","users.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","roles.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","roles.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","roles.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","roles.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","permissions.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","permissions.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","permissions.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","permissions.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","companies.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","companies.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","companies.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","companies.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","accounts.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","accounts.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","accounts.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","accounts.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","invoices.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","invoices.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","invoices.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","invoices.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","reports.view"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","reports.export"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","audit.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","system.settings"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","fiscal.close"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","vouchers.approve"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","vouchers.post"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["super_admin","vouchers.reverse"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","users.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","users.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","users.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","users.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","roles.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","roles.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","roles.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","roles.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","permissions.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","companies.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","companies.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","accounts.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","accounts.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","accounts.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","accounts.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","invoices.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","invoices.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","invoices.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","invoices.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","reports.view"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","reports.export"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","audit.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","system.settings"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","fiscal.close"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","vouchers.approve"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","vouchers.post"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["owner","vouchers.reverse"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","users.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","users.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","users.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","roles.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","permissions.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","companies.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","companies.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","accounts.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","accounts.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","accounts.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","accounts.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","invoices.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","invoices.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","invoices.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","invoices.delete"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","reports.view"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["admin","reports.export"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["accountant","accounts.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["accountant","accounts.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["accountant","accounts.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["accountant","invoices.create"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["accountant","invoices.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["accountant","invoices.update"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["accountant","reports.view"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["accountant","reports.export"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["user","accounts.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["user","invoices.read"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m
+                 [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mrole_id[0m
+                 [94mJOIN[0m [37mpermissions[0m [37mp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+                 [94mWHERE[0m [37mr[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mr[0m[37m.[0m[37mcompany_id[0m [94mIS NULL[0m [94mAND[0m [37mp[0m[37m.[0m[37mcode[0m [37m=[0m [37m$[0m[32m2[0m [90m-- PARAMETERS: ["user","reports.view"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+
+  console.log
+    Γ£à Role permissions assigned successfully
+
+      at AssignRolesSeed.run (../src/database/seeds/assign-roles.seed.ts:102:15)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37musers[0m [94mWHERE[0m [37memail[0m [37m=[0m [37m$[0m[32m1[0m [90m-- PARAMETERS: ["newmodules_2hxpvn@example.com"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [37mSTART[0m [37mTRANSACTION[0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95musers[0m [37m([0m[37mfull_name[0m[37m,[0m [37memail[0m[37m,[0m [37mpassword_hash[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["Test User","newmodules_2hxpvn@example.com","$2b$10$sUeCV6gpQ1C3x9WFw1enru3zJcx0p3P44CKMhP5OIgM.CK1qUZpmm",true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mcompanies[0m [37m([0m[37mname[0m[37m,[0m [37mcountry_code[0m[37m,[0m [37mcurrency_code[0m[37m,[0m [37mfiscal_year_start_month[0m[37m,[0m [37mphone[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["My Company","AE","AED",1,"+971500000001",true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mcompany_users[0m [37m([0m[37mcompany_id[0m[37m,[0m [37muser_id[0m[37m,[0m [37mis_active[0m[37m)[0m [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","670e1f71-fecb-44d4-9ffb-03c4c9fbf498",true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mid[0m [94mFROM[0m [37mroles[0m [94mWHERE[0m [37mcompany_id[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mcode[0m [37m=[0m [37m'owner'[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mroles[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mis_system[0m[37m)[0m 
+           [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","owner","Owner",true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95muser_roles[0m [37m([0m[37mcompany_id[0m[37m,[0m [37muser_id[0m[37m,[0m [37mrole_id[0m[37m)[0m [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","670e1f71-fecb-44d4-9ffb-03c4c9fbf498","8988e4ab-2b76-4c1c-907f-bdab89eac01c"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mrole_permissions[0m [37m([0m[37mrole_id[0m[37m,[0m [37mpermission_id[0m[37m)[0m
+           [94mSELECT[0m [37m$[0m[32m1[0m[37m,[0m [37mp[0m[37m.[0m[37mid[0m [94mFROM[0m [37mpermissions[0m [37mp[0m
+           [94mWHERE[0m [94mNOT[0m [94mEXISTS[0m [37m([0m
+             [94mSELECT[0m [32m1[0m [94mFROM[0m [37mrole_permissions[0m [37mrp[0m 
+             [94mWHERE[0m [37mrp[0m[37m.[0m[37mrole_id[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mrp[0m[37m.[0m[37mpermission_id[0m [37m=[0m [37mp[0m[37m.[0m[37mid[0m
+           [37m)[0m [90m-- PARAMETERS: ["8988e4ab-2b76-4c1c-907f-bdab89eac01c"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","1","Assets","asset","1",null,false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","2","Liabilities","liability","1",null,false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","3","Equity","equity","1",null,false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","4","Income","income","1",null,false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","5","Expenses","expense","1",null,false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","11","Current Assets","asset","2","0ad77780-a65a-4e86-88bb-24368141e746",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","12","Fixed Assets","asset","2","0ad77780-a65a-4e86-88bb-24368141e746",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","21","Current Liabilities","liability","2","cf87ea3b-ea60-4f8b-b20f-39144ab72886",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","22","Long-Term Liabilities","liability","2","cf87ea3b-ea60-4f8b-b20f-39144ab72886",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","31","Capital","equity","2","c3e7bd3a-1a4e-4617-9eb5-9cecda2cd4e4",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","41","Operating Income","income","2","a6170e9a-19ac-4a13-87e2-da6fefc4c97d",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","51","Operating Expenses","expense","2","5447f971-6918-4d94-99d5-6db5d2a79f10",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","111","Cash & Bank","asset","3","f518cf44-be6a-47bd-a649-a42eb5e51cc5",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","112","Accounts Receivable","asset","3","f518cf44-be6a-47bd-a649-a42eb5e51cc5",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","211","Accounts Payable","liability","3","04a84083-ce08-48a7-9061-1f7b30712f9a",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","311","Owner Equity","equity","3","d08b368a-ee1b-43da-a03c-a7675840260c",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","411","Sales Revenue","income","3","6d4a52ac-6cab-483e-85d6-2d5b18e488b0",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","511","Cost of Sales","expense","3","bd5bd1e3-348d-4456-aec4-1b204323873e",false,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","1111","Cash in Hand","asset","4","c585ffed-b6c0-44a1-bbfa-d387a16fcd38",true,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","1112","Bank Account","asset","4","c585ffed-b6c0-44a1-bbfa-d387a16fcd38",true,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","1121","Trade Receivables","asset","4","824f692c-ab95-4b88-9ef9-91b28811e74b",true,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","2111","Trade Payables","liability","4","cf76b021-1576-4109-9bcd-7a542fd99310",true,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","3111","Capital Account","equity","4","a8e9a9af-d92a-48fc-8333-fa5a356d7c63",true,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","4111","Sales","income","4","2183d174-6a32-46dc-a66e-c4dc436d8550",true,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95maccounts[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mtype[0m[37m,[0m [37mlevel[0m[37m,[0m [37mparent_id[0m[37m,[0m [37mis_posting[0m[37m,[0m [37mis_system[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m,[0m [37m$[0m[32m8[0m[37m,[0m [37m$[0m[32m9[0m[37m)[0m [94mRETURNING[0m [37mid[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","5111","Purchases","expense","4","2d7221d1-b0fb-4fb5-93e1-b3439243e0bd",true,true,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mfiscal_years[0m [37m([0m[37mcompany_id[0m[37m,[0m [37myear_name[0m[37m,[0m [37mstart_date[0m[37m,[0m [37mend_date[0m[37m,[0m [37mis_closed[0m[37m)[0m 
+           [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","FY 2026-2027","2025-12-31T19:00:00.000Z","2026-12-30T19:00:00.000Z",false][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mvoucher_types[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mnature[0m[37m,[0m [37mauto_numbering[0m[37m,[0m [37mnext_sequence[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","JV","Journal Voucher","journal",true,1,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mvoucher_types[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mnature[0m[37m,[0m [37mauto_numbering[0m[37m,[0m [37mnext_sequence[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","PV","Payment Voucher","payment",true,1,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mvoucher_types[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mnature[0m[37m,[0m [37mauto_numbering[0m[37m,[0m [37mnext_sequence[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","RV","Receipt Voucher","receipt",true,1,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mvoucher_types[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mnature[0m[37m,[0m [37mauto_numbering[0m[37m,[0m [37mnext_sequence[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","CN","Credit Note","credit_note",true,1,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mvoucher_types[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mnature[0m[37m,[0m [37mauto_numbering[0m[37m,[0m [37mnext_sequence[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","DN","Debit Note","debit_note",true,1,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [95mvoucher_types[0m [37m([0m[37mcompany_id[0m[37m,[0m [37mcode[0m[37m,[0m [37mname[0m[37m,[0m [37mnature[0m[37m,[0m [37mauto_numbering[0m[37m,[0m [37mnext_sequence[0m[37m,[0m [37mis_active[0m[37m)[0m 
+             [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [37m$[0m[32m4[0m[37m,[0m [37m$[0m[32m5[0m[37m,[0m [37m$[0m[32m6[0m[37m,[0m [37m$[0m[32m7[0m[37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4","CV","Contra Voucher","contra",true,1,true][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mCOMMIT[0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT DISTINCT[0m [37m"distinctAlias"[0m[37m.[0m[37m"User_id"[0m [94mAS[0m [37m"ids_User_id"[0m [94mFROM[0m [37m([0m[94mSELECT[0m [37m"User"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"User_id"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"full_name"[0m [94mAS[0m [37m"User_full_name"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"email"[0m [94mAS[0m [37m"User_email"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"password_hash"[0m [94mAS[0m [37m"User_password_hash"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"User_is_active"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"last_login_at"[0m [94mAS[0m [37m"User_last_login_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"User_created_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"updated_at"[0m [94mAS[0m [37m"User_updated_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"deleted_at"[0m [94mAS[0m [37m"User_deleted_at"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"User__User_companyUsers_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"User__User_companyUsers_company_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"User__User_companyUsers_user_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"User__User_companyUsers_is_active"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"User__User_companyUsers_created_at"[0m [94mFROM[0m [37m"users"[0m [37m"User"[0m [94mLEFT JOIN[0m [37m"company_users"[0m [37m"User__User_companyUsers"[0m [94mON[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"User"[0m[37m.[0m[37m"id"[0m [94mWHERE[0m [37m([0m [37m([0m[37m([0m[37m"User"[0m[37m.[0m[37m"email"[0m [37m=[0m [37m$[0m[32m1[0m[37m)[0m[37m)[0m [37m)[0m [94mAND[0m [37m([0m [37m"User"[0m[37m.[0m[37m"deleted_at"[0m [94mIS NULL[0m [37m)[0m[37m)[0m [37m"distinctAlias"[0m [94mORDER BY[0m [37m"User_id"[0m [94mASC[0m [94mLIMIT[0m [32m1[0m [90m-- PARAMETERS: ["newmodules_2hxpvn@example.com"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"User"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"User_id"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"full_name"[0m [94mAS[0m [37m"User_full_name"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"email"[0m [94mAS[0m [37m"User_email"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"password_hash"[0m [94mAS[0m [37m"User_password_hash"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"User_is_active"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"last_login_at"[0m [94mAS[0m [37m"User_last_login_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"User_created_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"updated_at"[0m [94mAS[0m [37m"User_updated_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"deleted_at"[0m [94mAS[0m [37m"User_deleted_at"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"User__User_companyUsers_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"User__User_companyUsers_company_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"User__User_companyUsers_user_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"User__User_companyUsers_is_active"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"User__User_companyUsers_created_at"[0m [94mFROM[0m [37m"users"[0m [37m"User"[0m [94mLEFT JOIN[0m [37m"company_users"[0m [37m"User__User_companyUsers"[0m [94mON[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"User"[0m[37m.[0m[37m"id"[0m [94mWHERE[0m [37m([0m [37m([0m[37m([0m[37m"User"[0m[37m.[0m[37m"email"[0m [37m=[0m [37m$[0m[32m1[0m[37m)[0m[37m)[0m [37m)[0m [94mAND[0m [37m([0m [37m"User"[0m[37m.[0m[37m"deleted_at"[0m [94mIS NULL[0m [37m)[0m [94mAND[0m [37m([0m [37m"User"[0m[37m.[0m[37m"id"[0m [94mIN[0m [37m([0m[37m$[0m[32m2[0m[37m)[0m [37m)[0m [90m-- PARAMETERS: ["newmodules_2hxpvn@example.com","670e1f71-fecb-44d4-9ffb-03c4c9fbf498"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mUPDATE[0m [37m"users"[0m [94mSET[0m [37m"last_login_at"[0m [37m=[0m [37m$[0m[32m1[0m[37m,[0m [37m"updated_at"[0m [37m=[0m [37mCURRENT_TIMESTAMP[0m [94mWHERE[0m [37m"id"[0m [94mIN[0m [37m([0m[37m$[0m[32m2[0m[37m)[0m [90m-- PARAMETERS: ["2026-01-01T09:58:13.131Z","670e1f71-fecb-44d4-9ffb-03c4c9fbf498"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mcompany_id[0m [94mFROM[0m [37mcompany_users[0m [94mWHERE[0m [37muser_id[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mis_active[0m [37m=[0m [94mtrue[0m [94mLIMIT[0m [32m1[0m [90m-- PARAMETERS: ["670e1f71-fecb-44d4-9ffb-03c4c9fbf498"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    JWT Strategy - Payload: {
+      sub: '670e1f71-fecb-44d4-9ffb-03c4c9fbf498',
+      email: 'newmodules_2hxpvn@example.com',
+      companyId: '27c60b19-a202-401c-af5f-be2e125b99b4',
+      jti: '87343b12-752a-4e83-93dc-c2edc65b0eb3',
+      iat: 1767261493,
+      exp: 1767347893
+    }
+
+      at JwtStrategy.validate (../src/modules/auth/strategies/jwt.strategy.ts:23:13)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"BlacklistedToken_id"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"token_jti"[0m [94mAS[0m [37m"BlacklistedToken_token_jti"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"BlacklistedToken_user_id"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"expires_at"[0m [94mAS[0m [37m"BlacklistedToken_expires_at"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"BlacklistedToken_created_at"[0m [94mFROM[0m [37m"blacklisted_tokens"[0m [37m"BlacklistedToken"[0m [94mWHERE[0m [37m([0m[37m([0m[37m"BlacklistedToken"[0m[37m.[0m[37m"token_jti"[0m [37m=[0m [37m$[0m[32m1[0m[37m)[0m[37m)[0m [94mLIMIT[0m [32m1[0m [90m-- PARAMETERS: ["87343b12-752a-4e83-93dc-c2edc65b0eb3"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"user"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"user_id"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"full_name"[0m [94mAS[0m [37m"user_full_name"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"email"[0m [94mAS[0m [37m"user_email"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"password_hash"[0m [94mAS[0m [37m"user_password_hash"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"user_is_active"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"last_login_at"[0m [94mAS[0m [37m"user_last_login_at"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"user_created_at"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"updated_at"[0m [94mAS[0m [37m"user_updated_at"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"deleted_at"[0m [94mAS[0m [37m"user_deleted_at"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"companyUser_id"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"companyUser_company_id"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"companyUser_user_id"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"companyUser_is_active"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"companyUser_created_at"[0m[37m,[0m [37m"userRole"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"userRole_company_id"[0m[37m,[0m [37m"userRole"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"userRole_user_id"[0m[37m,[0m [37m"userRole"[0m[37m.[0m[37m"role_id"[0m [94mAS[0m [37m"userRole_role_id"[0m [94mFROM[0m [37m"users"[0m [37m"user"[0m [94mLEFT JOIN[0m [37m"company_users"[0m [37m"companyUser"[0m [94mON[0m [37m"companyUser"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"user"[0m[37m.[0m[37m"id"[0m  [94mLEFT JOIN[0m [37m"user_roles"[0m [37m"userRole"[0m [94mON[0m [37m"userRole"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"user"[0m[37m.[0m[37m"id"[0m [94mWHERE[0m [37m([0m [37m"user"[0m[37m.[0m[37m"id"[0m [37m=[0m [37m$[0m[32m1[0m [37m)[0m [94mAND[0m [37m([0m [37m"user"[0m[37m.[0m[37m"deleted_at"[0m [94mIS NULL[0m [37m)[0m [90m-- PARAMETERS: ["670e1f71-fecb-44d4-9ffb-03c4c9fbf498"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    JWT Strategy - User found: true
+
+      at JwtStrategy.validate (../src/modules/auth/strategies/jwt.strategy.ts:25:13)
+
+  console.log
+    JWT Strategy - Returning user: {
+      id: '670e1f71-fecb-44d4-9ffb-03c4c9fbf498',
+      email: 'newmodules_2hxpvn@example.com',
+      companyId: '27c60b19-a202-401c-af5f-be2e125b99b4',
+      role: undefined,
+      roles: [ undefined ]
+    }
+
+      at JwtStrategy.validate (../src/modules/auth/strategies/jwt.strategy.ts:37:13)
+
+  console.log
+    [90m[4mquery:[24m[39m 
+          [94mSELECT DISTINCT[0m [37mp[0m[37m.[0m[37mcode[0m
+          [94mFROM[0m [37mpermissions[0m [37mp[0m
+          [94mJOIN[0m [37mrole_permissions[0m [37mrp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+          [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mrp[0m[37m.[0m[37mrole_id[0m [37m=[0m [37mr[0m[37m.[0m[37mid[0m
+          [94mJOIN[0m [37muser_roles[0m [37mur[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mur[0m[37m.[0m[37mrole_id[0m
+          [94mWHERE[0m [37mur[0m[37m.[0m[37muser_id[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mur[0m[37m.[0m[37mcompany_id[0m [37m=[0m [37m$[0m[32m2[0m
+           [90m-- PARAMETERS: ["670e1f71-fecb-44d4-9ffb-03c4c9fbf498","27c60b19-a202-401c-af5f-be2e125b99b4"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"company"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"company_id"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"name"[0m [94mAS[0m [37m"company_name"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"legal_name"[0m [94mAS[0m [37m"company_legal_name"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"registration_no"[0m [94mAS[0m [37m"company_registration_no"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"tax_registration_no"[0m [94mAS[0m [37m"company_tax_registration_no"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"country_code"[0m [94mAS[0m [37m"company_country_code"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"currency_code"[0m [94mAS[0m [37m"company_currency_code"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"fiscal_year_start_month"[0m [94mAS[0m [37m"company_fiscal_year_start_month"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"address"[0m [94mAS[0m [37m"company_address"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"phone"[0m [94mAS[0m [37m"company_phone"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"email"[0m [94mAS[0m [37m"company_email"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"logo_url"[0m [94mAS[0m [37m"company_logo_url"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"company_is_active"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"settings"[0m [94mAS[0m [37m"company_settings"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"company_created_at"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"updated_at"[0m [94mAS[0m [37m"company_updated_at"[0m[37m,[0m [37m"company"[0m[37m.[0m[37m"deleted_at"[0m [94mAS[0m [37m"company_deleted_at"[0m [94mFROM[0m [37m"companies"[0m [37m"company"[0m [94mWHERE[0m [37m([0m [95mLOWER[0m[37m([0m[37m"company"[0m[37m.[0m[37m"name"[0m[37m)[0m [37m=[0m [95mLOWER[0m[37m([0m[37m$[0m[32m1[0m[37m)[0m [37m)[0m [94mAND[0m [37m([0m [37m"company"[0m[37m.[0m[37m"deleted_at"[0m [94mIS NULL[0m [37m)[0m [90m-- PARAMETERS: ["Test Company 2hxpvn"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [37mSTART[0m [37mTRANSACTION[0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [37m"companies"[0m[37m([0m[37m"id"[0m[37m,[0m [37m"name"[0m[37m,[0m [37m"legal_name"[0m[37m,[0m [37m"registration_no"[0m[37m,[0m [37m"tax_registration_no"[0m[37m,[0m [37m"country_code"[0m[37m,[0m [37m"currency_code"[0m[37m,[0m [37m"fiscal_year_start_month"[0m[37m,[0m [37m"address"[0m[37m,[0m [37m"phone"[0m[37m,[0m [37m"email"[0m[37m,[0m [37m"logo_url"[0m[37m,[0m [37m"is_active"[0m[37m,[0m [37m"settings"[0m[37m,[0m [37m"created_at"[0m[37m,[0m [37m"updated_at"[0m[37m,[0m [37m"deleted_at"[0m[37m)[0m [94mVALUES[0m [37m([0m[94mDEFAULT[0m[37m,[0m [37m$[0m[32m1[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m,[0m [94mDEFAULT[0m[37m)[0m [94mRETURNING[0m [37m"id"[0m[37m,[0m [37m"fiscal_year_start_month"[0m[37m,[0m [37m"is_active"[0m[37m,[0m [37m"settings"[0m[37m,[0m [37m"created_at"[0m[37m,[0m [37m"updated_at"[0m[37m,[0m [37m"deleted_at"[0m [90m-- PARAMETERS: ["Test Company 2hxpvn","UAE","AED"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [37m"company_users"[0m[37m([0m[37m"id"[0m[37m,[0m [37m"company_id"[0m[37m,[0m [37m"user_id"[0m[37m,[0m [37m"is_active"[0m[37m,[0m [37m"created_at"[0m[37m)[0m [94mVALUES[0m [37m([0m[94mDEFAULT[0m[37m,[0m [37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m,[0m [94mDEFAULT[0m[37m)[0m [94mRETURNING[0m [37m"id"[0m[37m,[0m [37m"is_active"[0m[37m,[0m [37m"created_at"[0m [90m-- PARAMETERS: ["06dbb2bc-e87e-42a7-8ad3-73f29462dc6a","670e1f71-fecb-44d4-9ffb-03c4c9fbf498",1][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"role"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"role_id"[0m[37m,[0m [37m"role"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"role_company_id"[0m[37m,[0m [37m"role"[0m[37m.[0m[37m"code"[0m [94mAS[0m [37m"role_code"[0m[37m,[0m [37m"role"[0m[37m.[0m[37m"name"[0m [94mAS[0m [37m"role_name"[0m[37m,[0m [37m"role"[0m[37m.[0m[37m"is_system"[0m [94mAS[0m [37m"role_is_system"[0m[37m,[0m [37m"role"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"role_created_at"[0m [94mFROM[0m [37m"roles"[0m [37m"role"[0m [94mWHERE[0m [37m"role"[0m[37m.[0m[37m"code"[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37m"role"[0m[37m.[0m[37m"company_id"[0m [94mIS NULL[0m [90m-- PARAMETERS: ["owner"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"UserRole"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"UserRole_company_id"[0m[37m,[0m [37m"UserRole"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"UserRole_user_id"[0m[37m,[0m [37m"UserRole"[0m[37m.[0m[37m"role_id"[0m [94mAS[0m [37m"UserRole_role_id"[0m [94mFROM[0m [37m"user_roles"[0m [37m"UserRole"[0m [94mWHERE[0m [37m([0m[37m([0m[37m([0m[37m"UserRole"[0m[37m.[0m[37m"company_id"[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37m"UserRole"[0m[37m.[0m[37m"user_id"[0m [37m=[0m [37m$[0m[32m2[0m [94mAND[0m [37m"UserRole"[0m[37m.[0m[37m"role_id"[0m [37m=[0m [37m$[0m[32m3[0m[37m)[0m[37m)[0m[37m)[0m [90m-- PARAMETERS: ["06dbb2bc-e87e-42a7-8ad3-73f29462dc6a","670e1f71-fecb-44d4-9ffb-03c4c9fbf498","634b853c-433e-4c1b-b3ba-3bd5cb36a76d"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+          at async Promise.all (index 0)
+          at async Promise.all (index 0)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mINSERT INTO[0m [37m"user_roles"[0m[37m([0m[37m"company_id"[0m[37m,[0m [37m"user_id"[0m[37m,[0m [37m"role_id"[0m[37m)[0m [94mVALUES[0m [37m([0m[37m$[0m[32m1[0m[37m,[0m [37m$[0m[32m2[0m[37m,[0m [37m$[0m[32m3[0m[37m)[0m [90m-- PARAMETERS: ["06dbb2bc-e87e-42a7-8ad3-73f29462dc6a","670e1f71-fecb-44d4-9ffb-03c4c9fbf498","634b853c-433e-4c1b-b3ba-3bd5cb36a76d"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mCOMMIT[0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT DISTINCT[0m [37m"distinctAlias"[0m[37m.[0m[37m"User_id"[0m [94mAS[0m [37m"ids_User_id"[0m [94mFROM[0m [37m([0m[94mSELECT[0m [37m"User"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"User_id"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"full_name"[0m [94mAS[0m [37m"User_full_name"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"email"[0m [94mAS[0m [37m"User_email"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"password_hash"[0m [94mAS[0m [37m"User_password_hash"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"User_is_active"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"last_login_at"[0m [94mAS[0m [37m"User_last_login_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"User_created_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"updated_at"[0m [94mAS[0m [37m"User_updated_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"deleted_at"[0m [94mAS[0m [37m"User_deleted_at"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"User__User_companyUsers_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"User__User_companyUsers_company_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"User__User_companyUsers_user_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"User__User_companyUsers_is_active"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"User__User_companyUsers_created_at"[0m [94mFROM[0m [37m"users"[0m [37m"User"[0m [94mLEFT JOIN[0m [37m"company_users"[0m [37m"User__User_companyUsers"[0m [94mON[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"User"[0m[37m.[0m[37m"id"[0m [94mWHERE[0m [37m([0m [37m([0m[37m([0m[37m"User"[0m[37m.[0m[37m"email"[0m [37m=[0m [37m$[0m[32m1[0m[37m)[0m[37m)[0m [37m)[0m [94mAND[0m [37m([0m [37m"User"[0m[37m.[0m[37m"deleted_at"[0m [94mIS NULL[0m [37m)[0m[37m)[0m [37m"distinctAlias"[0m [94mORDER BY[0m [37m"User_id"[0m [94mASC[0m [94mLIMIT[0m [32m1[0m [90m-- PARAMETERS: ["newmodules_2hxpvn@example.com"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"User"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"User_id"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"full_name"[0m [94mAS[0m [37m"User_full_name"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"email"[0m [94mAS[0m [37m"User_email"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"password_hash"[0m [94mAS[0m [37m"User_password_hash"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"User_is_active"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"last_login_at"[0m [94mAS[0m [37m"User_last_login_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"User_created_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"updated_at"[0m [94mAS[0m [37m"User_updated_at"[0m[37m,[0m [37m"User"[0m[37m.[0m[37m"deleted_at"[0m [94mAS[0m [37m"User_deleted_at"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"User__User_companyUsers_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"User__User_companyUsers_company_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"User__User_companyUsers_user_id"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"User__User_companyUsers_is_active"[0m[37m,[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"User__User_companyUsers_created_at"[0m [94mFROM[0m [37m"users"[0m [37m"User"[0m [94mLEFT JOIN[0m [37m"company_users"[0m [37m"User__User_companyUsers"[0m [94mON[0m [37m"User__User_companyUsers"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"User"[0m[37m.[0m[37m"id"[0m [94mWHERE[0m [37m([0m [37m([0m[37m([0m[37m"User"[0m[37m.[0m[37m"email"[0m [37m=[0m [37m$[0m[32m1[0m[37m)[0m[37m)[0m [37m)[0m [94mAND[0m [37m([0m [37m"User"[0m[37m.[0m[37m"deleted_at"[0m [94mIS NULL[0m [37m)[0m [94mAND[0m [37m([0m [37m"User"[0m[37m.[0m[37m"id"[0m [94mIN[0m [37m([0m[37m$[0m[32m2[0m[37m)[0m [37m)[0m [90m-- PARAMETERS: ["newmodules_2hxpvn@example.com","670e1f71-fecb-44d4-9ffb-03c4c9fbf498"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mUPDATE[0m [37m"users"[0m [94mSET[0m [37m"last_login_at"[0m [37m=[0m [37m$[0m[32m1[0m[37m,[0m [37m"updated_at"[0m [37m=[0m [37mCURRENT_TIMESTAMP[0m [94mWHERE[0m [37m"id"[0m [94mIN[0m [37m([0m[37m$[0m[32m2[0m[37m)[0m [90m-- PARAMETERS: ["2026-01-01T09:58:13.337Z","670e1f71-fecb-44d4-9ffb-03c4c9fbf498"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37mcompany_id[0m [94mFROM[0m [37mcompany_users[0m [94mWHERE[0m [37muser_id[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mis_active[0m [37m=[0m [94mtrue[0m [94mLIMIT[0m [32m1[0m [90m-- PARAMETERS: ["670e1f71-fecb-44d4-9ffb-03c4c9fbf498"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    JWT Strategy - Payload: {
+      sub: '670e1f71-fecb-44d4-9ffb-03c4c9fbf498',
+      email: 'newmodules_2hxpvn@example.com',
+      companyId: '27c60b19-a202-401c-af5f-be2e125b99b4',
+      jti: '02668daa-94ae-44a4-acbd-84d1d2318f99',
+      iat: 1767261493,
+      exp: 1767347893
+    }
+
+      at JwtStrategy.validate (../src/modules/auth/strategies/jwt.strategy.ts:23:13)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"BlacklistedToken_id"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"token_jti"[0m [94mAS[0m [37m"BlacklistedToken_token_jti"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"BlacklistedToken_user_id"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"expires_at"[0m [94mAS[0m [37m"BlacklistedToken_expires_at"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"BlacklistedToken_created_at"[0m [94mFROM[0m [37m"blacklisted_tokens"[0m [37m"BlacklistedToken"[0m [94mWHERE[0m [37m([0m[37m([0m[37m"BlacklistedToken"[0m[37m.[0m[37m"token_jti"[0m [37m=[0m [37m$[0m[32m1[0m[37m)[0m[37m)[0m [94mLIMIT[0m [32m1[0m [90m-- PARAMETERS: ["02668daa-94ae-44a4-acbd-84d1d2318f99"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"user"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"user_id"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"full_name"[0m [94mAS[0m [37m"user_full_name"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"email"[0m [94mAS[0m [37m"user_email"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"password_hash"[0m [94mAS[0m [37m"user_password_hash"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"user_is_active"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"last_login_at"[0m [94mAS[0m [37m"user_last_login_at"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"user_created_at"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"updated_at"[0m [94mAS[0m [37m"user_updated_at"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"deleted_at"[0m [94mAS[0m [37m"user_deleted_at"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"companyUser_id"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"companyUser_company_id"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"companyUser_user_id"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"companyUser_is_active"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"companyUser_created_at"[0m[37m,[0m [37m"userRole"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"userRole_company_id"[0m[37m,[0m [37m"userRole"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"userRole_user_id"[0m[37m,[0m [37m"userRole"[0m[37m.[0m[37m"role_id"[0m [94mAS[0m [37m"userRole_role_id"[0m [94mFROM[0m [37m"users"[0m [37m"user"[0m [94mLEFT JOIN[0m [37m"company_users"[0m [37m"companyUser"[0m [94mON[0m [37m"companyUser"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"user"[0m[37m.[0m[37m"id"[0m  [94mLEFT JOIN[0m [37m"user_roles"[0m [37m"userRole"[0m [94mON[0m [37m"userRole"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"user"[0m[37m.[0m[37m"id"[0m [94mWHERE[0m [37m([0m [37m"user"[0m[37m.[0m[37m"id"[0m [37m=[0m [37m$[0m[32m1[0m [37m)[0m [94mAND[0m [37m([0m [37m"user"[0m[37m.[0m[37m"deleted_at"[0m [94mIS NULL[0m [37m)[0m [90m-- PARAMETERS: ["670e1f71-fecb-44d4-9ffb-03c4c9fbf498"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    JWT Strategy - User found: true
+
+      at JwtStrategy.validate (../src/modules/auth/strategies/jwt.strategy.ts:25:13)
+
+  console.log
+    JWT Strategy - Returning user: {
+      id: '670e1f71-fecb-44d4-9ffb-03c4c9fbf498',
+      email: 'newmodules_2hxpvn@example.com',
+      companyId: '27c60b19-a202-401c-af5f-be2e125b99b4',
+      role: undefined,
+      roles: [ undefined ]
+    }
+
+      at JwtStrategy.validate (../src/modules/auth/strategies/jwt.strategy.ts:37:13)
+
+  console.log
+    [90m[4mquery:[24m[39m 
+          [94mSELECT DISTINCT[0m [37mp[0m[37m.[0m[37mcode[0m
+          [94mFROM[0m [37mpermissions[0m [37mp[0m
+          [94mJOIN[0m [37mrole_permissions[0m [37mrp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+          [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mrp[0m[37m.[0m[37mrole_id[0m [37m=[0m [37mr[0m[37m.[0m[37mid[0m
+          [94mJOIN[0m [37muser_roles[0m [37mur[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mur[0m[37m.[0m[37mrole_id[0m
+          [94mWHERE[0m [37mur[0m[37m.[0m[37muser_id[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mur[0m[37m.[0m[37mcompany_id[0m [37m=[0m [37m$[0m[32m2[0m
+           [90m-- PARAMETERS: ["670e1f71-fecb-44d4-9ffb-03c4c9fbf498","27c60b19-a202-401c-af5f-be2e125b99b4"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"account"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"account_id"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"account_company_id"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"code"[0m [94mAS[0m [37m"account_code"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"name"[0m [94mAS[0m [37m"account_name"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"description"[0m [94mAS[0m [37m"account_description"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"type"[0m [94mAS[0m [37m"account_type"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"level"[0m [94mAS[0m [37m"account_level"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"parent_id"[0m [94mAS[0m [37m"account_parent_id"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"is_posting"[0m [94mAS[0m [37m"account_is_posting"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"account_is_active"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"is_system"[0m [94mAS[0m [37m"account_is_system"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"opening_balance"[0m [94mAS[0m [37m"account_opening_balance"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"opening_balance_type"[0m [94mAS[0m [37m"account_opening_balance_type"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"currency_code"[0m [94mAS[0m [37m"account_currency_code"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"allow_reconciliation"[0m [94mAS[0m [37m"account_allow_reconciliation"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"tax_category_id"[0m [94mAS[0m [37m"account_tax_category_id"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"sort_order"[0m [94mAS[0m [37m"account_sort_order"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"account_created_at"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"updated_at"[0m [94mAS[0m [37m"account_updated_at"[0m[37m,[0m [37m"account"[0m[37m.[0m[37m"deleted_at"[0m [94mAS[0m [37m"account_deleted_at"[0m [94mFROM[0m [37m"accounts"[0m [37m"account"[0m [94mWHERE[0m [37m([0m [37m"account"[0m[37m.[0m[37m"company_id"[0m [37m=[0m [37m$[0m[32m1[0m [37m)[0m [94mAND[0m [37m([0m [37m"account"[0m[37m.[0m[37m"deleted_at"[0m [94mIS NULL[0m [37m)[0m [90m-- PARAMETERS: ["27c60b19-a202-401c-af5f-be2e125b99b4"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    JWT Strategy - Payload: {
+      sub: '670e1f71-fecb-44d4-9ffb-03c4c9fbf498',
+      email: 'newmodules_2hxpvn@example.com',
+      companyId: '27c60b19-a202-401c-af5f-be2e125b99b4',
+      jti: '02668daa-94ae-44a4-acbd-84d1d2318f99',
+      iat: 1767261493,
+      exp: 1767347893
+    }
+
+      at JwtStrategy.validate (../src/modules/auth/strategies/jwt.strategy.ts:23:13)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"BlacklistedToken_id"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"token_jti"[0m [94mAS[0m [37m"BlacklistedToken_token_jti"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"BlacklistedToken_user_id"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"expires_at"[0m [94mAS[0m [37m"BlacklistedToken_expires_at"[0m[37m,[0m [37m"BlacklistedToken"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"BlacklistedToken_created_at"[0m [94mFROM[0m [37m"blacklisted_tokens"[0m [37m"BlacklistedToken"[0m [94mWHERE[0m [37m([0m[37m([0m[37m"BlacklistedToken"[0m[37m.[0m[37m"token_jti"[0m [37m=[0m [37m$[0m[32m1[0m[37m)[0m[37m)[0m [94mLIMIT[0m [32m1[0m [90m-- PARAMETERS: ["02668daa-94ae-44a4-acbd-84d1d2318f99"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [90m[4mquery:[24m[39m [94mSELECT[0m [37m"user"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"user_id"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"full_name"[0m [94mAS[0m [37m"user_full_name"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"email"[0m [94mAS[0m [37m"user_email"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"password_hash"[0m [94mAS[0m [37m"user_password_hash"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"user_is_active"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"last_login_at"[0m [94mAS[0m [37m"user_last_login_at"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"user_created_at"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"updated_at"[0m [94mAS[0m [37m"user_updated_at"[0m[37m,[0m [37m"user"[0m[37m.[0m[37m"deleted_at"[0m [94mAS[0m [37m"user_deleted_at"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"id"[0m [94mAS[0m [37m"companyUser_id"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"companyUser_company_id"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"companyUser_user_id"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"is_active"[0m [94mAS[0m [37m"companyUser_is_active"[0m[37m,[0m [37m"companyUser"[0m[37m.[0m[37m"created_at"[0m [94mAS[0m [37m"companyUser_created_at"[0m[37m,[0m [37m"userRole"[0m[37m.[0m[37m"company_id"[0m [94mAS[0m [37m"userRole_company_id"[0m[37m,[0m [37m"userRole"[0m[37m.[0m[37m"user_id"[0m [94mAS[0m [37m"userRole_user_id"[0m[37m,[0m [37m"userRole"[0m[37m.[0m[37m"role_id"[0m [94mAS[0m [37m"userRole_role_id"[0m [94mFROM[0m [37m"users"[0m [37m"user"[0m [94mLEFT JOIN[0m [37m"company_users"[0m [37m"companyUser"[0m [94mON[0m [37m"companyUser"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"user"[0m[37m.[0m[37m"id"[0m  [94mLEFT JOIN[0m [37m"user_roles"[0m [37m"userRole"[0m [94mON[0m [37m"userRole"[0m[37m.[0m[37m"user_id"[0m[37m=[0m[37m"user"[0m[37m.[0m[37m"id"[0m [94mWHERE[0m [37m([0m [37m"user"[0m[37m.[0m[37m"id"[0m [37m=[0m [37m$[0m[32m1[0m [37m)[0m [94mAND[0m [37m([0m [37m"user"[0m[37m.[0m[37m"deleted_at"[0m [94mIS NULL[0m [37m)[0m [90m-- PARAMETERS: ["670e1f71-fecb-44d4-9ffb-03c4c9fbf498"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    JWT Strategy - User found: true
+
+      at JwtStrategy.validate (../src/modules/auth/strategies/jwt.strategy.ts:25:13)
+
+  console.log
+    JWT Strategy - Returning user: {
+      id: '670e1f71-fecb-44d4-9ffb-03c4c9fbf498',
+      email: 'newmodules_2hxpvn@example.com',
+      companyId: '27c60b19-a202-401c-af5f-be2e125b99b4',
+      role: undefined,
+      roles: [ undefined ]
+    }
+
+      at JwtStrategy.validate (../src/modules/auth/strategies/jwt.strategy.ts:37:13)
+
+  console.log
+    [90m[4mquery:[24m[39m 
+          [94mSELECT DISTINCT[0m [37mp[0m[37m.[0m[37mcode[0m
+          [94mFROM[0m [37mpermissions[0m [37mp[0m
+          [94mJOIN[0m [37mrole_permissions[0m [37mrp[0m [94mON[0m [37mp[0m[37m.[0m[37mid[0m [37m=[0m [37mrp[0m[37m.[0m[37mpermission_id[0m
+          [94mJOIN[0m [37mroles[0m [37mr[0m [94mON[0m [37mrp[0m[37m.[0m[37mrole_id[0m [37m=[0m [37mr[0m[37m.[0m[37mid[0m
+          [94mJOIN[0m [37muser_roles[0m [37mur[0m [94mON[0m [37mr[0m[37m.[0m[37mid[0m [37m=[0m [37mur[0m[37m.[0m[37mrole_id[0m
+          [94mWHERE[0m [37mur[0m[37m.[0m[37muser_id[0m [37m=[0m [37m$[0m[32m1[0m [94mAND[0m [37mur[0m[37m.[0m[37mcompany_id[0m [37m=[0m [37m$[0m[32m2[0m
+           [90m-- PARAMETERS: ["670e1f71-fecb-44d4-9ffb-03c4c9fbf498","27c60b19-a202-401c-af5f-be2e125b99b4"][0m
+
+      at Function.logInfo (../src/platform/PlatformTools.ts:248:17)
+
+  console.log
+    [PermissionsGuard] User 670e1f71-fecb-44d4-9ffb-03c4c9fbf498 in company 27c60b19-a202-401c-af5f-be2e125b99b4 missing permissions: payments.create. User has: accounts.create,accounts.delete,accounts.read,accounts.update,audit.read,companies.create,companies.delete,companies.read,companies.update,fiscal.close,invoices.create,invoices.delete,invoices.read,invoices.update,permissions.create,permissions.delete,permissions.read,permissions.update,reports.export,reports.view,roles.create,roles.delete,roles.read,roles.update,system.settings,users.create,users.delete,users.read,users.update,vouchers.approve,vouchers.post,vouchers.reverse
+
+      at PermissionsGuard.canActivate (../src/common/guards/permissions.guard.ts:51:15)
+
+FAIL test/new-modules.e2e-spec.ts (5.124 s)
+  New Modules E2E Tests
+    Payments Module
+      ├ù should create a payment (32 ms)
+      Γùï skipped should list all payments
+      Γùï skipped should get a specific payment
+      Γùï skipped should confirm a payment
+      Γùï skipped should cancel a payment
+    Billing Module
+      Γùï skipped should get subscription (creates FREE if not exists)
+      Γùï skipped should update subscription
+      Γùï skipped should get billing transactions
+      Γùï skipped should cancel subscription
+    Integrations Module
+      Γùï skipped should create an integration
+      Γùï skipped should list all integrations
+      Γùï skipped should get a specific integration
+      Γùï skipped should activate an integration
+      Γùï skipped should test integration connection
+      Γùï skipped should deactivate an integration
+      Γùï skipped should update an integration
+    Settings Module
+      Γùï skipped should get user settings (creates default if not exists)
+      Γùï skipped should update user settings
+      Γùï skipped should get tenant settings (creates default if not exists)
+      Γùï skipped should update tenant settings
+    Reports Module - Aligned Endpoints
+      Γùï skipped should get trial balance from /reports/trial-balance
+      Γùï skipped should get general ledger from /reports/general-ledger/:accountId
+
+  ΓùÅ New Modules E2E Tests ΓÇ║ Payments Module ΓÇ║ should create a payment
+
+    expected 201 "Created", got 403 "Forbidden"
+
+       95 |                     accountId: accountId
+       96 |                 })
+    >  97 |                 .expect(201);
+          |                  ^
+       98 |
+       99 |             expect(response.body).toHaveProperty('id');
+      100 |             expect(response.body).toHaveProperty('paymentNumber');
+
+      at Object.<anonymous> (new-modules.e2e-spec.ts:97:18)
+      ----
+      at Test._assertStatus (../node_modules/supertest/lib/test.js:309:14)
+      at ../node_modules/supertest/lib/test.js:365:13
+      at Test._assertFunction (../node_modules/supertest/lib/test.js:342:13)
+      at Test.assert (../node_modules/supertest/lib/test.js:195:23)
+      at localAssert (../node_modules/supertest/lib/test.js:138:14)
+      at Server.<anonymous> (../node_modules/supertest/lib/test.js:152:11)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 21 skipped, 22 total
+Snapshots:   0 total
+Time:        5.62 s, estimated 8 s
+Ran all test suites matching test/new-modules.e2e-spec.ts with tests matching "should create a payment".
