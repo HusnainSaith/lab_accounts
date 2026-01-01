@@ -71,7 +71,9 @@ export class RegistrationBootstrapService {
         user: {
           id: userId,
           fullName: `${registerDto.firstName} ${registerDto.lastName}`,
-          email: registerDto.email
+          email: registerDto.email,
+          role: 'owner',
+          roles: ['owner']
         },
         company: {
           id: companyId,

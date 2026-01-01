@@ -47,11 +47,21 @@ export class AuthService {
     );
     const companyId = companyUserResult[0]?.company_id;
 
+    // Get user's role
+    const userRoleResult = await this.dataSource.query(
+      `SELECT r.code FROM roles r 
+       INNER JOIN user_roles ur ON ur.role_id = r.id 
+       WHERE ur.user_id = $1 AND ur.company_id = $2 LIMIT 1`,
+      [user.id, companyId]
+    );
+    const role = userRoleResult[0]?.code;
+
     const jti = crypto.randomUUID();
     const payload = {
       sub: user.id,
       email: user.email,
       companyId,
+      role,
       jti
     };
 
@@ -61,7 +71,9 @@ export class AuthService {
         id: user.id,
         fullName: user.fullName,
         email: user.email,
-        companyId
+        companyId,
+        role,
+        roles: role ? [role] : []
       }
     };
   }
