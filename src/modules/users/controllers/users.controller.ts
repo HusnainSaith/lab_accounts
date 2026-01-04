@@ -23,7 +23,7 @@ export class UsersController {
   constructor(
     private readonly usersService: UsersService,
     private readonly jwtService: JwtService,
-  ) {}
+  ) { }
 
   @Post()
   @UseGuards(JwtAuthGuard, PermissionsGuard)
@@ -78,13 +78,32 @@ export class UsersController {
     });
   }
 
+  @Post('invite')
+  @UseGuards(JwtAuthGuard, PermissionsGuard)
+  @RequirePermissions('users.create')
+  async invite(@Body() data: { email: string; role: string }, @Request() req: any) {
+    const companyId = req.user?.companyId;
+    return this.usersService.invite(data.email, data.role, companyId);
+  }
+
+  @Post('accept')
+  async accept(@Body() body: { invitationId: string }) {
+    return this.usersService.acceptInvitation(body.invitationId);
+  }
+
+  @Get('my-tenants')
+  @UseGuards(JwtAuthGuard)
+  async getMyTenants(@Request() req: any) {
+    return this.usersService.getMyTenants(req.user.id);
+  }
+
   @Delete(':id')
   @UseGuards(JwtAuthGuard, PermissionsGuard)
   @RequirePermissions('users.delete')
   async remove(@Param('id') id: string, @Request() req: any) {
     const companyId = req.user?.companyId;
     const user = await this.usersService.findOneActive(id, companyId);
-    
+
     await this.usersService.remove(id, companyId);
     return { message: 'User deleted successfully' };
   }
@@ -93,24 +112,24 @@ export class UsersController {
   async restore(@Param('id') id: string, @Body() body?: { newPassword?: string }) {
     // Check if user exists (even if inactive)
     const user = await this.usersService.findOne(id);
-    
+
     // Reset password if provided
     if (body?.newPassword) {
       await this.usersService.update(id, { password: body.newPassword } as any);
     }
-    
+
     // Regular user: Only restore this user
     const restoredUser = await this.usersService.restore(id);
-    
+
     // Generate new token for restored user
     const jti = crypto.randomUUID();
-    const payload = { 
-      sub: restoredUser.id, 
+    const payload = {
+      sub: restoredUser.id,
       email: restoredUser.email,
       jti
     };
-    
-    return { 
+
+    return {
       message: 'User restored successfully',
       access_token: this.jwtService.sign(payload),
       user: {

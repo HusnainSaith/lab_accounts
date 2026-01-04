@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository, Like } from 'typeorm';
+import { Repository, Like, IsNull } from 'typeorm';
 import { User, UserRole as UserRoleEnum } from '../entities/user.entity';
 import { CompanyUser } from '../../companies/entities/company-user.entity';
 import { UserRole } from '../entities/user-role.entity';
@@ -19,7 +19,7 @@ export class UsersService {
     private userRolesRepository: Repository<UserRole>,
     @InjectRepository(Role)
     private rolesRepository: Repository<Role>,
-  ) {}
+  ) { }
 
   async create(
     createUserDto: CreateUserDto & { companyId?: string },
@@ -28,8 +28,8 @@ export class UsersService {
 
     // Map fields to User entity schema
     const userData: any = {
-      fullName: createUserDto.firstName && createUserDto.lastName 
-        ? `${createUserDto.firstName} ${createUserDto.lastName}` 
+      fullName: createUserDto.firstName && createUserDto.lastName
+        ? `${createUserDto.firstName} ${createUserDto.lastName}`
         : createUserDto.fullName || createUserDto.firstName || 'Unknown',
       email: createUserDto.email,
       passwordHash: hashedPassword,
@@ -59,7 +59,7 @@ export class UsersService {
               companyId: createUserDto.companyId
             }
           });
-          
+
           if (!role) {
             role = await manager.createQueryBuilder(Role, 'role')
               .where('role.code = :code', { code: createUserDto.role.toUpperCase() })
@@ -74,7 +74,7 @@ export class UsersService {
               roleId: role.id,
             });
             await manager.save(userRole);
-            
+
             // Add role info to returned user
             (finalUser as any).role = role;
           }
@@ -101,20 +101,33 @@ export class UsersService {
       queryBuilder.andWhere('companyUser.companyId = :companyId', { companyId });
     }
 
+    // Include roles and companyUser info for display
+    queryBuilder
+      .leftJoinAndSelect('user.userRoles', 'userRole', 'userRole.companyId = :companyId', { companyId })
+      .leftJoinAndSelect('userRole.role', 'role');
+
     if (role) {
-      queryBuilder
-        .leftJoin('user.userRoles', 'userRole')
-        .leftJoin('userRole.role', 'roleEntity')
-        .andWhere('roleEntity.code = :role', { role: role.toUpperCase() });
+      queryBuilder.andWhere('role.code = :role', { role: role.toUpperCase() });
     }
 
     if (search) {
       queryBuilder.andWhere('user.fullName ILIKE :search', { search: `%${search}%` });
     }
 
-    return queryBuilder
+    const users = await queryBuilder
       .orderBy('user.createdAt', 'DESC')
       .getMany();
+
+    // Map to a friendlier format for the frontend
+    return users.map(user => {
+      const userRole = (user as any).userRoles?.[0];
+      return {
+        ...user,
+        role: userRole?.role?.code || 'USER',
+        status: user.isActive ? 'active' : 'inactive',
+        joinedAt: user.createdAt, // Fallback if no specific registration date
+      } as any;
+    });
   }
 
   async findOne(id: string, companyId?: string): Promise<User> {
@@ -135,39 +148,29 @@ export class UsersService {
       throw new NotFoundException('User not found');
     }
 
-    // Get role information
-    if (companyId && user.userRoles) {
+    // Get role information for the current company
+    let roleCode = 'USER';
+    if (companyId) {
       const userRole = await this.userRolesRepository.findOne({
         where: { userId: id, companyId },
         relations: ['role']
       });
-      
-      if (userRole) {
-        (user as any).role = (userRole as any).role;
+
+      if (userRole?.role) {
+        roleCode = (userRole.role as any).code;
       }
     }
 
-    return user;
+    return {
+      ...user,
+      role: roleCode,
+      status: user.isActive ? 'active' : 'inactive',
+      joinedAt: user.createdAt,
+    } as any;
   }
 
   async findOneActive(id: string, companyId?: string): Promise<User> {
-    const whereAll: any = { id };
-
-    // First check if user exists at all
-    const userExists = await this.usersRepository.findOne({
-      where: whereAll,
-      relations: ['companyUsers'],
-    });
-
-    if (!userExists) {
-      throw new NotFoundException('User not found');
-    }
-
-    if (!userExists.isActive) {
-      throw new NotFoundException('User has been deleted');
-    }
-
-    return userExists;
+    return this.findOne(id, companyId);
   }
 
   async findByEmail(email: string): Promise<User | null> {
@@ -200,10 +203,33 @@ export class UsersService {
       delete updateData.lastName;
     }
 
-    // Hash password if provided
-    if (updateUserDto.password) {
-      updateData.passwordHash = await bcrypt.hash(updateUserDto.password, 10);
-      delete updateData.password;
+    // Role update logic
+    if (updateUserDto.role && companyId) {
+      const roleEntity = await this.rolesRepository.findOne({
+        where: { code: updateUserDto.role.toUpperCase(), companyId }
+      }) || await this.rolesRepository.findOne({
+        where: { code: updateUserDto.role.toUpperCase(), companyId: IsNull() }
+      });
+
+      if (roleEntity) {
+        // Find existing user role for this company
+        const existingUserRole = await this.userRolesRepository.findOne({
+          where: { userId: id, companyId }
+        });
+
+        if (existingUserRole) {
+          existingUserRole.roleId = roleEntity.id;
+          await this.userRolesRepository.save(existingUserRole);
+        } else {
+          const newUserRole = this.userRolesRepository.create({
+            userId: id,
+            companyId,
+            roleId: roleEntity.id,
+          });
+          await this.userRolesRepository.save(newUserRole);
+        }
+      }
+      delete updateData.role;
     }
 
     const result = await this.usersRepository.update({ id }, updateData);
@@ -233,14 +259,14 @@ export class UsersService {
     // Find the owner
     const owner = await this.findOne(ownerId);
     // Skip role check for now - allow all users
-    
+
     // Get company ID from CompanyUser relationship
     const companyUser = (owner.companyUsers as any)?.[0];
     if (!companyUser) {
       throw new BadRequestException('User is not associated with any company');
     }
     const companyId = (companyUser as any).companyId;
-    
+
     // Start transaction for atomic operation
     await this.usersRepository.manager.transaction(async manager => {
       // 1. Soft delete all users in the company through CompanyUser
@@ -248,28 +274,28 @@ export class UsersService {
       for (const cu of companyUsers) {
         await manager.update('users', { id: (cu as any).userId }, { isActive: false });
       }
-      
+
       // 2. Cancel all invoices
-      await manager.update('invoices', 
-        { companyId }, 
+      await manager.update('invoices',
+        { companyId },
         { status: 'cancelled' }
       );
-      
+
       // 3. Delete customers (hard delete since no isActive field)
       await manager.delete('customers', { companyId });
-      
+
       // 4. Deactivate items
-      await manager.update('items', 
-        { companyId }, 
+      await manager.update('items',
+        { companyId },
         { isActive: false }
       );
-      
+
       // 5. Delete expenses (hard delete since no isActive field)
       await manager.delete('expenses', { companyId });
-      
+
       // 6. Deactivate the company
-      await manager.update('companies', 
-        { id: companyId }, 
+      await manager.update('companies',
+        { id: companyId },
         { isActive: false }
       );
     });
@@ -295,7 +321,7 @@ export class UsersService {
       INNER JOIN roles r ON r.id = ur.role_id
       WHERE cu.company_id = $1 AND u.is_active = true
     `, [companyId]);
-    
+
     console.log('Debug - User roles for company:', companyId, debugUserRoles);
 
     // Count users by roles using direct table joins
@@ -308,7 +334,7 @@ export class UsersService {
       WHERE cu.company_id = $1 AND u.is_active = true
       GROUP BY r.code
     `, [companyId]);
-    
+
     console.log('Debug - Role stats:', roleStats);
 
     const roleCounts = {
@@ -372,20 +398,20 @@ export class UsersService {
 
   async restoreOwnerAndCompany(ownerId: string): Promise<void> {
     // Find the owner
-    const owner = await this.usersRepository.findOne({ 
+    const owner = await this.usersRepository.findOne({
       where: { id: ownerId },
       relations: ['companyUsers']
     });
     if (!owner) {
       throw new BadRequestException('User is not an owner');
     }
-    
+
     const companyUser = (owner.companyUsers as any)?.[0];
     if (!companyUser) {
       throw new BadRequestException('User is not associated with any company');
     }
     const companyId = (companyUser as any).companyId;
-    
+
     // Start transaction for atomic operation
     await this.usersRepository.manager.transaction(async manager => {
       // 1. Restore all users in the company through CompanyUser
@@ -393,28 +419,98 @@ export class UsersService {
       for (const cu of companyUsers) {
         await manager.update('users', { id: (cu as any).userId }, { isActive: true });
       }
-      
+
       // 2. Restore all invoices (change from cancelled to sent)
-      await manager.update('invoices', 
-        { companyId, status: 'cancelled' }, 
+      await manager.update('invoices',
+        { companyId, status: 'cancelled' },
         { status: 'sent' }
       );
-      
+
       // 3. Customers are hard deleted, cannot restore
-      
+
       // 4. Restore items
-      await manager.update('items', 
-        { companyId }, 
+      await manager.update('items',
+        { companyId },
         { isActive: true }
       );
-      
+
       // 5. Expenses are hard deleted, cannot restore
-      
+
       // 6. Restore the company
-      await manager.update('companies', 
-        { id: companyId }, 
+      await manager.update('companies',
+        { id: companyId },
         { isActive: true }
       );
     });
+  }
+
+  async invite(
+    email: string,
+    role: string,
+    companyId: string,
+  ): Promise<any> {
+    // Check if user already exists
+    let user = await this.findByEmail(email);
+
+    if (!user) {
+      // Create a temporary user if they don't exist
+      // In a real system, you'd send an invitation email with a link to set a password
+      const dummyPassword = crypto.randomUUID();
+      user = await this.create({
+        email,
+        password: dummyPassword,
+        fullName: email.split('@')[0],
+        companyId,
+        role,
+      } as any);
+    } else {
+      // If user exists, just associate them with the new company and role
+      // Check if already in this company
+      const existingCU = await this.companyUsersRepository.findOne({
+        where: { userId: user.id, companyId }
+      });
+
+      if (!existingCU) {
+        const companyUser = this.companyUsersRepository.create({
+          userId: user.id,
+          companyId,
+          isActive: true,
+        });
+        await this.companyUsersRepository.save(companyUser);
+
+        // Assign role
+        const roleEntity = await this.rolesRepository.findOne({
+          where: { code: role.toUpperCase(), companyId }
+        }) || await this.rolesRepository.findOne({
+          where: { code: role.toUpperCase(), companyId: IsNull() }
+        });
+
+        if (roleEntity) {
+          const userRole = this.userRolesRepository.create({
+            userId: user.id,
+            companyId,
+            roleId: roleEntity.id,
+          });
+          await this.userRolesRepository.save(userRole);
+        }
+      }
+    }
+
+    // Return the full user object for consistency with other endpoints
+    return this.findOneActive(user.id, companyId);
+  }
+
+  async acceptInvitation(invitationId: string): Promise<any> {
+    // Placeholder logic - in a real app, you'd validate a token
+    return { message: 'Invitation accepted successfully' };
+  }
+
+  async getMyTenants(userId: string): Promise<any[]> {
+    const companyUsers = await this.companyUsersRepository.find({
+      where: { userId, isActive: true },
+      relations: ['company'],
+    });
+
+    return companyUsers.map(cu => cu.company);
   }
 }
